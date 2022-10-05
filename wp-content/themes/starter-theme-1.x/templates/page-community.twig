@@ -1,0 +1,174 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	{# {% include 'product-hero.twig' %} #}
+	{% include 'gray-background-arrows.twig' %}
+	<section id="product-hero">
+		<div class="container container-1088 product-hero-wrapper">
+			<div class="left-hero">
+				<div class="mt-md-5 py-md-5"></div>
+				<div class="mobile-img-wrapper d-md-none">
+					<img src="{{ Image(post.meta('hero_background_image')).src }}"
+						alt="{{ Image(post.meta('hero_background_image')).alt }}"
+						class="" />
+				</div>
+				<div class="container">
+					<span class="hero-subtitle">{{ post.hero_subtitle }}</span>
+					<h1 class="hero-title">
+						{{ post.hero_title }}
+					</h1>
+					<p class="hero-paragraph">
+						{{ post.hero_paragraph }}
+					</p>
+					<div class="links-wrapper">
+						<a class="hero-button main-btn" href="{{ post.hero_button_url }}">{{ post.hero_button_text }}</a>
+					</div>
+				</div>
+				<div class="mt-md-5 py-md-5"></div>
+			</div>
+			<div class="right-hero">
+				<img src="{{ Image(post.meta('hero_image')).src }}"
+					alt="{{ Image(post.meta('hero_image')).alt }}"
+					class="hero-image img-fluid" />
+			</div>
+			<div class="d-none d-md-block background-arrow">
+				<img src="{{ Image(post.meta('hero_background_image')).src }}"
+					alt="{{ Image(post.meta('hero_background_image')).alt }}"
+					class="hero-background-image" />
+			</div>
+		</div>
+	</section>
+	<div class="container container-1088 my-5 area-2">
+		<div class="inner-wrapper container">
+			<h2>
+				{{ post.row_2_heading }}
+			</h2>
+			<p>
+				{{ post.row_2_paragraph }}
+			</p>
+		</div>
+	</div>
+	<div class="container container-1088 my-5 py-4 area-3">
+		<div class="text-side container">
+			<h3>
+				{{ post.row_3_heading }}
+			</h3>
+			<p>
+				{{ post.row_3_paragraph }}
+			</p>
+		</div>
+		<div class="img-side">
+			<img src="{{ Image(post.meta('row_3_image')).src }}"
+				alt="{{ Image(post.meta('row_3_image')).alt }}"
+				class="" />
+		</div>
+	</div>
+	<div class="container container-1088 my-5 py-4 area-4">
+		<div class="img-side">
+			<img src="{{ Image(post.meta('row_4_image')).src }}"
+				alt="{{ Image(post.meta('row_4_image')).alt }}"
+				class="" />
+		</div>
+		<div class="text-side container">
+			<h3>
+				{{ post.row_4_heading }}
+			</h3>
+			<p>
+				{{ post.row_4_paragraph }}
+			</p>
+		</div>
+	</div>
+	<div class="container container-1088 my-5 py-4 area-5">
+		<div class="text-side d-none d-md-flex container">
+			<h3>
+				{{ post.row_5_heading }}
+			</h3>
+			<p>
+				{{ post.row_5_paragraph }}
+			</p>
+		</div>
+		<div class="img-side">
+			<img src="{{ Image(post.meta('row_5_image_1')).src }}"
+				alt="{{ Image(post.meta('row_5_image_1')).alt }}"
+				class="image-1" />
+			<img src="{{ Image(post.meta('row_5_image_2')).src }}"
+				alt="{{ Image(post.meta('row_5_image_2')).alt }}"
+				class="image-2" />
+		</div>
+		<div class="text-side d-md-none container">
+			<h3>
+				{{ post.row_5_heading }}
+			</h3>
+			<p>
+				{{ post.row_5_paragraph }}
+			</p>
+		</div>
+	</div>
+	<div class="container container-1088 my-5 py-4 area-6">
+		<div class="img-side">
+			<img src="{{ Image(post.meta('row_6_image')).src }}"
+				alt="{{ Image(post.meta('row_6_image')).alt }}"
+				class="img-fluid" />
+		</div>
+		<div class="text-side container">
+			<h3>
+				{{ post.row_6_heading }}
+			</h3>
+			<p>
+				{{ post.row_6_paragraph }}
+			</p>
+		</div>
+	</div>
+	<div class="container area-7">
+		<h2 class="text-center">
+			{{ post.row_7_heading }}
+		</h2>
+		<p class="text-center">
+			{{ post.row_7_paragraph }}
+		</p>
+		<div class="my-5 py-2"></div>
+		<div class="area-columns-wrapper">
+			{% for item in post.meta('slider_columns') %}
+				<div class="single-column">
+					<img src="{{ item.image.url }}" alt="{{ item.image.alt }}" class="column-img" />
+					<h4 class="column-heading">
+						{{ item.heading }}
+					</h4>
+					<p class="column-description">
+						{{ item.paragraph }}
+					</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="my-5 py-2"></div>
+	<div class="container container-1088 area-8">
+		<div class="text-side d-none d-lg-block container">
+			<h2>
+				{{ post.row_8_heading }}
+			</h2>
+			<p>
+				{{ post.row_8_paragraph }}
+			</p>
+		</div>
+		<div class="img-side">
+			<img src="{{ Image(post.meta('row_8_image')).src }}"
+				alt="{{ Image(post.meta('row_8_image')).alt }}"
+				class="img-fluid" />
+		</div>
+		<div class="text-side d-lg-none container">
+			<h2>
+				{{ post.row_8_heading }}
+			</h2>
+			<p>
+				{{ post.row_8_paragraph }}
+			</p>
+		</div>
+	</div>
+	<div class="my-5 py-2"></div>
+	{% include 'cta-text-link.twig' %}
+	<div class="py-3 py-md-4"></div>
+	<div class="recommended-posts-wrapper">
+		{% include 'recommended-posts.twig' %}
+	</div>
+{% endblock %}

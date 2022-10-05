@@ -1,0 +1,166 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<div class="">
+		<div class="container container-1088 about-us-hero">
+			<div class="hero-copy-wrapper"
+				style="background-image:url('{{ TimberImage(post.get_field('hero_background')).src }}')">
+				<div class="hero-copy-wrapper-inner">
+					<p class="hero-subheading">
+						{{ post.hero_subheading }}
+					</p>
+					<h1 class="hero-heading">
+						{{ post.hero_heading }}
+					</h1>
+					<p class="hero-paragraph">
+						{{ post.hero_paragraph }}
+					</p>
+					<div class="links-wrapper">
+						<a class="main-btn hero-button" href="{{ post.hero_button_url }}">{{ post.hero_button_text }}</a>
+						{# <a class="text-white watch-video-text-link" href="{{ post.hero_link_url }}">
+							{{ post.hero_link_text }}
+						</a> #}
+					</div>
+				</div>
+				{# <a href="" class="play-video-link">
+					<img src="{{ Image(post.meta('play_video_image')).src }}"
+						alt="{{ Image(post.meta('play_video_image')).alt }}"
+						class="play-video-image" />
+				</a> #}
+			</div>
+			<div class="background-arrow">
+				<img src="{{ Image(post.meta('hero_background_arrow')).src }}"
+					alt="{{ Image(post.meta('hero_background_arrow')).alt }}"
+					class="hero-background-arrow" />
+			</div>
+		</div>
+		<div class="mt-5 pt-md-2 mt-lg-5 py-lg-5"></div>
+		<div class="container container-1088 area-2">
+			<div class="image-side">
+				<img src="{{ Image(post.meta('area_2_image')).src }}"
+					alt="{{ Image(post.meta('area_2_image')).alt }}"
+					class="img-fluid" />
+			</div>
+			<div class="text-side">
+				<h2>
+					{{ post.area_2_heading }}
+				</h2>
+				<p>
+					{{ post.area_2_paragraph }}
+				</p>
+			</div>
+		</div>
+		<div class="my-3 my-md-5 py-2 py-md-1"></div>
+		<div class="area-3">
+			<h2 class="text-center">
+				{{ post.area_3_heading }}
+			</h2>
+			<p class="text-center">
+				{{ post.area_3_paragraph }}
+			</p>
+			<div class="container container-1088">
+				<div class="area-3-columns-wrapper"
+					style="background-image:url('{{ TimberImage(post.get_field('area_3_background_image')).src }}')">
+					{% for item in post.meta('area_3_columns') %}
+						<div class="single-column">
+							<img src="{{ item.image.url }}" alt="{{ item.image.alt }}" class="column-img" />
+							<h3 class="column-heading">
+								{{ item.heading }}
+							</h3>
+							<p class="column-paragraph">
+								{{ item.paragraph }}
+							</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="my-4 my-md-5 py-3 py-md-1"></div>
+		<div class="container container-1088 area-4">
+			<div class="text-side">
+				<p class="subheading">
+					{{ post.area_4_subheading }}
+				</p>
+				<h2>
+					{{ post.area_4_heading }}
+				</h2>
+				<p class="paragraph">
+					{{ post.area_4_paragraph }}
+				</p>
+			</div>
+			<div class="image-side">
+				<img src="{{ Image(post.meta('area_4_image')).src }}"
+					alt="{{ Image(post.meta('area_4_image')).alt }}"
+					class="img-fluid" />
+			</div>
+		</div>
+		<div class="my-md-5 py-4 py-md-1"></div>
+		<div class="container container-1088 area-5 pb-lg-5">
+			<h2 class="text-center">
+				{{ post.area_5_heading }}
+			</h2>
+			<p class="text-center">
+				{{ post.area_5_paragraph }}
+			</p>
+			<div class="awards-icons-wrapper">
+				{% for item in post.meta('area_5_columns') %}
+					<div class="column">
+						<div class="award-logo-img-wrapper">
+							<img src="{{ item.image.url }}" alt="{{ item.image.alt }}" class="img-fluid column-img" />
+						</div>
+						<p class="award-logo-text">
+							{{ item.award_logo_text }}
+						</p>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="container container-1088 area-6">
+			<div class="d-none d-lg-block bg-arrow">
+				<img src="{{ Image(post.meta('area_6_arrow')).src }}"
+					alt="{{ Image(post.meta('area_6_arrow')).alt }}"
+					class="" />
+			</div>
+			<div class="text-side">
+				<h3>
+					{{ post.area_6_heading }}
+				</h3>
+				<p>
+					{{ post.area_6_paragraph }}
+				</p>
+				<div class="columns-wrapper">
+					{% for item in post.meta('area_6_columns') %}
+						<div class="column">
+							<div class="img-wrapper">
+								<img src="{{ item.image.url }}" alt="{{ item.image.alt }}" class="img-fluid column-img" />
+							</div>
+							<p class="job-title">
+								{{ item.job_title }}
+							</p>
+							<p class="name">
+								{{ item.name }}
+							</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="area-7">
+			<div class="text-side">
+				<div class="inner-wrapper">
+					<h3>
+						{{ post.area_7_heading }}
+					</h3>
+					<p>
+						{{ post.area_7_paragraph }}
+					</p>
+				</div>
+			</div>
+			<div class="image-side">
+				<img src="{{ Image(post.meta('area_7_background_image')).src }}"
+					alt="{{ Image(post.meta('area_7_background_image')).alt }}"
+					class="" />
+			</div>
+		</div>
+	</div>
+{% endblock %}

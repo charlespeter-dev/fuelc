@@ -1,0 +1,21 @@
+<div class="image-text left-text-right-image">
+	<div class="text-side">
+		<h3 class="heading">
+			{{ layout.heading }}
+		</h3>
+		<p class="paragraph">
+			{{ layout.paragraph }}
+		</p>
+		<p class="underlined-text">
+			<a href="{{ layout.underlined_url }}" class="underlined-link">{{ layout.underlined_text }}</a>
+		</p>
+		<div class="link-wrapper">
+			<a href="{{ layout.link_url }}" class="">
+				{{ layout.link_text }} <i class="fa-regular fa-arrow-right view-link"></i>
+			</a>
+		</div>
+	</div>
+	<div class="image-side">
+		<img src="{{ layout.image.url }}" alt="{{ layout.image.alt }}" class="img-fluid" />
+	</div>
+</div>

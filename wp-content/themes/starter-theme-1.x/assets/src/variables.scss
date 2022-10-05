@@ -1,0 +1,19 @@
+// Fonts
+$primary-font: 'Greycliff', 'Open Sans', sans-serif;
+$primary-font-light: 'Greycliff Light', 'Open Sans', sans-serif;
+$primary-font-medium: 'Greycliff Medium', 'Open Sans', sans-serif;
+$primary-font-bold: 'Greycliff Bold', 'Open Sans', sans-serif;
+$primary-font-demi-bold: 'Greycliff Demi Bold', 'Open Sans', sans-serif;
+$secondary-font: 'Bebas Neue';
+
+// Colors
+
+$fc-purple: #613f97;
+$fc-orange: #e85948;
+$fc-pink: #cb198a;
+$fc-gray: #49494b;
+$fc-light-gray: rgba(73, 73, 75, 0.5);
+
+.fc-orange {
+	color: $fc-orange;
+}

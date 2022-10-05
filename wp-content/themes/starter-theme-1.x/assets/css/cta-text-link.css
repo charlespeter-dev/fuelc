@@ -1,0 +1,35 @@
+#cta-text-link {
+  background: #cb198a;
+  background: -moz-linear-gradient(63deg, #cb198a 0%, #613f97 100%);
+  background: -webkit-linear-gradient(63deg, #cb198a 0%, #613f97 100%);
+  background: linear-gradient(63deg, #cb198a 0%, #613f97 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cb198a",endColorstr="#613f97",GradientType=1);
+}
+
+.cta-text-link-wrapper {
+  text-align: center;
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+.cta-heading {
+  color: white;
+  text-align: center;
+  max-width: 450px;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 auto;
+}
+
+.cta-paragraph {
+  color: white;
+  max-width: 515px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.cta-button {
+  margin-top: 35px;
+}

@@ -1,0 +1,46 @@
+<div class="hero hero-mobile d-lg-none">
+	<div class="image-side">
+		<img src="{{ layout.image.url }}" alt="{{ layout.image.alt }}" class="img-fluid" />
+	</div>
+	<div class="text-side">
+		<p class="subheading">
+			{{ layout.subheading }}
+		</p>
+		<h1 class="heading">
+			{{ layout.heading }}
+		</h1>
+		<p class="paragraph-large">
+			{{ layout.paragraph_large }}
+		</p>
+		<p class="paragraph">
+			{{ layout.paragraph }}
+		</p>
+		<div class="button-wrapper">
+			<a href="{{ layout.button_url }}" class="main-btn">{{ layout.button_text }}</a>
+		</div>
+	</div>
+</div>
+<div class="hero hero-desktop d-none d-lg-grid">
+	<div class="text-side">
+		<p class="subheading">
+			{{ layout.subheading }}
+		</p>
+		<h1 class="heading">
+			{{ layout.heading }}
+		</h1>
+		<p class="paragraph">
+			{{ layout.paragraph }}
+		</p>
+		<div class="button-wrapper">
+			<a href="{{ layout.button_url }}" class="main-btn">{{ layout.button_text }}</a>
+		</div>
+	</div>
+	<div class="image-side">
+		<img src="{{ layout.image.url }}" alt="{{ layout.image.alt }}" class="img-fluid" />
+	</div>
+	<div class="background-arrow">
+		<img src="{{ layout.hero_background_image.url }}"
+			alt="{{ layout.hero_background_image.alt }}"
+			class="hero-background-image" />
+	</div>
+</div>

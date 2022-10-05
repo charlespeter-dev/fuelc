@@ -1,0 +1,19 @@
+.background-image-wrapper {
+	position: absolute;
+	top: 650px;
+	right: 0;
+	left: 0;
+	z-index: -1000;
+	overflow: hidden;
+}
+.bg-arrow {
+	width: 1750px;
+}
+.bg-arrow-one {
+	position: relative;
+	left: -875px;
+}
+.bg-arrow-two {
+	position: relative;
+	left: -1240px;
+}

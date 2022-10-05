@@ -1,0 +1,13 @@
+<section id="cta-text-link">
+	<div class="cta-text-link-wrapper container container-1088">
+		<h2 class="cta-heading">
+			{{ post.cta_heading }}
+		</h2>
+		{% if post.cta_paragraph %}
+			<p class="cta-paragraph">
+				{{ post.cta_paragraph }}
+			</p>
+		{% endif %}
+		<a class="main-btn cta-button" href="{{ post.cta_button_url }}">{{ post.cta_button_text }}</a>
+	</div>
+</section>

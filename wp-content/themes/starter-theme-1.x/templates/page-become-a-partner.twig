@@ -1,0 +1,87 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<div class="container container-1088">
+		<div class="horizontal-line-clean partner-horizontal-line"></div>
+		<div class="hero">
+			<div class="hero-image">
+				<img src="{{ Image(post.meta('hero_image')).src }}"
+					alt="{{ Image(post.meta('hero_image')).alt }}"
+					class="w-100 h-100 hero-image" />
+			</div>
+			<div class="hero-text d-flex flex-column justify-content-center">
+				<p class="hero-subheading">
+					{{ post.hero_subheading }}
+				</p>
+				<h1 class="hero-heading">
+					{{ post.hero_heading }}
+				</h1>
+				<p class="hero-paragraph">
+					{{ post.hero_paragraph }}
+				</p>
+				<div class="btn-wrapper">
+					<a id="hero-btn" class="main-btn brand-btn" href="{{ post.hero_button_url }}">
+						{{ post.hero_button_text }}
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="my-4 my-md-5 py-3 py-md-1"></div>
+		<div class="mb-3">
+			<h2 class="text-center area-title">
+				{{ post.area_2_title }}
+			</h2>
+			<p class="text-center area-paragraph">
+				{{ post.area_2_paragraph }}
+			</p>
+		</div>
+		<div class="my-4 my-md-5 py-2 py-md-1"></div>
+		<div class="area-columns-wrapper">
+			{% for item in post.meta('area_2_columns') %}
+				<div class="single-column">
+					<img src="{{ item.image.url }}" alt="{{ item.image.alt }}" class="column-img" />
+					<h3 class="column-heading">
+						{{ item.heading }}
+					</h3>
+					<p class="column-paragraph">
+						{{ item.paragraph }}
+					</p>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="my-4 my-md-5 py-1 pb-mb-4"></div>
+		<div class="area-3">
+			<div class="text-wrapper">
+				<h2 class="area-title">
+					{{ post.area_3_title }}
+				</h2>
+				<ul>
+					{% for item in post.meta('area_3_bullet_points') %}
+						<li class="single-li mb-4">
+							<h4 class="li-heading">
+								{{ item.heading }}
+							</h4>
+							<p class="li-paragraph pb-2">
+								{{ item.paragraph }}
+							</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="image-wrapper">
+				<img src="{{ Image(post.meta('area_3_image')).src }}"
+					alt="{{ Image(post.meta('area_3_image')).alt }}"
+					class="img-fluid" />
+			</div>
+		</div>
+	</div>
+	<div class="area-4">
+		<div class="pt-5"></div>
+		<h2 class="area-title text-center pt-5">
+			{{ post.area_4_title }}
+		</h2>
+		<div class="container container-1088 py-3 content-form">
+			{{ post.area_4_form|shortcodes }}
+		</div>
+	</div>
+{% endblock %}

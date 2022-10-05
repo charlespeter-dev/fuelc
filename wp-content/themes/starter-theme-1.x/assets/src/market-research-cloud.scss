@@ -1,0 +1,172 @@
+@import 'variables.scss';
+@import 'product-hero.scss';
+@import 'cta-text-link.scss';
+
+.product-hero-wrapper {
+	@media (max-width: 1199px) {
+		min-height: auto;
+		padding: 142px 12px 60px;
+	}
+	@media (max-width: 767px) {
+		padding: 114px 16px 88px;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.left-hero {
+	@media (min-width: 768px) and (max-width: 1199px) {
+		padding-left: 24px;
+	}
+	@media (max-width: 767px) {
+		order: 1;
+		margin-top: 48px;
+		padding: 0 32px;
+	}
+}
+
+.background-arrow {
+	@media (max-width: 1199px) {
+		width: 727px;
+	}
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+}
+
+.hero-background-image {
+	@media (max-width: 1199px) {
+		width: 100%;
+		bottom: -30px;
+		left: -140px;
+	}
+	@media (max-width: 767px) {
+		bottom: 100px;
+		left: calc(100% - 102px);
+		width: 560px;
+	}
+	@media (max-width: 575px) {
+		bottom: -24px;
+	}
+}
+
+#road-map {
+	padding: 0 16px;
+	@media (min-width: 768px) and (max-width: 1199px) {
+		padding: 0 16px 40px;
+	}
+	.title {
+		padding-bottom: 0 !important;
+	}
+}
+
+.product-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 40px;
+	@media (max-width: 1199px) {
+		grid-gap: 16px;
+	}
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+	}
+	.py-4 {
+		@media (max-width: 1199px) {
+			display: none;
+		}
+	}
+}
+.image-side {
+	display: flex;
+	align-items: center;
+}
+.screen-image {
+	width: 100%;
+}
+.product-section {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	&:nth-child(odd) {
+		.image-side {
+			@media (max-width: 767px) {
+				grid-row-start: 1;
+				grid-row-end: 2;
+			}
+		}
+	}
+}
+.subtitle {
+	color: $fc-orange;
+	font-size: 12px;
+	line-height: 1;
+	position: relative;
+	bottom: -2px;
+}
+.product-title {
+	font-size: 24px;
+	line-height: 26px;
+	@media (max-width: 1199px) {
+		font-size: 20px;
+	}
+}
+.product-paragraph {
+	font-size: 16px;
+	line-height: 26px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	@media (max-width: 1199px) {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+.product-ul {
+	list-style: none; /* Remove default bullets */
+	padding-left: 15px;
+	padding-right: 15px;
+	li {
+		font-size: 16px;
+		line-height: 26px;
+		margin-bottom: 18px;
+		@media (max-width: 1199px) {
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+}
+
+.product-ul li::before {
+	content: '\25A0'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+	color: $fc-orange; /* Change the color */
+	font-weight: bold; /* If you want it to be bold */
+	display: inline-block; /* Needed to add space between the bullet and the text */
+	width: 1em; /* Also needed for space (tweak if needed) */
+	margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.product-btn {
+	margin-top: 10px;
+}
+
+.text-side {
+	padding-right: 60px;
+	padding-left: 60px;
+	@media (max-width: 1199px) {
+		padding: 0 20px;
+	}
+	@media (max-width: 767px) {
+		padding: 0 12px;
+	}
+}
+// CTA
+.cta-heading {
+	max-width: 610px !important;
+}
+#cta-text-link {
+	margin-bottom: 24px;
+	padding: 0 56px;
+	@media (max-width: 767px) {
+		padding: 0 3px;
+	}
+	.cta-text-link-wrapper {
+		padding: 62px 12px 82px;
+	}
+}

@@ -1,0 +1,36 @@
+.fc-orange {
+  color: #e85948;
+}
+
+.wrapper {
+  margin-top: 100px;
+}
+
+.subheading {
+  color: #e85948;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.heading {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+.text-side {
+  padding-bottom: 35px;
+}
+
+.form-side {
+  border: 1px solid #e7e7e7;
+  border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+  .wrapper-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+  }
+}

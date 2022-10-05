@@ -1,0 +1,52 @@
+.fc-orange {
+  color: #e85948;
+}
+
+.product-hero-wrapper {
+  min-height: 675px;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1px;
+}
+
+.left-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 75px;
+}
+
+.right-hero {
+  display: flex;
+  align-items: center;
+}
+
+.background-arrow {
+  width: 1350px;
+  position: relative;
+}
+
+.hero-background-image {
+  position: absolute;
+  bottom: 5px;
+  left: -200px;
+  z-index: -10;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  line-height: 18px;
+  color: #e85948;
+}
+
+.hero-title {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.hero-paragraph {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 26px;
+}

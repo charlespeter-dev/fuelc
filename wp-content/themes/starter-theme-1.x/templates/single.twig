@@ -1,0 +1,106 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<div class="py-5"></div>
+	{% if post.breadcrumbs %}
+		<div class="container container-1088 breadcrumbs">
+			{{ post.breadcrumbs }}
+		</div>
+	{% endif %}
+	{% if post.breadcrumbs == false %}
+		<div class="container container-1088 horizontal-line-clean"></div>
+	{% endif %}
+	<div class="py-3"></div>
+	<div class="content-wrapper container container-900">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+			<span class="blog-tag">
+				{% for category in post.categories %}
+					{{ category }}{% if loop.length > 1 and loop.index < loop.length %},{% endif %}
+				{% endfor %}
+			</span>
+			<h1 class="article-h1">
+				{{ post.title }}
+			</h1>
+			<div class="my-3 py-1"></div>
+			<img src="{{ post.thumbnail.src }}" class="img-fluid post-featured-img" />
+			<div class="my-3 py-1"></div>
+			<section class="article-content">
+				<div class="article-body">
+					{{ post.content }}
+				</div>
+			</section>
+		</article>
+	</div>
+	<div class="py-3"></div>
+	<div class="single-post-pagination-wrapper container container-1088">
+		<div class="horizontal-line"></div>
+		<div class="single-post-pagination container container-900 my-4">
+			<div class="newest mb-3 mb-sm-0">
+				{% if post.prev %}
+					<div class="newest-title">
+						OLDER
+					</div>
+					<a href="{{ post.prev.link }}" class="previous-post-link">{{ post.prev.title }}</a>
+				{% endif %}
+			</div>
+			<div class="divider-line"></div>
+			<div class="older mb-3 mb-sm-0">
+				{% if post.next %}
+					<div class="newest-title">
+						NEWER
+					</div>
+					<a href="{{ post.next.link }}" class="next-post-link">{{ post.next.title }}</a>
+				{% endif %}
+			</div>
+		</div>
+		<div class="horizontal-line"></div>
+	</div>
+	<div class="py-3"></div>
+	<div class="recommended-posts-wrapper">
+		<section class="recommended-posts container container-1088">
+			<div class="recommended-posts-label">
+				{{ post.recommended_posts_label }}
+			</div>
+			<h2 class="recommended-posts-title">
+				{{ post.recommended_posts_title }}
+			</h2>
+			<div class="recommended-posts-row">
+				{% for post in post.meta('recommended_posts') %}
+					<div class="single-post-wrapper">
+						<div class="post-image-wrapper">
+							<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" class="post-image" /></a>
+							<div class="post-image-badge">
+								{% for category in post.categories %}
+									{{ category }}{% if loop.length > 1 and loop.index < loop.length %},{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+						<div class="post-text-wrapper">
+							<span class="post-categories">
+								{% for category in post.categories %}
+									{{ category }}{% if loop.length > 1 and loop.index < loop.length %},{% endif %}
+								{% endfor %}
+							</span>
+							<h1 class="single-post-title">
+								<a href="{{ post.link }}">
+									{{ (post.title|length) > 110 ? (post.title|slice(0, 110)) ~ '...' : post.title }}
+								</a>
+							</h1>
+							<p class="single-post-excerpt">
+								{% if post.post_excerpt_custom %}
+									{{ post.post_excerpt_custom }}
+								{% else %}
+									{{ post.preview.length(10).force.read_more('') }}
+								{% endif %}
+								<a href="{{ post.link }}" class="read-more">
+									<i class="fa-regular fa-arrow-right view-link"></i>
+								</a>
+							</p>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</section>
+	</div>
+	<!-- /content-wrapper -->
+{% endblock %}

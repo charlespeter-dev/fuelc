@@ -1,0 +1,71 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	{% include 'product-hero.twig' %}
+	<div class="two-col-wrapper">
+		<div class="two-col-row">
+			<div class="image-side">
+				<img src="{{ Image(post.meta('two_col_image')).src }}"
+					alt="{{ Image(post.meta('two_col_image')).alt }}"
+					class="two-col-image" />
+			</div>
+			<div class="text-side"
+				style="background-image:url('{{ TimberImage(post.get_field('two_col_text_area_background')).src }}')">
+				<div class="py-3 py-lg-5"></div>
+				<h2 class="two-col-heading">
+					{{ post.two_col_heading }}
+				</h2>
+				<p class="two-col-paragraph">
+					{{ post.two_col_paragraph }}
+				</p>
+				<div class="py-4 py-md-3 py-lg-5"></div>
+			</div>
+		</div>
+	</div>
+	<section id="area-3">
+		<h2 class="area-heading text-center">
+			{{ post.area_3_heading }}
+		</h2>
+		<p class="area-paragraph text-center">
+			{{ post.area_3_paragraph }}
+		</p>
+		<div class="area-columns-wrapper">
+			{% for item in post.meta('area_3_columns') %}
+				<div class="single-column">
+					<img src="{{ item.image.url }}" alt="{{ item.image.alt }}" class="column-img" />
+					<h4 class="column-heading">
+						{{ item.heading }}
+					</h4>
+					<p class="column-description">
+						{{ item.paragraph }}
+					</p>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+	<section id="area-4">
+		<div class="area-4-wrapper container text-center">
+			<h2 class="area-heading text-center">
+				{{ post.area_4_heading }}
+			</h2>
+			<p class="area-paragraph text-center">
+				{{ post.area_4_paragraph }}
+			</p>
+			<div class="container area-4-columns-wrapper">
+				{% for item in post.meta('area_4_columns') %}
+					<div class="single-column text-center">
+						<img src="{{ item.image.url }}" alt="{{ item.image.alt }}" class="column-img" />
+						<p class="column-description">
+							<span class="column-description-bold">{{ item.bold_text }}</span> {{ item.regular_text }}
+						</p>
+					</div>
+				{% endfor %}
+			</div>
+			<a class="main-btn area-4-button" href="{{ post.area_4_button_url }}">{{ post.area_4_button_text }}</a>
+		</div>
+	</section>
+	<div class="py-4 mt-4"></div>
+	<div class="recommended-posts-wrapper">
+		{% include 'recommended-posts.twig' %}
+	</div>
+{% endblock %}

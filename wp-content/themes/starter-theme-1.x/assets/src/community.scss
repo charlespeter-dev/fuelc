@@ -1,0 +1,257 @@
+@import 'variables.scss';
+@import 'product-hero.scss';
+@import 'cta-text-link.scss';
+@import 'recommended-posts.scss';
+@import 'gray-background-arrows.scss';
+.bg-arrow-two {
+	display: none;
+}
+
+// HERO
+.left-hero {
+	padding-left: 0;
+}
+.mobile-img-wrapper {
+	height: 350px;
+	position: relative;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+	.mobile-img-wrapper {
+		height: 475px;
+		position: relative;
+	}
+}
+.mobile-img-wrapper img {
+	width: 150%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+@media (max-width: 767px) {
+	.product-hero-wrapper {
+		grid-template-columns: 1fr;
+		grid-gap: 25px;
+	}
+	.background-arrow {
+		width: 400px;
+	}
+	.hero-background-image {
+		width: 500px;
+		left: 0;
+	}
+}
+@media (min-width: 768px) {
+	.product-hero-wrapper {
+		grid-template-columns: 1fr 1fr 1px;
+		grid-gap: 75px;
+	}
+	.hero-background-image {
+		left: -35%;
+	}
+	.left-hero {
+		padding-left: 25px;
+	}
+}
+
+.area-3 {
+	img {
+		width: 115%;
+		position: relative;
+		left: 0;
+	}
+}
+.area-4 {
+	.text-side {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 400px;
+		@media (max-width: 767px) {
+			margin-top: 15px;
+		}
+	}
+	img {
+		position: relative;
+		right: 100px;
+		width: 100%;
+	}
+}
+.area-5 {
+	.img-side {
+		position: relative;
+	}
+	.text-side {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@media (max-width: 767px) {
+			margin-top: 15px;
+		}
+	}
+	.image-1 {
+		position: absolute;
+		bottom: 125px;
+		left: 0;
+		right: 0;
+		width: 500px;
+		z-index: -10;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.image-2 {
+		width: 220px;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+.area-6 .text-side {
+	@media (max-width: 767px) {
+		margin-top: 15px;
+	}
+}
+.area-7 {
+	> p {
+		max-width: 600px;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 25px;
+	}
+}
+// Slick Slider
+.column-img {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 50px;
+}
+.area-columns-wrapper {
+	max-width: 975px;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+@media (min-width: 768px) {
+	.area-columns-wrapper {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+.column-heading,
+.column-description {
+	max-width: 250px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.column-description {
+	font-size: 14px;
+}
+.slick-prev:before,
+.slick-next:before {
+	color: #e85948 !important;
+}
+
+.slick-dots {
+	bottom: -40px;
+}
+@media (min-width: 768px) {
+	.area-3,
+	.area-4 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.area-5 {
+		display: grid;
+		grid-template-columns: 375px 1fr;
+		grid-gap: 50px;
+	}
+	.area-6 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 100px;
+		.text-side {
+			padding-right: 75px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+	.area-8 {
+		grid-gap: 60px;
+	}
+}
+.area-8 img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 15px;
+}
+@media (min-width: 992px) {
+	.area-8 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+#cta-text-link {
+	.cta-text-link-wrapper {
+		@media (max-width: 767px) {
+			padding: 60px 40px;
+		}
+	}
+}
+
+.recommended-posts-wrapper {
+	padding: 0 20px;
+	@media (max-width: 767px) {
+		padding: 0 20px 28px;
+	}
+}
+
+.recommended-posts-row {
+	@media (max-width: 991px) {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: 1fr;
+	}
+}
+
+.category-post-list-grid {
+	grid-gap: 20px;
+}
+.category-results {
+	grid-gap: 40px 30px;
+}
+.single-post-wrapper {
+	display: grid;
+	grid-template-columns: 135px 1fr;
+}
+.post-image-wrapper {
+	max-height: 140px;
+}
+.post-text-wrapper {
+	padding-left: 22px;
+}
+.post-image {
+	width: 135px;
+	height: 140px;
+	object-fit: cover;
+}
+
+.post-text-wrapper {
+	@media (max-width: 767px) {
+		padding-left: 12px;
+	}
+}
+
+.single-post-title {
+	@media (max-width: 767px) {
+		font-size: 14px;
+		line-height: 16px;
+	}
+}
+
+.single-post-excerpt {
+	@media (max-width: 767px) {
+		font-size: 13px;
+		line-height: 16px;
+	}
+}

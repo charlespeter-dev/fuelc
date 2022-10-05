@@ -1,0 +1,432 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<section id="home-hero">
+		<div class="container container-1088 home-hero-wrapper">
+			<div class="left-hero">
+				<h1 class="hero-title">
+					{{ post.hero_title }}
+				</h1>
+				<p class="hero-paragraph">
+					{{ post.hero_paragraph }}
+				</p>
+				<div class="links-wrapper">
+					{# <a class="hero-button main-btn">{{ post.hero_button_text }}</a> #}
+					 <!-- Button trigger modal -->
+					<button type="button" class="hero-button main-btn video-btn" data-bs-toggle="modal" data-src="{{post.hero_button_url}}" data-bs-target="#myModal">
+					{{ post.hero_button_text }}
+					</button>
+					<br />
+					<a href="{{ post.hero_link_url }}" class="hero-link-text">
+						{{ post.hero_link_text }} <i class="fa-regular fa-arrow-right view-link"></i>
+					</a>
+					{# <a href="{{ post.hero_link_url }}">
+						<img src="{{ TimberImage(post.get_field('hero_link_icon')).src }}"
+							alt="{{ TimberImage(post.get_field('hero_link_icon')).alt }}"
+							class="hero-link-icon" />
+					</a> #}
+				</div>
+			</div>
+			<div class="right-hero">
+				<video id="background-video" autoplay loop muted playsinline poster="">
+					<source src="{{ file_url }}" type="video/mp4" />
+				</video>
+			</div>
+		</div>
+		<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      
+      <div class="modal-body">
+       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></span>
+        </button>        
+        <!-- 16:9 aspect ratio -->
+<div class="ratio ratio-16x9">
+  <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+</div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div> 
+	</section>
+	<section id="tabbed-slider">
+		<div class="container container-1088 tabbed-slider-wrapper">
+			<h2 class="tabbed-slider-heading">
+				{{ post.tabbed_slider_heading }}
+			</h2>
+			<div class="tabbed-slider-button-wrapper">
+				<a href="{{ post.tabbed_slider_button_url }}" class="main-btn tabbed-slider-button">
+					{{ post.tabbed_slider_button_text }}
+				</a>
+			</div>
+			<div class="tabs-images-wrapper">
+				<div class="tabbed-left">
+					<div class="mb-1"></div>
+					<div class="horizontal-line-clean"></div>
+					{% for tab in post.meta('slider_tabs') %}
+						<div class="mb-4"></div>
+						<div class="single-tab-wrapper single-tab-wrapper--tab">
+							<div class="single-tab-icon">
+								<img src="{{ Image(tab.icon) }}"
+									alt=""
+									class="tab-icon tab-icon-color {{ loop.index == 1 ? 'active' : 'hidden' }}" />
+								<img src="{{ Image(tab.icon_disabled) }}"
+									alt=""
+									class="tab-icon tab-icon-gray {{ loop.index == 1 ? 'hidden' : 'active' }}" />
+							</div>
+							<div class="single-tab-text">
+								<span class="tab-subtitle">{{ tab.subtitle }}</span>
+								<h3 class="tab-title">
+									{{ tab.title }}
+								</h3>
+								<p class="tab-paragraph">
+									{{ tab.paragraph }}
+									<a href="{{ tab.view_icon_url }}"><i class="fa-regular fa-arrow-right view-link"></i></a>
+								</p>
+							</div>
+						</div>
+						<div class="mb-3"></div>
+						<div class="horizontal-line-clean"></div>
+					{% endfor %}
+				</div>
+				<div class="tabbed-right">
+					<div id="carouselExampleIndicators"
+						class="carousel carousel-dark carousel-fade"
+						data-bs-ride="carousel"
+						data-bs-interval="false">
+						<div class="carousel-indicators">
+							<button type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1">
+
+							</button>
+							<button type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="1"
+								aria-label="Slide 2">
+
+							</button>
+							<button type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="2"
+								aria-label="Slide 3">
+
+							</button>
+							<button type="button"
+								data-bs-target="#carouselExampleIndicators"
+								data-bs-slide-to="3"
+								aria-label="Slide 4">
+
+							</button>
+						</div>
+						<div class="carousel-inner">
+							{% for image in post.meta('slider_images') %}
+								<div class="carousel-item {{ loop.index == 1 ? 'active' : '' }}">
+									<img class="d-block w-100" src="{{ Image(image.image) }}" alt="" />
+									<div class="carousel-caption">
+										<p>
+											{{ image.image_caption }}
+										</p>
+									</div>
+								</div>
+							{% endfor %}
+							{% for tab in post.meta('slider_tabs') %}
+								<div class="single-tab-wrapper single-tab-wrapper--carousel">
+									<div class="single-tab-icon">
+										<img src="{{ Image(tab.icon) }}" alt="" class="tab-icon tab-icon-color active" />
+									</div>
+									<div class="single-tab-text">
+										<span class="tab-subtitle">{{ tab.subtitle }}</span>
+										<h3 class="tab-title">
+											{{ tab.title }}
+										</h3>
+										<p class="tab-paragraph">
+											{{ tab.paragraph }}
+											<a href="{{ tab.view_icon_url }}">
+												<i class="fa-regular fa-arrow-right view-link"></i>
+											</a>
+										</p>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="logos-slider">
+		<div class="container container-1088">
+			<h2 class="logos-slider-heading">
+				{{ post.logos_slider_heading }}
+			</h2>
+			<p class="logos-slider-paragraph">
+				{{ post.logos_slider_paragraph }}
+			</p>
+			<a href="{{ post.logos_slider_link_url }}" class="logos-slider-link">
+				{{ post.logos_slider_link_text }}<i class="fa-regular fa-arrow-right view-link"></i>
+			</a>
+			<div class="logos-slider-wrapper">
+				<div id="carouselLogos"
+					class="carousel carousel-dark slide"
+					data-bs-ride="carousel"
+					data-bs-interval="false">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="carousel-item-inner">
+								{% for brand in brands.meta('brands_logo') %}
+									{% if loop.index < 16 %}
+										<div class="brand-wrapper">
+											<img src="{{ brand.logo.url }}" alt="" class="img-fluid" />
+										</div>
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+						{# <div class="carousel-item">
+							<div class="carousel-item-inner">
+								{% for brand in brands.meta('brands_logo') %}
+									{% if loop.index > 15 %}
+										<div class="brand-wrapper">
+											<img src="{{ brand.logo.url }}" alt="" />
+										</div>
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+						<div class="carousel-item">
+							<div class="carousel-item-inner">
+								{% for brand in brands.meta('brands_logo') %}
+									{% if loop.index < 16 %}
+										<div class="brand-wrapper">
+											<img src="{{ brand.logo.url }}" alt="" />
+										</div>
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div> #}
+					</div>
+
+					<div class="carousel-indicators">
+						{# <button type="button"
+							data-bs-target="#carouselLogos"
+							data-bs-slide-to="0"
+							class="active"
+							aria-label="Slide 1">
+
+						</button> #}
+						{# <button type="button"
+							data-bs-target="#carouselLogos"
+							data-bs-slide-to="1"
+							aria-label="Slide 2"
+							class="">
+
+						</button>
+						<button type="button"
+							data-bs-target="#carouselLogos"
+							data-bs-slide-to="2"
+							aria-label="Slide 3"
+							class=""
+							aria-current="true">
+
+						</button> #}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="cases-slider">
+		<div class="container container-1088 cases-slider-wrapper-outer">
+			<div class="left-side">
+				<h2 class="cases-slider-heading cases-slider-heading--desktop">
+					{{ post.cases_slider_heading }}
+				</h2>
+				<div class="cases-slider-wrapper">
+					<div id="casesSlider"
+						class="carousel carousel-dark slide"
+						data-bs-ride="carousel"
+						data-bs-interval="false">
+						<div class="carousel-inner">
+							{% for slide in post.meta('cases_for_slider') %}
+								<div class="carousel-item {{ loop.index == 1 ? 'active' : '' }}">
+									<div class="carousel-item-inner">
+										<div class="slide-wrapper">
+											<div class="img-wrapper">
+												<img class="img-fluid" src="{{ slide.logo.url }}" alt="" />
+											</div>
+											<div class="text-wrapper">
+												<p class="case-slider-paragraph">
+													{{ slide.paragraph }}
+												</p>
+												<a class="slide-link-text" href="{{ slide.link_text_url }}">
+													{{ slide.link_text }} <i class="fa-regular fa-arrow-right view-link"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+
+							<div class="carousel-item">
+								<div class="carousel-item-inner">
+									{% for brand in brands.meta('brands_logo') %}
+										{% if loop.index < 16 %}
+											<div class="brand-wrapper">
+												<img src="{{ brand.logo.url }}" alt="" />
+											</div>
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="carousel-item-inner">
+									{% for brand in brands.meta('brands_logo') %}
+										{% if loop.index < 16 %}
+											<div class="brand-wrapper">
+												<img src="{{ brand.logo.url }}" alt="" />
+											</div>
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+
+						<div class="carousel-indicators">
+							{% for slide in post.meta('cases_for_slider') %}
+								<button type="button"
+									data-bs-target="#casesSlider"
+									data-bs-slide-to="{{ loop.index0 }}"
+									aria-label="Slide {{ loop.index }}"
+									class="{{ loop.index == 1 ? 'active' : '' }}"
+									aria-current="{{ loop.index == 1 ? 'true' : '' }}">
+
+								</button>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right-side">
+				<h2 class="cases-slider-heading cases-slider-heading--mobile">
+					{{ post.cases_slider_heading }}
+				</h2>
+				<div id="casesArrows" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="false">
+					<div class="carousel-inner">
+						{% for slide in post.meta('cases_for_slider') %}
+							<div class="carousel-item {{ loop.index == 1 ? 'active' : '' }}">
+								<img class="img-fluid arrow-image" src="{{ slide.right_side_large_arrow.url }}" />
+							</div>
+						{% endfor %}
+					</div>
+					<div class="carousel-indicators">
+						{% for slide in post.meta('cases_for_slider') %}
+							<button type="button"
+								data-bs-target="#casesArrows"
+								data-bs-slide-to="{{ loop.index0 }}"
+								aria-label="Slide {{ loop.index }}"
+								class="{{ loop.index == 1 ? 'active' : '' }}"
+								aria-current="{{ loop.index == 1 ? 'true' : '' }}">
+
+							</button>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="awards">
+		<div class="container container-700">
+			<h2 class="awards-title">
+				{{ post.awards_title }}
+			</h2>
+			<div class="awards-icons-wrapper">
+				<div class="column">
+					<div class="award-logo-img-wrapper">
+						<img class="img-fluid award-logo-img" src="{{ Image(post.meta('award_logo_1')).src }}" />
+					</div>
+					<p class="award-logo-text">
+						{{ post.award_logo_text_1 }}
+					</p>
+				</div>
+				<div class="column">
+					<div class="award-logo-img-wrapper">
+						<img class="img-fluid award-logo-img" src="{{ Image(post.meta('award_logo_2')).src }}" />
+					</div>
+					<p class="award-logo-text">
+						{{ post.award_logo_text_2 }}
+					</p>
+				</div>
+				<div class="column">
+					<div class="award-logo-img-wrapper">
+						<img class="img-fluid award-logo-img" src="{{ Image(post.meta('award_logo_3')).src }}" />
+					</div>
+					<p class="award-logo-text">
+						{{ post.award_logo_text_3 }}
+					</p>
+				</div>
+			</div>
+			<p class="awards-paragraph">
+				{{ post.awards_paragraph }}
+			</p>
+			<a href="{{ post.awards_link_url }}" class="awards-link">
+				{{ post.awards_link_text }} <i class="fa-regular fa-arrow-right view-link"></i>
+			</a>
+		</div>
+	</section>
+	<section id="articles-slick-slider" class="">
+		<div class="left-arrow">
+			<div class="awards-background-arrow-wrapper">
+				<img class="img-fluid awards-background-arrow"
+					src="{{ Image(post.meta('awards_section_background_arrow')).src }}" />
+			</div>
+		</div>
+		<div class="articles-wrapper container container-1088">
+			<h2 class="articles-section-title">
+				{{ post.articles_section_title }}
+			</h2>
+			<div class="articles-responsive">
+				{% for post in post.meta('articles') %}
+					<div class="single-post-wrapper">
+						<div class="post-image-wrapper">
+							<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" class="post-image" /></a>
+						</div>
+						<div class="post-text-wrapper">
+							<span class="post-categories">
+								{% for category in post.categories %}
+									{{ category }}{% if loop.length > 1 and loop.index < loop.length %},{% endif %}
+								{% endfor %}
+							</span>
+							<h4 class="single-post-title">
+								<a href="{{ post.link }}">
+									{{ (post.title|length) > 110 ? (post.title|slice(0, 110)) ~ '...' : post.title }}
+								</a>
+							</h4>
+							<p class="single-post-excerpt">
+								{% if post.post_excerpt_custom %}
+									{{ post.post_excerpt_custom }}
+									<i class="fa-regular fa-arrow-right view-link"></i>
+								{% else %}
+									{{
+										post.preview.length(14).force.read_more(
+											'<i class="fa-regular fa-arrow-right view-link"></i>'
+										)
+									}}
+								{% endif %}
+							</p>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	{% include 'cta-form.twig' %}
+	<!-- /content-wrapper -->
+{% endblock %}

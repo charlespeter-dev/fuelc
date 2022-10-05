@@ -1,0 +1,79 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<section class="gated-content">
+		<div class="py-5"></div>
+		<div class="container container-1088 breadcrumbs">
+			{{ post.breadcrumbs }}
+		</div>
+		<div class="py-3"></div>
+		<div class="container-post-wrapper">
+			<div class="container container-900">
+				<span class="content-type">{{ post.content_type }}</span>
+				<h1 class="content-title">
+					{{ post.content_title }}
+				</h1>
+				<div class="py-2 py-md-3"></div>
+				<div class="img-and-form-wrapper">
+					<div class="content-image">
+						<img class="img-fluid" src="{{ Image(post.meta('content_image')).src }}" />
+					</div>
+					<div class="content-form">
+						{{ post.gravity_form_shortcode|shortcodes }}
+					</div>
+				</div>
+				<div class="py-2 py-md-3"></div>
+				<div class="content-preview-text-wrapper">
+					{{ post.meta('content_preview_text') }}
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="py-2 py-md-3"></div>
+	<div class="recommended-posts-wrapper">
+		<section class="recommended-posts container container-1088">
+			<div class="recommended-posts-label">
+				{{ post.recommended_posts_label }}
+			</div>
+			<h2 class="recommended-posts-title">
+				{{ post.recommended_posts_title }}
+			</h2>
+			<div class="recommended-posts-row">
+				{% for post in post.meta('recommended_posts') %}
+					<div class="single-post-wrapper">
+						<div class="post-image-wrapper">
+							<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" class="post-image" /></a>
+							<div class="post-image-badge">
+								{% for category in post.categories %}
+									{{ category }}{% if loop.length > 1 and loop.index < loop.length %},{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+						<div class="post-text-wrapper">
+							<span class="post-categories">
+								{% for category in post.categories %}
+									{{ category }}{% if loop.length > 1 and loop.index < loop.length %},{% endif %}
+								{% endfor %}
+							</span>
+							<h1 class="single-post-title">
+								<a href="{{ post.link }}">
+									{{ (post.title|length) > 70 ? (post.title|slice(0, 70)) ~ '...' : post.title }}
+								</a>
+							</h1>
+							<p class="single-post-excerpt">
+								{% if post.post_excerpt_custom %}
+									{{ post.post_excerpt_custom }}
+								{% else %}
+									{{ post.preview.length(10).force.read_more('') }}
+								{% endif %}
+								<a href="{{ post.link }}" class="read-more">
+									<i class="fa-regular fa-arrow-right view-link"></i>
+								</a>
+							</p>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</section>
+	</div>
+{% endblock %}

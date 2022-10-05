@@ -1,0 +1,119 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	{% include 'product-hero.twig' %}
+	<div class="two-col-wrapper">
+		<div class="two-col-row">
+			{# style="background-image:url('{{ TimberImage(post.get_field('two_col_background_image')).src }}')" #}
+			<div class="image-side">
+				<img src="{{ Image(post.meta('two_col_background_image')).src }}"
+					alt="{{ Image(post.meta('two_col_background_image')).alt }}"
+					class="two-col-image" />
+			</div>
+			<div class="text-side">
+				<div class="py-5"></div>
+				<h2 class="two-col-heading">
+					{{ post.two_col_heading }}
+				</h2>
+				<p class="two-col-paragraph">
+					{{ post.two_col_paragraph }}
+				</p>
+				<div class="py-5"></div>
+			</div>
+		</div>
+	</div>
+	<section id="integrations">
+		<h2 class="integrations-heading text-center">
+			{{ post.integrations_heading }}
+		</h2>
+		<p class="integrations-paragraph text-center">
+			{{ post.integrations_paragraph }}
+		</p>
+		<div class="integrations-wrapper container container-1088">
+			{% for item in post.meta('integrations') %}
+				{% if loop.index < 19 %}
+					<div class="single-integration">
+						<img src="{{ item.logo.url }}" alt="{{ item.logo.alt }}" />
+						<span class="integration-description text-center">{{ item.text }}</span>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+		<div id="load-more-area" class="container container-1088 integrations-wrapper">
+			{% for item in post.meta('integrations') %}
+				{% if loop.index > 18 %}
+					<div class="single-integration">
+						<img src="{{ item.logo.url }}" alt="{{ item.logo.alt }}" />
+						<span class="integration-description text-center">{{ item.text }}</span>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+		<div class="text-center">
+			<button id="load-more-btn" class="text-center mr-auto ml-auto mt-5">
+				load more </br><i class="fa-regular fa-arrow-down view-link mt-3"></i>
+			</button>
+		</div>
+	</section>
+	<section id="data">
+		<div class="container container-1088 data-row-wrapper">
+			<div class="data-text-col">
+				<div class="py-5"></div>
+				<h3 class="data-heading">
+					{{ post.data_heading_1 }}
+				</h3>
+				<p class="data-paragraph">
+					{{ post.data_paragraph_1 }}
+				</p>
+				<div class="py-2 py-md-4 py-lg-5"></div>
+			</div>
+			<div class="data-image-col">
+				<img src="{{ Image(post.meta('data_image_1')).src }}" alt="" class="data-img-row-1" />
+			</div>
+		</div>
+		<div class="container container-1088 data-row-wrapper-2 my-3 my-lg-5">
+			<div class="data-image-col">
+				<img src="{{ Image(post.meta('data_image_2')).src }}" alt="" class="img-fluid" />
+			</div>
+			<div class="data-text-col data-text-col-2">
+				<div class="py-4 py-md-5"></div>
+				<h3 class="data-heading">
+					{{ post.data_heading_2 }}
+				</h3>
+				<p class="data-paragraph">
+					{{ post.data_paragraph_2 }}
+				</p>
+				<div class="py-5"></div>
+			</div>
+		</div>
+	</section>
+	<section id="research">
+		<div class="py-3"></div>
+		<div class="container container-1088 research-wrapper">
+			<div class="research-text">
+				<div class="py-2 py-md-4 py-lg-5"></div>
+				<h3 class="research-heading">
+					{{ post.research_heading }}
+				</h3>
+				<p class="research-paragraph">
+					{{ post.research_paragraph }}
+				</p>
+				<div class="button-wrapper">
+					<a href="{{ post.research_button_url }}" class="research-link main-btn">
+						{{ post.research_button_text }}
+					</a>
+				</div>
+				<div class="py-2 py-md-4 py-lg-5"></div>
+			</div>
+			<div class="research-image">
+				<img src="{{ Image(post.meta('research_image')).src }}" alt="" class="img-fluid" />
+			</div>
+		</div>
+		<div class="py-5"></div>
+	</section>
+	{% include 'cta-text-link.twig' %}
+	<div class="py-4"></div>
+	<div class="recommended-posts-wrapper">
+		{% include 'recommended-posts.twig' %}
+	</div>
+{% endblock %}

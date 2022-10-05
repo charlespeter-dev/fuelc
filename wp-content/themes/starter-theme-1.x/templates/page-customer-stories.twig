@@ -1,0 +1,292 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	{% include 'gray-background-arrows.twig' %}
+	<div class="container container-1088">
+		<div class="customer-stories-hero">
+			<div class="hero-copy-wrapper">
+				<div class="customer-stories-hero-bg">
+					<div class="customer-stories-hero-bg-cover"
+						style="background-image:url('{{ TimberImage(post.get_field('hero_background')).src }}')"></div>
+					<div class="customer-stories-hero-bg-arrow"
+						style="background-image:url('{{ Image(post.meta('hero_background_arrow')).src }}')"></div>
+				</div>
+				<div class="hero-copy-wrapper-inner">
+					<p class="hero-subheading">
+						{{ post.hero_subheading }}
+					</p>
+					<h1 class="hero-heading">
+						{{ post.hero_heading }}
+					</h1>
+					<p class="hero-paragraph">
+						{{ post.hero_paragraph }}
+					</p>
+				</div>
+			</div>
+			<div class="background-arrow">
+				<img src="{{ Image(post.meta('hero_background_arrow')).src }}"
+					alt="{{ Image(post.meta('hero_background_arrow')).alt }}"
+					class="hero-background-arrow" />
+			</div>
+		</div>
+		<div class="story-brands">
+			<h2 class="text-center story-brands-title mb-5">
+				{{ post.story_brands_title }}
+			</h2>
+			<div class="brands-wrapper">
+				{% for item in post.meta('story_brands_logos') %}
+					<div class="single-brand">
+						<img src="{{ item.image.url }}" alt="{{ item.image.alt }}" class="img-fluid brand-logo" />
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="my-5"></div>
+		<div class="brand-story">
+			<div class="brand-featured-image-wrapper">
+				<img src="{{ Image(post.meta('brand_featured_image_1')).src }}"
+					alt="{{ Image(post.meta('brand_featured_image_1')).alt }}"
+					class="w-100 h-100 brand-featured-image" />
+			</div>
+			<div class="brand-featured-text-wrapper">
+				<p class="brand-subheading">
+					{{ post.brand_subheading_1 }}
+				</p>
+				<h3 class="brand-heading">
+					{{ post.brand_heading_1 }}
+				</h3>
+				<p class="brand-paragraph">
+					{{ post.brand_paragraph_1 }}
+				</p>
+				{% if post.brand_button_url_1 %}
+					<a class="main-btn brand-btn" href="{{ post.brand_button_url_1 }}">{{ post.brand_button_text_1 }}</a>
+				{% endif %}
+				{% if post.testimonial_paragraph_1 %}
+					<div class="testimonial-wrapper">
+						<p class="testimonial-paragraph">
+							{{ post.testimonial_paragraph_1 }}
+						</p>
+						<div class="testimonial-person-wrapper">
+							<div class="testimonial-person-img">
+								<img src="{{ Image(post.meta('testimonial_person_image_1')).src }}"
+									alt="{{ Image(post.meta('testimonial_person_image_1')).alt }}"
+									class="img-fluid brand-featured-image" />
+							</div>
+							<div class="testimonial-person-text">
+								<p class="testimonial-person-name">
+									{{ post.testimonial_person_name_1 }}
+								</p>
+								<p class="testimonial-person-title">
+									{{ post.testimonial_person_title_1 }}
+								</p>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+
+		<div class="brand-story">
+			<div class="brand-featured-text-wrapper">
+				<p class="brand-subheading">
+					{{ post.brand_subheading_2 }}
+				</p>
+				<h3 class="brand-heading">
+					{{ post.brand_heading_2 }}
+				</h3>
+				<p class="brand-paragraph">
+					{{ post.brand_paragraph_2 }}
+				</p>
+				{% if post.brand_button_url_2 %}
+					<a class="main-btn brand-btn" href="{{ post.brand_button_url_2 }}">{{ post.brand_button_text_2 }}</a>
+				{% endif %}
+				{% if post.testimonial_paragraph_2 %}
+					<div class="testimonial-wrapper">
+						<p class="testimonial-paragraph">
+							{{ post.testimonial_paragraph_2 }}
+						</p>
+						<div class="testimonial-person-wrapper">
+							<div class="testimonial-person-img">
+								<img src="{{ Image(post.meta('testimonial_person_image_2')).src }}"
+									alt="{{ Image(post.meta('testimonial_person_image_2')).alt }}"
+									class="img-fluid brand-featured-image" />
+							</div>
+							<div class="testimonial-person-text">
+								<p class="testimonial-person-name">
+									{{ post.testimonial_person_name_2 }}
+								</p>
+								<p class="testimonial-person-title">
+									{{ post.testimonial_person_title_2 }}
+								</p>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+			<div class="brand-featured-image-wrapper">
+				<img src="{{ Image(post.meta('brand_featured_image_2')).src }}"
+					alt="{{ Image(post.meta('brand_featured_image_2')).alt }}"
+					class="w-100 h-100 brand-featured-image" />
+			</div>
+		</div>
+
+		<div class="brand-story">
+			<div class="brand-featured-image-wrapper">
+				<img src="{{ Image(post.meta('brand_featured_image_3')).src }}"
+					alt="{{ Image(post.meta('brand_featured_image_3')).alt }}"
+					class="w-100 h-100 brand-featured-image" />
+			</div>
+			<div class="brand-featured-text-wrapper">
+				<p class="brand-subheading">
+					{{ post.brand_subheading_3 }}
+				</p>
+				<h3 class="brand-heading">
+					{{ post.brand_heading_3 }}
+				</h3>
+				<p class="brand-paragraph">
+					{{ post.brand_paragraph_3 }}
+				</p>
+				{% if post.brand_button_url_3 %}
+					<a class="main-btn brand-btn" href="{{ post.brand_button_url_3 }}">{{ post.brand_button_text_3 }}</a>
+				{% endif %}
+				{% if post.testimonial_paragraph_3 %}
+					<div class="testimonial-wrapper">
+						<p class="testimonial-paragraph">
+							{{ post.testimonial_paragraph_3 }}
+						</p>
+						<div class="testimonial-person-wrapper">
+							<div class="testimonial-person-img">
+								<img src="{{ Image(post.meta('testimonial_person_image_3')).src }}"
+									alt="{{ Image(post.meta('testimonial_person_image_3')).alt }}"
+									class="img-fluid brand-featured-image" />
+							</div>
+							<div class="testimonial-person-text">
+								<p class="testimonial-person-name">
+									{{ post.testimonial_person_name_3 }}
+								</p>
+								<p class="testimonial-person-title">
+									{{ post.testimonial_person_title_3 }}
+								</p>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+
+		<div class="brand-story">
+			<div class="brand-featured-text-wrapper">
+				<p class="brand-subheading">
+					{{ post.brand_subheading_4 }}
+				</p>
+				<h3 class="brand-heading">
+					{{ post.brand_heading_4 }}
+				</h3>
+				<p class="brand-paragraph">
+					{{ post.brand_paragraph_4 }}
+				</p>
+				{% if post.brand_button_url_4 %}
+					<a class="main-btn brand-btn" href="{{ post.brand_button_url_4 }}">{{ post.brand_button_text_4 }}</a>
+				{% endif %}
+				{% if post.testimonial_paragraph_4 %}
+					<div class="testimonial-wrapper">
+						<p class="testimonial-paragraph">
+							{{ post.testimonial_paragraph_4 }}
+						</p>
+						<div class="testimonial-person-wrapper">
+							<div class="testimonial-person-img">
+								<img src="{{ Image(post.meta('testimonial_person_image_4')).src }}"
+									alt="{{ Image(post.meta('testimonial_person_image_4')).alt }}"
+									class="img-fluid brand-featured-image" />
+							</div>
+							<div class="testimonial-person-text">
+								<p class="testimonial-person-name">
+									{{ post.testimonial_person_name_4 }}
+								</p>
+								<p class="testimonial-person-title">
+									{{ post.testimonial_person_title_4 }}
+								</p>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+			<div class="brand-featured-image-wrapper">
+				<img src="{{ Image(post.meta('brand_featured_image_4')).src }}"
+					alt="{{ Image(post.meta('brand_featured_image_4')).alt }}"
+					class="w-100 h-100 brand-featured-image" />
+			</div>
+		</div>
+
+		<div class="brand-story">
+			<div class="brand-featured-image-wrapper">
+				<img src="{{ Image(post.meta('brand_featured_image_5')).src }}"
+					alt="{{ Image(post.meta('brand_featured_image_5')).alt }}"
+					class="w-100 h-100 brand-featured-image" />
+			</div>
+			<div class="brand-featured-text-wrapper">
+				<p class="brand-subheading">
+					{{ post.brand_subheading_5 }}
+				</p>
+				<h3 class="brand-heading">
+					{{ post.brand_heading_5 }}
+				</h3>
+				<p class="brand-paragraph">
+					{{ post.brand_paragraph_5 }}
+				</p>
+				{% if post.brand_button_url_5 %}
+					<a class="main-btn brand-btn" href="{{ post.brand_button_url_5 }}">{{ post.brand_button_text_5 }}</a>
+				{% endif %}
+				{% if post.testimonial_paragraph_5 %}
+					<div class="testimonial-wrapper">
+						<p class="testimonial-paragraph">
+							{{ post.testimonial_paragraph_5 }}
+						</p>
+						<div class="testimonial-person-wrapper">
+							<div class="testimonial-person-img">
+								<img src="{{ Image(post.meta('testimonial_person_image_5')).src }}"
+									alt="{{ Image(post.meta('testimonial_person_image_5')).alt }}"
+									class="img-fluid brand-featured-image" />
+							</div>
+							<div class="testimonial-person-text">
+								<p class="testimonial-person-name">
+									{{ post.testimonial_person_name_5 }}
+								</p>
+								<p class="testimonial-person-title">
+									{{ post.testimonial_person_title_5 }}
+								</p>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div id="testimonial-slider">
+		<div class="container container-1088">
+			<h2 class="text-center area-heading">
+				{{ post.testimonial_slider_heading }}
+			</h2>
+
+			<div class="slider-text-wrapper">
+				{% for item in post.meta('slider_testimonials') %}
+					<div class="single-testimonial">
+						<p class="text-center bold-statement">
+							{{ item.bold_statement }}
+						</p>
+						<p class="text-center regular-statment">
+							{{ item.regular_statement }}
+						</p>
+						<img src="{{ item.stars.url }}" alt="{{ item.stars.alt }}" class="stars d-block mr-auto ml-auto" />
+						<p class="text-center author">
+							{{ item.author }}
+						</p>
+						<p class="text-center author-title">
+							{{ item.author_title }}
+						</p>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

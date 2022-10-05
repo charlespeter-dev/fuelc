@@ -1,0 +1,33 @@
+<div class="text-arrow left-text-right-arrow">
+	<div class="image-side d-md-none">
+		<img src="{{ layout.arrow.url }}" alt="{{ layout.arrow.alt }}" class="arrow arrow-mobile" />
+	</div>
+	<div class="text-side">
+		<h3 class="heading">
+			{{ layout.heading }}
+		</h3>
+		<p class="paragraph">
+			{{ layout.paragraph }}
+		</p>
+		<div class="testimonial-wrapper">
+			<div class="img-wrapper">
+				<img class="img-fluid testimonial-image"
+					src="{{ layout.testimonial_image.url }}"
+					alt="{{ layout.testimonial_image.alt }}" />
+			</div>
+			<div class="text-wrapper">
+				<p class="testimonial-paragraph">
+					{{ layout.testimonial_paragraph }}
+				</p>
+				<p class="testimonial-link">
+					<a href="{{ layout.link_url }}">
+						{{ layout.link_text }} <i class="fa-regular fa-arrow-right view-link"></i>
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="d-none d-md-block image-side">
+		<img src="{{ layout.arrow.url }}" alt="{{ layout.arrow.alt }}" class="arrow arrow-tablet" />
+	</div>
+</div>

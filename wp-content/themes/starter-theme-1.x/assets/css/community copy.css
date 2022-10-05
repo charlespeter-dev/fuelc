@@ -1,0 +1,269 @@
+.fc-orange {
+  color: #e85948;
+}
+
+.fc-orange {
+  color: #e85948;
+}
+
+.product-hero-wrapper {
+  min-height: 675px;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1px;
+}
+
+.left-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 75px;
+}
+
+.right-hero {
+  display: flex;
+  align-items: center;
+}
+
+.background-arrow {
+  width: 1350px;
+  position: relative;
+}
+
+.hero-background-image {
+  position: absolute;
+  bottom: 5px;
+  left: -200px;
+  z-index: -10;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  line-height: 18px;
+  color: #e85948;
+}
+
+.hero-title {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.hero-paragraph {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 26px;
+}
+
+.fc-orange {
+  color: #e85948;
+}
+
+@media (min-width: 574px) {
+  .single-post-pagination {
+    display: grid;
+    grid-template-columns: 250px 1px 250px;
+    justify-content: space-between;
+  }
+}
+.single-post-pagination a {
+  color: #e85948;
+}
+
+.divider-line {
+  height: 100%;
+  border-left: 1px solid rgba(73, 73, 75, 0.2);
+}
+
+.single-post-pagination {
+  position: relative;
+}
+
+.previous-post-link::before {
+  content: url("../images/left-arrow-purple.svg");
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next-post-link::before {
+  content: url("../images/arrow-right-orange.svg");
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .recommended-posts-row {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.recommended-posts-label {
+  letter-spacing: 2px;
+  font-size: 12px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.recommended-posts-title {
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 28px;
+}
+
+/* Individual Post block - Found on Post Page */
+.post-categories {
+  font-family: "Greycliff Light", "Open Sans", sans-serif;
+  font-size: 13px;
+  color: #49494b;
+  display: block;
+  margin-top: -4px;
+  margin-bottom: 2px;
+  margin-top: 0;
+}
+
+.post-text-wrapper {
+  position: relative;
+}
+
+.post-image-wrapper img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.single-post-title {
+  font-family: "Greycliff Bold", "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 17px;
+  margin-bottom: 5px;
+  color: #e85948;
+}
+
+.single-post-excerpt {
+  font-size: 15px;
+  font-family: "Greycliff Medium", "Open Sans", sans-serif;
+  line-height: 16px;
+  margin-bottom: 0;
+}
+
+.category-filters {
+  order: 1;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category-results {
+  display: grid;
+  padding-bottom: 60px;
+  grid-gap: 40px;
+  order: 2;
+}
+
+.category-results a,
+.recommended-posts a {
+  color: #e85948;
+}
+
+.category-results .read-more,
+.recommended-posts .read-more {
+  display: inline;
+  color: #e85948;
+}
+
+.filter-by-title {
+  padding-bottom: 12px;
+}
+
+.results-section-title {
+  display: none;
+  padding-bottom: 20px;
+  margin-top: unset;
+}
+
+.post-image-wrapper {
+  position: relative;
+}
+
+.post-image-badge {
+  position: absolute;
+  bottom: 7px;
+  left: 7px;
+  background-color: #000000;
+  color: white;
+  border-radius: 6px;
+  font-size: 9px;
+  border: 1px solid white;
+  padding: 4px 6px;
+  letter-spacing: 1px;
+  font-family: "Greycliff Bold", "Open Sans", sans-serif;
+  line-height: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .category-post-list-grid {
+    grid-template-columns: 1fr 250px;
+  }
+
+  .category-results {
+    order: 1;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px 20px;
+  }
+
+  .category-filters {
+    order: 2;
+  }
+
+  .results-section-title {
+    display: block;
+  }
+
+  .post-categories {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1088px) {
+  .category-post-list-grid {
+    grid-gap: 20px;
+  }
+
+  .category-results {
+    grid-gap: 40px 30px;
+  }
+
+  .single-post-wrapper {
+    display: grid;
+    grid-template-columns: 135px 1fr;
+  }
+
+  .post-image-wrapper {
+    max-height: 140px;
+  }
+
+  .post-text-wrapper {
+    padding-left: 22px;
+  }
+
+  .post-image {
+    width: 135px;
+    height: 140px;
+    object-fit: cover;
+  }
+}
+.product-hero-wrapper {
+  grid-template-columns: 1fr 1fr 1px;
+  grid-gap: 75px;
+}
+
+.hero-background-image {
+  left: -35%;
+}
+
+.left-hero {
+  padding-left: 25px;
+}

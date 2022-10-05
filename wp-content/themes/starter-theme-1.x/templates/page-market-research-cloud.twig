@@ -1,0 +1,120 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	{% include 'product-hero.twig' %}
+	<section id="road-map">
+		<h3 class="title text-center mb-4 pb-3">
+			{{ post.road_map_heading }}
+		</h3>
+		<div class="container container-1088">
+			<img src="{{ Image(post.meta('road_map_image')).src }}"
+				alt="{{ Image(post.meta('road_map_image')).alt }}"
+				class="img-fluid screen-image" />
+		</div>
+	</section>
+	<section id="product-community" class="product-section">
+		<div class="container container-1088 product-row">
+			<div class="text-side">
+				<div class="py-4"></div>
+				<span class="subtitle">{{ post.community_subtitle }}</span>
+				<h2 class="product-title">
+					{{ post.community_title }}
+				</h2>
+				<p class="product-paragraph">
+					{{ post.community_paragraph }}
+				</p>
+				<ul class="product-ul">
+					{% for item in post.meta('community_list_items') %}
+						<li>{{ item.text }}</li>
+					{% endfor %}
+				</ul>
+				<a class="main-btn product-btn" href="{{ post.community_button_url }}">{{ post.community_button_text }}</a>
+				<div class="py-4"></div>
+			</div>
+			<div class="image-side">
+				<img src="{{ Image(post.meta('community_image')).src }}"
+					alt="{{ Image(post.meta('community_image')).alt }}"
+					class="img-fluid screen-image" />
+			</div>
+		</div>
+	</section>
+	<section id="product-ignition" class="product-section">
+		<div class="container container-1088 product-row">
+			<div class="image-side">
+				<img src="{{ Image(post.meta('ignition_image')).src }}"
+					alt="{{ Image(post.meta('ignition_image')).alt }}"
+					class="img-fluid screen-image" />
+			</div>
+			<div class="text-side">
+				<div class="py-4"></div>
+				<span class="subtitle">{{ post.ignition_subtitle }}</span>
+				<h2 class="product-title">
+					{{ post.ignition_title }}
+				</h2>
+				<p class="product-paragraph">
+					{{ post.ignition_paragraph }}
+				</p>
+				<ul class="product-ul">
+					{% for item in post.meta('ignition_list_items') %}
+						<li>{{ item.text }}</li>
+					{% endfor %}
+				</ul>
+				<a class="main-btn product-btn" href="{{ post.ignition_button_url }}">{{ post.ignition_button_text }}</a>
+				<div class="py-4"></div>
+			</div>
+		</div>
+	</section>
+	<section id="product-live" class="product-section">
+		<div class="container container-1088 product-row">
+			<div class="text-side">
+				<div class="py-4"></div>
+				<span class="subtitle">{{ post.live_subtitle }}</span>
+				<h2 class="product-title">
+					{{ post.live_title }}
+				</h2>
+				<p class="product-paragraph">
+					{{ post.live_paragraph }}
+				</p>
+				<ul class="product-ul">
+					{% for item in post.meta('live_list_items') %}
+						<li>{{ item.text }}</li>
+					{% endfor %}
+				</ul>
+				<a class="main-btn product-btn" href="{{ post.live_button_url }}">{{ post.live_button_text }}</a>
+				<div class="py-4"></div>
+			</div>
+			<div class="image-side">
+				<img src="{{ Image(post.meta('live_image')).src }}"
+					alt="{{ Image(post.meta('live_image')).alt }}"
+					class="img-fluid screen-image" />
+			</div>
+		</div>
+	</section>
+	<section id="product-exchange" class="product-section">
+		<div class="container container-1088 product-row">
+			<div class="image-side">
+				<img src="{{ Image(post.meta('exchange_image')).src }}"
+					alt="{{ Image(post.meta('exchange_image')).alt }}"
+					class="img-fluid two-col-image" />
+			</div>
+			<div class="text-side">
+				<div class="py-4"></div>
+				<span class="subtitle">{{ post.exchange_subtitle }}</span>
+				<h2 class="product-title">
+					{{ post.exchange_title }}
+				</h2>
+				<p class="product-paragraph">
+					{{ post.exchange_paragraph }}
+				</p>
+				<ul class="product-ul">
+					{% for item in post.meta('exchange_list_items') %}
+						<li>{{ item.text }}</li>
+					{% endfor %}
+				</ul>
+				<a class="main-btn product-btn" href="{{ post.exchange_button_url }}">{{ post.exchange_button_text }}</a>
+				<div class="py-4"></div>
+			</div>
+		</div>
+	</section>
+	{% include 'cta-text-link.twig' %}
+{% endblock %}

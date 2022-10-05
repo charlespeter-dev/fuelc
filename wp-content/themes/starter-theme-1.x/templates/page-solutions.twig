@@ -1,0 +1,125 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<div class="container container-1088">
+		<div class="solutions-hero">
+			<div class="hero-copy-wrapper"
+				style="background-image:url('{{ TimberImage(post.get_field('hero_background')).src }}')">
+				<div class="hero-copy-wrapper-inner d-none d-md-block">
+					<p class="hero-subheading">
+						{{ post.hero_subheading }}
+					</p>
+					<h1 class="hero-heading">
+						{{ post.hero_heading }}
+					</h1>
+					<p class="hero-paragraph">
+						{{ post.hero_paragraph }}
+					</p>
+					<a class="main-btn brand-btn" href="{{ post.hero_button_url }}">{{ post.hero_button_text }}</a>
+				</div>
+			</div>
+			<div class="hero-mobile-text mt-4 d-md-none">
+				<p class="hero-subheading fc-orange">
+					{{ post.hero_subheading }}
+				</p>
+				<h1 class="hero-heading">
+					{{ post.hero_heading }}
+				</h1>
+				<p class="hero-paragraph">
+					{{ post.hero_paragraph }}
+				</p>
+				<a class="main-btn brand-btn" href="{{ post.hero_button_url }}">{{ post.hero_button_text }}</a>
+			</div>
+		</div>
+		<div class="area-2">
+			<h2>
+				{{ post.area_2_heading }}
+			</h2>
+			<div class="row-wrapper-1">
+				<div class="single-column object-fit-cover">
+					<a href="{{ post.solution_link_url_1 }}" class="">
+						<img src="{{ Image(post.meta('solution_image_1')).src }}"
+							alt="{{ Image(post.meta('solution_image_1')).alt }}"
+							class="img-fluid solution-image" />
+					</a>
+					<h3 class="solution-heading">
+						{{ post.solution_heading_1 }}
+					</h3>
+					<p class="solution-paragraph">
+						{{ post.solution_paragraph_1 }}
+					</p>
+					<a href="{{ post.solution_link_url_1 }}" class="solution-link">
+						{{ post.solution_link_text_1 }} <i class="fa-regular fa-arrow-right view-link"></i>
+					</a>
+				</div>
+				<div class="single-column object-fit-cover">
+					<a href="{{ post.solution_link_url_2 }}" class="">
+						<img src="{{ Image(post.meta('solution_image_2')).src }}"
+							alt="{{ Image(post.meta('solution_image_2')).alt }}"
+							class="img-fluid solution-image" />
+					</a>
+					<h3 class="solution-heading">
+						{{ post.solution_heading_2 }}
+					</h3>
+					<p class="solution-paragraph">
+						{{ post.solution_paragraph_2 }}
+					</p>
+					<a href="{{ post.solution_link_url_2 }}" class="solution-link">
+						{{ post.solution_link_text_2 }} <i class="fa-regular fa-arrow-right view-link"></i>
+					</a>
+				</div>
+				<div class="single-column object-fit-cover">
+					<a href="{{ post.solution_link_url_3 }}" class="">
+						<img src="{{ Image(post.meta('solution_image_3')).src }}"
+							alt="{{ Image(post.meta('solution_image_3')).alt }}"
+							class="img-fluid solution-image" />
+					</a>
+					<h3 class="solution-heading">
+						{{ post.solution_heading_3 }}
+					</h3>
+					<p class="solution-paragraph">
+						{{ post.solution_paragraph_3 }}
+					</p>
+					<a href="{{ post.solution_link_url_3 }}" class="solution-link">
+						{{ post.solution_link_text_3 }} <i class="fa-regular fa-arrow-right view-link"></i>
+					</a>
+				</div>
+			</div>
+			<div class="row-wrapper-2">
+				<div class="single-column object-fit-cover">
+					<a href="{{ post.solution_link_url_4 }}" class="">
+						<img src="{{ Image(post.meta('solution_image_4')).src }}"
+							alt="{{ Image(post.meta('solution_image_4')).alt }}"
+							class="img-fluid solution-image" />
+					</a>
+					<h3 class="solution-heading">
+						{{ post.solution_heading_4 }}
+					</h3>
+					<p class="solution-paragraph">
+						{{ post.solution_paragraph_4 }}
+					</p>
+					<a href="{{ post.solution_link_url_4 }}" class="solution-link">
+						{{ post.solution_link_text_4 }} <i class="fa-regular fa-arrow-right view-link"></i>
+					</a>
+				</div>
+				<div class="single-column object-fit-cover">
+					<a href="{{ post.solution_link_url_5 }}" class="">
+						<img src="{{ Image(post.meta('solution_image_5')).src }}"
+							alt="{{ Image(post.meta('solution_image_5')).alt }}"
+							class="img-fluid solution-image" />
+					</a>
+					<h3 class="solution-heading">
+						{{ post.solution_heading_5 }}
+					</h3>
+					<p class="solution-paragraph">
+						{{ post.solution_paragraph_5 }}
+					</p>
+					<a href="{{ post.solution_link_url_5 }}" class="solution-link">
+						{{ post.solution_link_text_5 }} <i class="fa-regular fa-arrow-right view-link"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include 'solutions_cta_form.twig' %}
+{% endblock %}

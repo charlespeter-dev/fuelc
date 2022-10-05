@@ -1,0 +1,304 @@
+@charset "UTF-8";
+.fc-orange {
+  color: #e85948;
+}
+
+.fc-orange {
+  color: #e85948;
+}
+
+.product-hero-wrapper {
+  min-height: 675px;
+  display: grid;
+  grid-template-columns: 2fr 3fr 1px;
+}
+
+.left-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 75px;
+}
+
+.right-hero {
+  display: flex;
+  align-items: center;
+}
+
+.background-arrow {
+  width: 1350px;
+  position: relative;
+}
+
+.hero-background-image {
+  position: absolute;
+  bottom: 5px;
+  left: -200px;
+  z-index: -10;
+}
+
+.hero-subtitle {
+  font-size: 14px;
+  line-height: 18px;
+  color: #e85948;
+}
+
+.hero-title {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.hero-paragraph {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 26px;
+}
+
+#cta-text-link {
+  background: #cb198a;
+  background: -moz-linear-gradient(63deg, #cb198a 0%, #613f97 100%);
+  background: -webkit-linear-gradient(63deg, #cb198a 0%, #613f97 100%);
+  background: linear-gradient(63deg, #cb198a 0%, #613f97 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cb198a",endColorstr="#613f97",GradientType=1);
+}
+
+.cta-text-link-wrapper {
+  text-align: center;
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+.cta-heading {
+  color: white;
+  text-align: center;
+  max-width: 450px;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 auto;
+}
+
+.cta-paragraph {
+  color: white;
+  max-width: 515px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.cta-button {
+  margin-top: 35px;
+}
+
+@media (max-width: 1199px) {
+  .product-hero-wrapper {
+    min-height: auto;
+    padding: 142px 12px 60px;
+  }
+}
+@media (max-width: 767px) {
+  .product-hero-wrapper {
+    padding: 114px 16px 88px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .left-hero {
+    padding-left: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .left-hero {
+    order: 1;
+    margin-top: 48px;
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .background-arrow {
+    width: 727px;
+  }
+}
+@media (max-width: 767px) {
+  .background-arrow {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .hero-background-image {
+    width: 100%;
+    bottom: -30px;
+    left: -140px;
+  }
+}
+@media (max-width: 767px) {
+  .hero-background-image {
+    bottom: 100px;
+    left: calc(100% - 102px);
+    width: 560px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-background-image {
+    bottom: -24px;
+  }
+}
+
+#road-map {
+  padding: 0 16px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #road-map {
+    padding: 0 16px 40px;
+  }
+}
+#road-map .title {
+  padding-bottom: 0 !important;
+}
+
+.product-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+}
+@media (max-width: 1199px) {
+  .product-row {
+    grid-gap: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .product-row {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1199px) {
+  .product-row .py-4 {
+    display: none;
+  }
+}
+
+.image-side {
+  display: flex;
+  align-items: center;
+}
+
+.screen-image {
+  width: 100%;
+}
+
+.product-section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+@media (max-width: 767px) {
+  .product-section:nth-child(odd) .image-side {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.subtitle {
+  color: #e85948;
+  font-size: 12px;
+  line-height: 1;
+  position: relative;
+  bottom: -2px;
+}
+
+.product-title {
+  font-size: 24px;
+  line-height: 26px;
+}
+@media (max-width: 1199px) {
+  .product-title {
+    font-size: 20px;
+  }
+}
+
+.product-paragraph {
+  font-size: 16px;
+  line-height: 26px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 1199px) {
+  .product-paragraph {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.product-ul {
+  list-style: none;
+  /* Remove default bullets */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.product-ul li {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 18px;
+}
+@media (max-width: 1199px) {
+  .product-ul li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.product-ul li::before {
+  content: "■";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #e85948;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+}
+
+.product-btn {
+  margin-top: 10px;
+}
+
+.text-side {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+@media (max-width: 1199px) {
+  .text-side {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .text-side {
+    padding: 0 12px;
+  }
+}
+
+.cta-heading {
+  max-width: 610px !important;
+}
+
+#cta-text-link {
+  margin-bottom: 24px;
+  padding: 0 56px;
+}
+@media (max-width: 767px) {
+  #cta-text-link {
+    padding: 0 3px;
+  }
+}
+#cta-text-link .cta-text-link-wrapper {
+  padding: 62px 12px 82px;
+}

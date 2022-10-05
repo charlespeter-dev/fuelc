@@ -1,0 +1,253 @@
+.fc-orange {
+  color: #e85948;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.main > .container-1088 {
+  max-width: 1128px !important;
+  padding: 0 32px;
+}
+@media (max-width: 767px) {
+  .main > .container-1088 {
+    padding: 0 16px;
+  }
+}
+
+.solutions-hero {
+  min-height: 625px;
+  padding-top: 85px;
+}
+@media (max-width: 991px) {
+  .solutions-hero {
+    min-height: auto;
+    margin-bottom: 56px;
+  }
+}
+
+.hero-copy-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 90px;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  min-height: 508px;
+}
+@media (max-width: 991px) {
+  .hero-copy-wrapper {
+    align-items: flex-start;
+    min-height: 328px;
+    padding-top: 32px;
+    padding-left: 24px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-copy-wrapper {
+    min-height: 160px;
+  }
+}
+.hero-copy-wrapper .hero-subheading,
+.hero-copy-wrapper .hero-heading,
+.hero-copy-wrapper .hero-paragraph {
+  color: white;
+}
+
+.hero-copy-wrapper-inner {
+  max-width: 440px;
+}
+
+.hero-heading {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+
+.hero-subheading {
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: "Greycliff Light", "Open Sans", sans-serif;
+  letter-spacing: 1px;
+}
+
+.hero-paragraph {
+  font-size: 18px;
+  font-family: "Greycliff Light", "Open Sans", sans-serif;
+  margin-bottom: 25px;
+}
+@media (max-width: 991px) {
+  .hero-paragraph {
+    max-width: 364px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .hero-paragraph {
+    font-size: 16px;
+  }
+}
+
+.area-2 p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 18px;
+}
+.area-2 a {
+  color: #e85948;
+}
+@media (max-width: 991px) {
+  .area-2 h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+@media (max-width: 767px) {
+  .area-2 h2 {
+    margin-bottom: 15px;
+  }
+}
+
+.solution-heading {
+  margin: 20px 0;
+}
+@media (max-width: 767px) {
+  .solution-heading {
+    margin: 10px 0;
+  }
+}
+
+.solution-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.row-wrapper-1,
+.row-wrapper-2 {
+  display: grid;
+  grid-gap: 50px;
+}
+
+.row-wrapper-2 {
+  margin-top: 50px;
+}
+
+#cta-form {
+  margin-top: 100px;
+  padding: 0 12px;
+  background: linear-gradient(#e6e6e6, #ffffff);
+}
+@media (max-width: 991px) {
+  #cta-form {
+    padding: 0 4px;
+    margin-top: 52px;
+  }
+}
+#cta-form .left-area-text {
+  padding-right: 90px;
+}
+@media (max-width: 991px) {
+  #cta-form .left-area-text {
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  #cta-form .left-area-text p {
+    margin-bottom: 37px;
+  }
+}
+#cta-form .content-form input[type=submit] {
+  width: 227px;
+  padding-bottom: 18px !important;
+}
+@media (max-width: 991px) {
+  #cta-form .py-5 {
+    padding: 28px 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  #cta-form .py-5 {
+    padding: 24px 0 !important;
+  }
+}
+@media (max-width: 991px) {
+  #cta-form .py-4 {
+    padding: 5px 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  #cta-form .mb-5 {
+    margin-bottom: 20px !important;
+  }
+}
+@media (max-width: 767px) {
+  #cta-form hr {
+    display: none;
+  }
+}
+#cta-form .content-form {
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media (min-width: 992px) {
+  #cta-form .cta-form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+}
+@media (max-width: 991px) {
+  #cta-form .cta-form-wrapper {
+    max-width: 560px !important;
+  }
+}
+#cta-form .gform_footer {
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .row-wrapper-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+  }
+
+  .row-wrapper-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .solutions-hero {
+    margin-bottom: 75px;
+    padding-top: 125px;
+  }
+
+  .row-wrapper-1,
+.row-wrapper-2 {
+    margin-top: 50px;
+  }
+  .row-wrapper-1 img,
+.row-wrapper-2 img {
+    height: 325px;
+    object-fit: cover;
+  }
+
+  .row-wrapper-2 {
+    margin-top: 50px;
+  }
+}
+.view-link {
+  margin-left: 15px;
+}

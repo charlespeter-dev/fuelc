@@ -1,0 +1,10 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+	<div class="container container-1088 wrapper container--solutions">
+		{% for layout in post.get_field('layouts') %}
+			{% include 'solutions-layouts/' ~ layout.acf_fc_layout ~ '.twig' %}
+		{% endfor %}
+	</div>
+	{% include 'solutions_cta_form.twig' %}
+{% endblock %}

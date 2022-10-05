@@ -1,0 +1,175 @@
+.fc-orange {
+  color: #e85948;
+}
+
+@font-face {
+  font-family: "Greycliff";
+  src: url(../fonts/GreycliffCF-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Greycliff Light";
+  src: url(../fonts/GreycliffCF-Light.otf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Greycliff Medium";
+  src: url(../fonts/GreycliffCF-Medium.otf);
+  font-weight: medium;
+}
+@font-face {
+  font-family: "Greycliff Bold";
+  src: url(../fonts/GreycliffCF-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Greycliff Demi Bold";
+  src: url(../fonts/GreycliffCF-DemiBold.otf);
+}
+h1 {
+  font-family: "Greycliff Medium", "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 40.74px;
+  line-height: 49px;
+  color: #000000;
+}
+
+h2 {
+  font-family: "Greycliff Medium", "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: #49494b;
+}
+
+h3 {
+  font-family: "Greycliff Medium", "Open Sans", sans-serif;
+  font-size: 24px;
+}
+
+h4 {
+  font-family: "Greycliff Medium", "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 18px !important;
+  line-height: 26px;
+}
+
+p {
+  font-family: "Greycliff Medium", "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #49494b;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #613f97 !important;
+}
+
+textarea:focus,
+input:focus {
+  outline: none !important;
+}
+
+.text-light {
+  color: white;
+}
+
+.text-primary {
+  color: #e85948 !important;
+}
+
+.main-btn,
+.search-filter-reset,
+.fc-main-button a,
+.content-form input[type=submit] {
+  border: #e85948;
+  background-color: #e85948 !important;
+  min-width: 151px;
+  padding-bottom: 16px !important;
+  padding-top: 14px !important;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 4px !important;
+  justify-self: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  display: inline-block;
+  font-family: "Greycliff", "Open Sans", sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: all 1s;
+}
+
+.main-btn:hover,
+.search-filter-reset:hover,
+.fc-main-button a:hover {
+  background-color: #613f97 !important;
+  color: white !important;
+  transition: all 1s;
+}
+
+.main-link {
+  font-family: "Greycliff", "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: left;
+  color: #e85948;
+  text-decoration: none !important;
+}
+.main-link i {
+  margin-left: 15px;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  color: #e85948;
+}
+
+.main-link:hover {
+  transition: 0.4s;
+  color: #e85948;
+  text-decoration: underline !important;
+}
+
+.main-link::after {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 500;
+  content: "\f061";
+  color: red;
+  margin-left: 10px;
+}
+
+.main-btn-white {
+  border: white;
+  background-color: white;
+  width: 151px;
+  height: 40px;
+  border-radius: 4px;
+  justify-self: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  display: inline-block;
+  font-family: "Greycliff", "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  padding-top: 8px;
+  text-align: center !important;
+  color: #613f97 !important;
+  text-decoration: none !important;
+}
+
+.main-btn-white:hover {
+  transition: 0.4s;
+  background-color: #613f97 !important;
+  border: white 1px solid !important;
+  color: white !important;
+}

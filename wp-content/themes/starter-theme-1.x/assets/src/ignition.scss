@@ -1,0 +1,256 @@
+@import 'variables.scss';
+@import 'product-hero.scss';
+@import 'recommended-posts.scss';
+@import 'two-col-gray.scss';
+
+main h2 {
+	font-size: 28px !important;
+	line-height: 32px !important;
+}
+
+.product-hero-wrapper {
+	grid-template-columns: 4fr 5fr 1px;
+	@media (max-width: 1199px) {
+		min-height: auto;
+		padding: 142px 12px 60px;
+	}
+	@media (max-width: 767px) {
+		padding: 114px 16px 24px;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.left-hero {
+	@media (min-width: 768px) and (max-width: 1199px) {
+		padding-left: 24px;
+	}
+	@media (max-width: 767px) {
+		order: 1;
+		margin-top: 12px;
+		padding: 0 32px;
+	}
+}
+
+.two-col-wrapper {
+	h2 {
+		@media (max-width: 1199px) {
+			margin-bottom: 24px;
+			font-size: 28px;
+			line-height: 32px;
+		}
+	}
+}
+
+.two-col-row {
+	grid-template-columns: 5fr 5fr;
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+	}
+}
+.image-side {
+	@media (max-width: 767px) {
+		&:before {
+			content: '';
+			display: block;
+			padding-bottom: 100%;
+		}
+	}
+}
+.two-col-image {
+	object-position: right center;
+	@media (max-width: 767px) {
+		top: 0;
+		left: 0;
+	}
+}
+.text-side {
+	padding-left: 60px;
+	@media (max-width: 1199px) {
+		padding: 0 48px;
+	}
+}
+.area-paragraph {
+	max-width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 70px;
+}
+// Slick Slider
+#area-3 {
+	padding: 75px 36px;
+	@media (max-width: 767px) {
+		padding: 50px 36px;
+	}
+	h2 {
+		@media (max-width: 767px) {
+			font-size: 20px;
+			line-height: 26px;
+		}
+	}
+	p {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.single-column {
+		@media (min-width: 566px) and (max-width: 1199px) {
+			padding: 0 12px;
+		}
+	}
+}
+.column-img {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 50px;
+}
+.area-columns-wrapper {
+	max-width: 975px;
+	margin-right: auto;
+	margin-left: auto;
+	@media (max-width: 575px) {
+		max-width: 375px;
+	}
+}
+.column-heading,
+.column-description {
+	max-width: 250px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.column-description {
+	font-size: 14px;
+}
+.slick-prev:before,
+.slick-next:before {
+	color: #e85948 !important;
+}
+
+.slick-dots {
+	bottom: -40px;
+}
+//// Area 4
+#area-4 {
+	padding-top: 75px;
+	padding-bottom: 75px;
+	h2,
+	p {
+		color: white;
+	}
+	h2 {
+		@media (max-width: 767px) {
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+	.area-paragraph {
+		margin-bottom: 32px;
+	}
+	background: rgb(203, 25, 138);
+	background: -moz-linear-gradient(
+		63deg,
+		rgba(203, 25, 138, 1) 0%,
+		rgba(97, 63, 151, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		63deg,
+		rgba(203, 25, 138, 1) 0%,
+		rgba(97, 63, 151, 1) 100%
+	);
+	background: linear-gradient(
+		63deg,
+		rgba(203, 25, 138, 1) 0%,
+		rgba(97, 63, 151, 1) 100%
+	);
+}
+.area-4-wrapper {
+	max-width: 1320px;
+	padding: 0 36px;
+}
+.area-4-columns-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	max-width: 975px;
+	grid-gap: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	@media (max-width: 1199px) {
+		grid-gap: 50px;
+	}
+	@media (max-width: 991px) {
+		grid-template-columns: 1fr 1fr;
+		max-width: 500px;
+	}
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+	}
+}
+.column-img {
+	height: 50px;
+	width: auto;
+}
+.column-description {
+	text-align: left;
+}
+.column-description-bold {
+	font-family: $primary-font-bold;
+}
+.area-4-button {
+	margin-top: 45px;
+}
+
+.recommended-posts-wrapper {
+	padding: 0 20px;
+	@media (max-width: 767px) {
+		padding: 0 20px 28px;
+	}
+}
+
+.recommended-posts-row {
+	@media (max-width: 991px) {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: 1fr;
+	}
+}
+
+.category-post-list-grid {
+	grid-gap: 20px;
+}
+.category-results {
+	grid-gap: 40px 30px;
+}
+.single-post-wrapper {
+	display: grid;
+	grid-template-columns: 135px 1fr;
+}
+.post-image-wrapper {
+	max-height: 140px;
+}
+.post-text-wrapper {
+	padding-left: 22px;
+}
+.post-image {
+	width: 135px;
+	height: 140px;
+	object-fit: cover;
+}
+
+.post-text-wrapper {
+	@media (max-width: 767px) {
+		padding-left: 12px;
+	}
+}
+
+.single-post-title {
+	@media (max-width: 767px) {
+		font-size: 14px;
+		line-height: 16px;
+	}
+}
+
+.single-post-excerpt {
+	@media (max-width: 767px) {
+		font-size: 13px;
+		line-height: 16px;
+	}
+}

@@ -1,0 +1,26 @@
+<section id="product-hero">
+	<div class="container container-1088 product-hero-wrapper">
+		<div class="left-hero">
+			<span class="hero-subtitle">{{ post.hero_subtitle }}</span>
+			<h1 class="hero-title">
+				{{ post.hero_title }}
+			</h1>
+			<p class="hero-paragraph">
+				{{ post.hero_paragraph }}
+			</p>
+			<div class="links-wrapper">
+				<a class="hero-button main-btn" href="{{ post.hero_button_url }}">{{ post.hero_button_text }}</a>
+			</div>
+		</div>
+		<div class="right-hero">
+			<img src="{{ Image(post.meta('hero_image')).src }}"
+				alt="{{ Image(post.meta('hero_image')).alt }}"
+				class="hero-image img-fluid" />
+		</div>
+		<div class="background-arrow">
+			<img src="{{ Image(post.meta('hero_background_image')).src }}"
+				alt="{{ Image(post.meta('hero_background_image')).alt }}"
+				class="hero-background-image" />
+		</div>
+	</div>
+</section>

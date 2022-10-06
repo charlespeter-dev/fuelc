@@ -98,3 +98,4 @@ apple-touch-icon-precomposed.png
 composer.phar
 composer.lock
 vendor
+*.sql

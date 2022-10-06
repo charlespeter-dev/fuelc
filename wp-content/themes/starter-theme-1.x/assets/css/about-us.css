@@ -165,7 +165,6 @@
   .area-2 {
     grid-gap: 90px;
   }
-
   .area-4 {
     grid-template-columns: 1fr 536px;
     grid-gap: 175px;
@@ -280,7 +279,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
   .area-5 .column:nth-child(2n+2) {
     border-right: none;
   }
@@ -290,7 +288,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-
   .area-5 .column:nth-child(3) {
     border-right: none;
   }
@@ -300,7 +297,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
-
   .area-5 .column:nth-child(3) {
     border-right: 1px solid rgba(73, 73, 75, 0.1);
   }

@@ -235,8 +235,7 @@
 }
 
 .product-ul {
-  list-style: none;
-  /* Remove default bullets */
+  list-style: none; /* Remove default bullets */
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -253,18 +252,12 @@
 }
 
 .product-ul li::before {
-  content: "■";
-  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #e85948;
-  /* Change the color */
-  font-weight: bold;
-  /* If you want it to be bold */
-  display: inline-block;
-  /* Needed to add space between the bullet and the text */
-  width: 1em;
-  /* Also needed for space (tweak if needed) */
-  margin-left: -1em;
-  /* Also needed for space (tweak if needed) */
+  content: "■"; /* Add content: \25A0 is the CSS Code/unicode for a bullet */
+  color: #e85948; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
 
 .product-btn {

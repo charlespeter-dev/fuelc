@@ -135,7 +135,7 @@
 }
 
 .product-ul li::before {
-	content: '\25A0'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+	content: '\25A0'; /* Add content: \25A0 is the CSS Code/unicode for a bullet */
 	color: $fc-orange; /* Change the color */
 	font-weight: bold; /* If you want it to be bold */
 	display: inline-block; /* Needed to add space between the bullet and the text */

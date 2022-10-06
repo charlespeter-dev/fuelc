@@ -180,6 +180,9 @@ function hideSubnavs() {
 // 		$nav.toggleClass('scrolled', jQuery(this).scrollTop() > $nav.height())
 // 	})
 // })
+if (document.body.scrollTop === 0) {
+	document.getElementById('main-navbar').style.background = 'none'
+}
 window.onscroll = function () {
 	scrollFunction()
 }

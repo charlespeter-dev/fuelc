@@ -221,7 +221,6 @@ h3 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
   }
-
   .row-wrapper-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -233,7 +232,6 @@ h3 {
     margin-bottom: 75px;
     padding-top: 125px;
   }
-
   .row-wrapper-1,
 .row-wrapper-2 {
     margin-top: 50px;
@@ -243,7 +241,6 @@ h3 {
     height: 325px;
     object-fit: cover;
   }
-
   .row-wrapper-2 {
     margin-top: 50px;
   }

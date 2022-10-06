@@ -241,7 +241,6 @@
   .area-paragraph {
     max-width: 715px;
   }
-
   .area-3 {
     display: grid;
     grid-template-columns: 1fr 1fr;

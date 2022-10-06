@@ -283,14 +283,12 @@
   .hero .image-side img {
     height: 366px;
   }
-
   .image-text {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
     align-items: center;
   }
-
   .text-arrow {
     display: grid;
     grid-template-columns: 350px 1fr;
@@ -301,39 +299,32 @@
   .hero .image-side img {
     height: 500px;
   }
-
   .left-text-right-image {
     grid-template-columns: 1fr 530px;
   }
   .left-text-right-image .text-side {
     padding-left: 90px;
   }
-
   .image-text {
     grid-gap: 90px;
     align-items: flex-start;
   }
-
   .left-image-right-text {
     grid-template-columns: 530px 1fr;
   }
   .left-image-right-text .text-side {
     padding-right: 90px;
   }
-
   .image-text .text-side {
     padding-top: 45px;
   }
-
   .text-arrow {
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
   }
-
   .arrow-tablet {
     width: 1520px;
   }
-
   .testimonial-wrapper {
     display: grid;
     grid-template-columns: 175px 1fr;

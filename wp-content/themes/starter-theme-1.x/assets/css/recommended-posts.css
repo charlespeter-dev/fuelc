@@ -153,21 +153,17 @@
   .category-post-list-grid {
     grid-template-columns: 1fr 250px;
   }
-
   .category-results {
     order: 1;
     grid-template-columns: 1fr 1fr;
     grid-gap: 40px 20px;
   }
-
   .category-filters {
     order: 2;
   }
-
   .results-section-title {
     display: block;
   }
-
   .post-categories {
     margin-top: 0;
   }
@@ -176,24 +172,19 @@
   .category-post-list-grid {
     grid-gap: 20px;
   }
-
   .category-results {
     grid-gap: 40px 30px;
   }
-
   .single-post-wrapper {
     display: grid;
     grid-template-columns: 135px 1fr;
   }
-
   .post-image-wrapper {
     max-height: 140px;
   }
-
   .post-text-wrapper {
     padding-left: 22px;
   }
-
   .post-image {
     width: 135px;
     height: 140px;

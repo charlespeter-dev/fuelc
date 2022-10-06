@@ -535,7 +535,6 @@ body.offcanvas-active {
   .offcanvas-header {
     display: block;
   }
-
   .mobile-offcanvas {
     visibility: hidden;
     transform: translateX(-100%);
@@ -551,29 +550,23 @@ body.offcanvas-active {
     overflow-x: hidden;
     transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
-
   .mobile-offcanvas.show {
     visibility: visible;
     transform: translateX(0);
   }
-
   .mobile-offcanvas .container,
 .mobile-offcanvas .container-fluid {
     display: block;
   }
-
   .subnav-link-title {
     font-size: 13px;
   }
-
   .subnav-link-title-heading {
     font-size: 18px;
   }
-
   .subnav-link-subtitle {
     font-size: 11px;
   }
-
   .subnav-link-title.bold-smaller {
     font-size: 13px;
   }

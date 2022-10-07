@@ -9,7 +9,7 @@
 		{% for post in post.meta('recommended_posts') %}
 			<div class="single-post-wrapper">
 				<div class="post-image-wrapper">
-					<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" class="post-image" /></a>
+					<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" class="post-image" /></a>
 					<div class="post-image-badge">
 						{% for category in post.categories %}
 							{{ category }}{% if loop.length > 1 and loop.index < loop.length %},{% endif %}

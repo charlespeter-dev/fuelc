@@ -36,7 +36,7 @@
 										href="{{ item.link ? item.link : 'javascript:;' }}">
 										{{ item.title }}
 										<img class="nav-arrow {{ item.title == 'contact' ? 'd-none' : '' }}"
-											src="{{ options.nav_arrow.url }}" />
+											src="{{ options.nav_arrow.url }}" alt="{{ options.nav_arrow.alt }}" />
 									</a>
 								</li>
 							{% endfor %}

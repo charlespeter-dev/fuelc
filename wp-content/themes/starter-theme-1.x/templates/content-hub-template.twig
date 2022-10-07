@@ -20,7 +20,7 @@
 			<div class="row">
 				<span class="hub-featured-section-title">{{ post.featured_section_title }}</span>
 				<div class="col-12 col-md-7">
-					<img class="img-fluid hub-featured-post-image" src="{{ Image(post.meta('featured_post_image')).src }}" />
+					<img class="img-fluid hub-featured-post-image" src="{{ Image(post.meta('featured_post_image')).src }}" alt="{{ Image(post.meta('featured_post_image')).alt }}" />
 				</div>
 				<div class="col-12 col-md-5">
 					<h2 class="hub-featured-post-title">
@@ -62,7 +62,7 @@
 					{% for post in ttcposts %}
 						<div class="single-post-wrapper">
 							<div class="post-image-wrapper">
-								<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" class="post-image" /></a>
+								<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" class="post-image" /></a>
 								<div class="post-image-badge">
 									{% for category in post.categories %}
 										{{ category }}{% if loop.length > 1 and loop.index < loop.length %},{% endif %}

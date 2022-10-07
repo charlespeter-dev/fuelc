@@ -260,7 +260,7 @@
 									<div class="carousel-item-inner">
 										<div class="slide-wrapper">
 											<div class="img-wrapper">
-												<img class="img-fluid" src="{{ slide.logo.url }}" alt="" />
+												<img class="img-fluid" src="{{ slide.logo.url }}" alt="{{ slide.logo.alt }}" />
 											</div>
 											<div class="text-wrapper">
 												<p class="case-slider-paragraph">
@@ -280,7 +280,7 @@
 									{% for brand in brands.meta('brands_logo') %}
 										{% if loop.index < 16 %}
 											<div class="brand-wrapper">
-												<img src="{{ brand.logo.url }}" alt="" />
+												<img src="{{ brand.logo.url }}" alt="{{ brand.logo.alt }}" />
 											</div>
 										{% endif %}
 									{% endfor %}
@@ -291,7 +291,7 @@
 									{% for brand in brands.meta('brands_logo') %}
 										{% if loop.index < 16 %}
 											<div class="brand-wrapper">
-												<img src="{{ brand.logo.url }}" alt="" />
+												<img src="{{ brand.logo.url }}" alt="{{ brand.logo.alt }}" />
 											</div>
 										{% endif %}
 									{% endfor %}
@@ -322,7 +322,7 @@
 					<div class="carousel-inner">
 						{% for slide in post.meta('cases_for_slider') %}
 							<div class="carousel-item {{ loop.index == 1 ? 'active' : '' }}">
-								<img class="img-fluid arrow-image" src="{{ slide.right_side_large_arrow.url }}" />
+								<img class="img-fluid arrow-image" src="{{ slide.right_side_large_arrow.url }}" alt="{{ slide.right_side_large_arrow.alt }}" />
 							</div>
 						{% endfor %}
 					</div>
@@ -350,7 +350,7 @@
 			<div class="awards-icons-wrapper">
 				<div class="column">
 					<div class="award-logo-img-wrapper">
-						<img class="img-fluid award-logo-img" src="{{ Image(post.meta('award_logo_1')).src }}" />
+						<img class="img-fluid award-logo-img" src="{{ Image(post.meta('award_logo_1')).src }}" alt="{{ Image(post.meta('award_logo_1')).alt }}" />
 					</div>
 					<p class="award-logo-text">
 						{{ post.award_logo_text_1 }}
@@ -358,7 +358,7 @@
 				</div>
 				<div class="column">
 					<div class="award-logo-img-wrapper">
-						<img class="img-fluid award-logo-img" src="{{ Image(post.meta('award_logo_2')).src }}" />
+						<img class="img-fluid award-logo-img" src="{{ Image(post.meta('award_logo_2')).src }}" alt="{{ Image(post.meta('award_logo_2')).alt }}" />
 					</div>
 					<p class="award-logo-text">
 						{{ post.award_logo_text_2 }}
@@ -366,7 +366,7 @@
 				</div>
 				<div class="column">
 					<div class="award-logo-img-wrapper">
-						<img class="img-fluid award-logo-img" src="{{ Image(post.meta('award_logo_3')).src }}" />
+						<img class="img-fluid award-logo-img" src="{{ Image(post.meta('award_logo_3')).src }}" alt="{{ Image(post.meta('award_logo_3')).alt }}" />
 					</div>
 					<p class="award-logo-text">
 						{{ post.award_logo_text_3 }}
@@ -385,7 +385,7 @@
 		<div class="left-arrow">
 			<div class="awards-background-arrow-wrapper">
 				<img class="img-fluid awards-background-arrow"
-					src="{{ Image(post.meta('awards_section_background_arrow')).src }}" />
+					src="{{ Image(post.meta('awards_section_background_arrow')).src }}" alt="{{ Image(post.meta('awards_section_background_arrow')).alt }}" />
 			</div>
 		</div>
 		<div class="articles-wrapper container container-1088">
@@ -396,7 +396,7 @@
 				{% for post in post.meta('articles') %}
 					<div class="single-post-wrapper">
 						<div class="post-image-wrapper">
-							<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" class="post-image" /></a>
+							<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" class="post-image" /></a>
 						</div>
 						<div class="post-text-wrapper">
 							<span class="post-categories">

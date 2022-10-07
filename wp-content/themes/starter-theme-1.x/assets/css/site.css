@@ -353,8 +353,10 @@ header h2 {
 
 .subnav-link-title {
   font-size: 18px;
-  font-weight: medium;
+  font-weight: 500;
   margin-bottom: 3px;
+  color: #49494b;
+  display: block;
 }
 
 .subnav-link-subtitle,
@@ -383,6 +385,7 @@ header h2 {
   font-family: "Greycliff Bold", "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 14px;
+  line-height: 1.2;
 }
 
 .link-right-subnav {
@@ -460,6 +463,8 @@ header h2 {
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 13px;
+  line-height: 1.2;
+  display: block;
 }
 
 .featured-post-title:hover {

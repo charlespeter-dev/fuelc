@@ -350,3 +350,14 @@
 .view-link {
   margin-left: 15px;
 }
+
+.page-template-page-solutions-template .hero .heading {
+  font-family: "Greycliff Medium", "Open Sans", sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: normal;
+  color: #000;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}

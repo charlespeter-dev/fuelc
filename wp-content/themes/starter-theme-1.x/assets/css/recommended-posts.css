@@ -86,6 +86,7 @@
   line-height: 17px;
   margin-bottom: 5px;
   color: #e85948;
+  display: block;
 }
 
 .single-post-excerpt {

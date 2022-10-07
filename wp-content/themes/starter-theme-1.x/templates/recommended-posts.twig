@@ -22,11 +22,11 @@
 							{{ category }}{% if loop.length > 1 and loop.index < loop.length %},{% endif %}
 						{% endfor %}
 					</span>
-					<h1 class="single-post-title">
+					<span class="single-post-title">
 						<a href="{{ post.link }}">
 							{{ (post.title|length) > 70 ? (post.title|slice(0, 70)) ~ '...' : post.title }}
 						</a>
-					</h1>
+					</span>
 					<p class="single-post-excerpt">
 						{% if post.post_excerpt_custom %}
 							{{ post.post_excerpt_custom }}

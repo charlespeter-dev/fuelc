@@ -16,7 +16,7 @@
 				<div class="py-2 py-md-3"></div>
 				<div class="img-and-form-wrapper">
 					<div class="content-image">
-						<img class="img-fluid" src="{{ Image(post.meta('content_image')).src }}" />
+						<img class="img-fluid" src="{{ Image(post.meta('content_image')).src }}" alt="{{ Image(post.meta('content_image')).alt }}" />
 					</div>
 					<div class="content-form">
 						{{ post.gravity_form_shortcode|shortcodes }}
@@ -42,7 +42,7 @@
 				{% for post in post.meta('recommended_posts') %}
 					<div class="single-post-wrapper">
 						<div class="post-image-wrapper">
-							<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" class="post-image" /></a>
+							<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" class="post-image" /></a>
 							<div class="post-image-badge">
 								{% for category in post.categories %}
 									{{ category }}{% if loop.length > 1 and loop.index < loop.length %},{% endif %}

@@ -185,7 +185,7 @@
 								{% for brand in brands.meta('brands_logo') %}
 									{% if loop.index < 16 %}
 										<div class="brand-wrapper">
-											<img src="{{ brand.logo.url }}" alt="" class="img-fluid" />
+											<img src="{{ brand.logo.url }}" alt="{{ brand.logo.alt }}" class="img-fluid" />
 										</div>
 									{% endif %}
 								{% endfor %}

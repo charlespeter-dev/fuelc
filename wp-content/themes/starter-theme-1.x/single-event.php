@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The Template for displaying all single posts
  *
@@ -12,10 +13,31 @@
 $context         = Timber::context();
 $timber_post     = Timber::get_post();
 $context['post'] = $timber_post;
-wp_enqueue_style( 'single-site', get_template_directory_uri() . '/assets/css/post.css', array(), '1.9992', 'all');	 
-wp_enqueue_script( 'single-script', get_template_directory_uri() . '/assets/js/post.js', array ( 'jquery' ), 1.9992, true);
-if ( post_password_required( $timber_post->ID ) ) {
-	Timber::render( 'single-password.twig', $context );
+
+/**
+ * specific css/js
+ */
+
+$css_absolute_path = sprintf('%s/assets/css/%s.css', get_stylesheet_directory(), 'post');
+$js_absolute_path  = sprintf('%s/assets/js/%s.js', get_stylesheet_directory(), 'post');
+
+$css_url = sprintf('%s/assets/css/%s.css', get_stylesheet_directory_uri(), 'post');
+$js_url = sprintf('%s/assets/js/%s.js', get_stylesheet_directory_uri(), 'post');
+
+if (file_exists($css_absolute_path)) {
+	wp_enqueue_style('page-site', $css_url, [], false, 'screen');
+}
+
+if (file_exists($js_absolute_path)) {
+	wp_enqueue_script('page-script', $js_url, ['jquery'], false, true);
+}
+
+/**
+ * render
+ */
+
+if (post_password_required($timber_post->ID)) {
+	Timber::render('single-password.twig', $context);
 } else {
 	Timber::render(array('single-event.twig'), $context);
 }

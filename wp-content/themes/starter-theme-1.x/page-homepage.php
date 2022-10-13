@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages.
  *
@@ -22,7 +23,6 @@
  */
 
 $context = Timber::context();
-
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
 $args = array(
@@ -33,10 +33,30 @@ $args = array(
     'order' => 'ASC',
 );
 $context['brands'] = Timber::get_posts($args)[0];
-$file = get_field( 'hero_video_bg' );
+$file = get_field('hero_video_bg');
 $context['file_url'] = $file['url'];
-wp_enqueue_style( 'page-site', get_template_directory_uri() . '/assets/css/'.$timber_post->post_name .'.css', array(), '1.9992', 'all');	 
-wp_enqueue_script( 'page-script', get_template_directory_uri() . '/assets/js/'.$timber_post->post_name.'.js', array ( 'jquery' ), 1.9992, true);
 $context['slick_slider'] = 'true';
 
-Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
+/**
+ * specific css/js
+ */
+
+$css_absolute_path = sprintf('%s/assets/css/%s.css', get_stylesheet_directory(), $timber_post->post_name);
+$js_absolute_path  = sprintf('%s/assets/js/%s.js', get_stylesheet_directory(), $timber_post->post_name);
+
+$css_url = sprintf('%s/assets/css/%s.css', get_stylesheet_directory_uri(), $timber_post->post_name);
+$js_url = sprintf('%s/assets/js/%s.js', get_stylesheet_directory_uri(), $timber_post->post_name);
+
+if (file_exists($css_absolute_path)) {
+    wp_enqueue_style('page-site', $css_url, [], false, 'screen');
+}
+
+if (file_exists($js_absolute_path)) {
+    wp_enqueue_script('page-script', $js_url, ['jquery'], false, true);
+}
+
+/**
+ * render
+ */
+
+Timber::render(array('page-' . $timber_post->post_name . '.twig', 'page.twig'), $context);

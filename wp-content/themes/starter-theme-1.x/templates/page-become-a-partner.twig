@@ -23,6 +23,13 @@
 					<a id="hero-btn" class="main-btn brand-btn" href="{{ post.hero_button_url }}">
 						{{ post.hero_button_text }}
 					</a>
+					
+					{% if post.hero_button_text_2 and post.hero_button_url_2 %}
+						<a id="hero-btn" class="main-btn brand-btn" href="{{ post.hero_button_url_2.url }}">
+							{{ post.hero_button_text_2 }}
+						</a>
+					{% endif %}
+
 				</div>
 			</div>
 		</div>

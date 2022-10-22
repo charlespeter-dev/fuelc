@@ -99,3 +99,4 @@ composer.phar
 composer.lock
 vendor
 *.sql
+~$metadesc.xlsx

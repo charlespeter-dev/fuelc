@@ -35,6 +35,9 @@ $spreadsheet = $reader->load($inputFileName);
 $sheetData = $spreadsheet->getActiveSheet()->toArray();
 $invalid = [];
 
+$sql = "TRUNCATE _2x_metadesc_page_xlsx";
+$wpdb->query($sql);
+
 foreach ($sheetData as $sd) {
     if (is_array($sd)) {
         if (isset($sd[0]) && $sd[0]) {

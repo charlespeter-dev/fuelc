@@ -80,15 +80,16 @@
 									class="tab-icon tab-icon-gray {{ loop.index == 1 ? 'hidden' : 'active' }}" />
 							</div>
 							<div class="single-tab-text">
+							<a href="{{ tab.view_icon_url }}">
 								<span class="tab-subtitle">{{ tab.subtitle }}</span>
 								<h3 class="tab-title">
 									{{ tab.title }}
 								</h3>
 								<p class="tab-paragraph">
 									{{ tab.paragraph }}
-									<a href="{{ tab.view_icon_url }}"><i class="fa-regular fa-arrow-right view-link"></i></a>
 								</p>
 							</div>
+							</a>
 						</div>
 						<div class="mb-3"></div>
 						<div class="horizontal-line-clean"></div>

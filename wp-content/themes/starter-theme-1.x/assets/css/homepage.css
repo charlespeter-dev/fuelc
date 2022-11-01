@@ -218,7 +218,6 @@
 .single-tab-wrapper {
   display: grid;
   grid-template-columns: 75px 1fr;
-  cursor: pointer;
 }
 @media (max-width: 767px) {
   .single-tab-wrapper {
@@ -233,6 +232,13 @@
 }
 .single-tab-wrapper--carousel.hidden {
   display: none;
+}
+
+.single-tab-text a,
+.single-tab-text a:hover,
+.single-tab-text a:visited,
+.single-tab-text a:active {
+  color: #212529 !important;
 }
 
 .single-tab-icon {

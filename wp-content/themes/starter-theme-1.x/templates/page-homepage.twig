@@ -97,7 +97,7 @@
 				</div>
 				<div class="tabbed-right">
 					<div id="carouselExampleIndicators"
-						class="carousel carousel-dark carousel-fade"
+						class="carousel slide carousel-dark carousel-fade"
 						data-bs-ride="carousel"
 						data-bs-interval="false">
 						<div class="carousel-indicators">
@@ -145,16 +145,15 @@
 										<img src="{{ Image(tab.icon) }}" alt="" class="tab-icon tab-icon-color active" />
 									</div>
 									<div class="single-tab-text">
-										<span class="tab-subtitle">{{ tab.subtitle }}</span>
-										<h3 class="tab-title">
-											{{ tab.title }}
-										</h3>
-										<p class="tab-paragraph">
-											{{ tab.paragraph }}
-											<a href="{{ tab.view_icon_url }}">
-												<i class="fa-regular fa-arrow-right view-link"></i>
-											</a>
-										</p>
+										<a href="{{ tab.view_icon_url }}">
+											<span class="tab-subtitle">{{ tab.subtitle }}</span>
+											<h3 class="tab-title">
+												{{ tab.title }}
+											</h3>
+											<p class="tab-paragraph">
+												{{ tab.paragraph }}
+											</p>
+										</a>
 									</div>
 								</div>
 							{% endfor %}

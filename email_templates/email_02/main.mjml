@@ -1,0 +1,217 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-wrapper background-color="#f9f9f9" />
+      <mj-section background-color="#ffffff" />
+      <mj-text font-family="Arial, Helvetica, san-serif" font-size="16px" line-height="22px" color="#333234" />
+      <mj-table font-family="Arial, Helvetica, san-serif" font-size="16px" line-height="22px" color="#333234" />
+      <mj-button font-family="Arial, Helvetica, san-serif" font-size="18px" line-height="21px" font-weight="700" background-color="#FF9015" color="#ffffff" border="1px solid #FF9015" border-radius="0" width="50%" />
+      <mj-class name="h1" font-size="20px" line-height="30px" color="#14426B" align="center" />
+      <mj-class name="header-text" font-size="12px" line-height="15px" color="#e9e9e9" align="right" />
+      <mj-class name="maroon" color="#BF0D76" font-weight="700" align="center" />
+      <mj-class name="main-heading" font-size="30px" line-height="34px" font-weight="700" letter-spacing="0.6px" align="center" />
+      <mj-class name="_3columns-text" font-size="14px" line-height="16px" align="center" />
+      <mj-class name="speakers-text" font-size="16px" line-height="18px" align="center" />
+      <mj-class name="callout-text" font-size="23px" line-height="27px" font-weight="700" letter-spacing="0.46px" align="center" />
+      <mj-class name="signature-text" font-size="16px" line-height="25px" align="center" />
+      <mj-class name="footer-text" font-size="12px" line-height="25px" color="#4A4A4C" align="center" />
+    </mj-attributes>
+  </mj-head>
+
+  <mj-body>
+    <mj-wrapper full-width="full-width" padding="0">
+
+      <!-- header logo begin -->
+      <mj-section padding-left="20px" padding-top="40px">
+        <mj-column width="50%">
+          <mj-image align="left" width="200px" padding="0" href="https://fuelcycle.com/" src="https://storage.pardot.com/428582/1667879623m53Z462n/Fuelcycle_header_logo.png" alt="" />
+        </mj-column>
+        <mj-column width="50%">
+          <mj-text mj-class="header-text">
+            <span style="color: #4D2B83; font-weight: 700;">Come join us!</span> <br>
+            <a href="{{View_Online}}" style="color: #1E78D7; text-decoration: none;" target="_blank"><strong style="color: #1E78D7; font-weight: normal;">View it in your browser</strong></a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- header logo end -->
+
+      <!-- separator begin -->
+      <mj-section padding="0">
+        <mj-column>
+          <mj-image padding="0" src="https://storage.pardot.com/428582/166787409779zdb033/Seperator.jpg" alt="" />
+        </mj-column>
+      </mj-section>
+      <!-- separator end -->
+
+      <!-- resource-type begin -->
+      <mj-section padding-bottom="0">
+        <mj-column>
+          <mj-text mj-class="maroon">
+            WEBINAR
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- resource-type end -->
+
+      <!-- banner begin -->
+      <mj-section padding="0">
+        <mj-column>
+          <mj-image padding="0" href="https://fuelcycle.com/" src="https://storage.pardot.com/428582/1665112470URBTZkYE/General_email_banner.png" alt="" />
+          <mj-image padding="0" src="https://img1.niftyimages.com/l8dh/99xr/r5ri" alt="" />
+        </mj-column>
+      </mj-section>
+      <!-- banner end -->
+
+      <!-- date begin -->
+      <mj-section padding="0">
+        <mj-column>
+          <mj-text mj-class="maroon">
+            On Thursday, 1st September
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- date end -->
+
+      <!-- cta begin -->
+      <mj-section padding="0">
+        <mj-column>
+          <mj-button href="https://fuelcycle.com/">
+            Register Now
+          </mj-button>
+        </mj-column>
+      </mj-section>
+      <!-- cta end -->
+
+      <!-- top image begin -->
+      <mj-section padding="0">
+        <mj-column>
+          <mj-image padding="0" href="https://fuelcycle.com/" src="https://storage.pardot.com/428582/1667874001NIlCA22W/FuelCycle_Events_Email_Banner.png" alt="" />
+        </mj-column>
+      </mj-section>
+      <!-- top image end -->
+
+      <!-- greetings begin -->
+      <mj-section background-color="#FFFBFA">
+        <mj-column>
+          <mj-text align="center">
+            Hi there,
+          </mj-text>
+          <mj-text align="center">
+            Join Greenbook and Ariel Chavez, Solutions Associate at Fuel Cycle, for the next webinar event that’s right around the corner!
+          </mj-text>
+          <mj-text align="center">
+            You’ll hear about how important Customer Journey Tracking (CJT) is and how to fine-tune your CX strategy to leverage CJT, surface key opportunities to optimize customer onboarding, reduce churn, and increase overall satisfaction.
+          </mj-text>
+          <mj-text align="center">
+            Register today to claim your spot, and you’ll:
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- greetings end -->
+
+      <!-- 3 columns begin -->
+      <mj-section padding-top="0" background-color="#FFFBFA">
+        <mj-column>
+          <mj-image width="52px" height="49px" src="https://storage.pardot.com/428582/16678796370wzoZZFB/Icon_1.png" alt="" />
+          <mj-text mj-class="_3columns-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nam auctor dolor eu mattis egestas.
+          </mj-text>
+        </mj-column>
+        <mj-column>
+          <mj-image width="52px" height="49px" src="https://storage.pardot.com/428582/1667879651M6oWU9O7/Icon_2.png" alt="" />
+          <mj-text mj-class="_3columns-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nam auctor dolor eu mattis egestas.
+          </mj-text>
+        </mj-column>
+        <mj-column>
+          <mj-image width="52px" height="49px" src="https://storage.pardot.com/428582/1667879663TgFkwMWC/Icon_3.png" alt="" />
+          <mj-text mj-class="_3columns-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, nam auctor dolor eu mattis egestas.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- 3 columns end -->
+
+      <!-- speakers begin -->
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="maroon">
+            Speakers of the day :
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section>
+        <mj-column>
+          <mj-image width="100px" height="100px" src="https://storage.pardot.com/428582/1667874045sbAakJZB/Headshot_sample_2.png" alt="" />
+          <mj-text mj-class="maroon" padding="0">
+            Ariel Chavez
+          </mj-text>
+          <mj-text mj-class="speakers-text">
+            Nam auctor dolor eu mattis egestas. Praesent pretium ut lectus
+          </mj-text>
+        </mj-column>
+        <mj-column>
+          <mj-image width="100px" height="100px" src="https://storage.pardot.com/428582/1667874045sbAakJZB/Headshot_sample_2.png" alt="" />
+          <mj-text mj-class="maroon" padding="0">
+            Ariel Chavez
+          </mj-text>
+          <mj-text mj-class="speakers-text">
+            Nam auctor dolor eu mattis egestas. Praesent pretium ut lectus
+          </mj-text>
+        </mj-column>
+        <mj-column>
+          <mj-image width="100px" height="100px" src="https://storage.pardot.com/428582/1667874045sbAakJZB/Headshot_sample_2.png" alt="" />
+          <mj-text mj-class="maroon" padding="0">
+            Ariel Chavez
+          </mj-text>
+          <mj-text mj-class="speakers-text">
+            Nam auctor dolor eu mattis egestas. Praesent pretium ut lectus
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- speakers end -->
+
+      <!-- callout bottom begin -->
+      <mj-section background-color="#FFFBFA">
+        <mj-column>
+          <mj-text mj-class="callout-text">
+            Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit sed.
+          </mj-text>
+          <mj-button href="https://fuelcycle.com/">
+            Register Now
+          </mj-button>
+        </mj-column>
+      </mj-section>
+      <!-- callout bottom end -->
+
+      <!-- signature begin -->
+      <mj-section>
+        <mj-column>
+          <mj-text mj-class="signature-text">
+            See you soon! <br> <strong>Victoria (Shakespeare) Youngwall</strong> <br> <strong>Associate Director, Marketing Partnerships</strong>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- signature end -->
+
+      <!-- footer begin -->
+      <mj-section background-color="#ededed">
+        <mj-column>
+          <mj-image width="42.19px" height="31.64px" src="https://storage.pardot.com/428582/1667879609reBewktL/Fuelcycle_footer_logo.png" alt="" />
+          <mj-text mj-class="footer-text">
+            Fuel Cycle, 11859 Willshire Blvd, Suite 400, Los Angeles, CA 90025 <br> Copyright © 2022, All Rights Reserved.
+          </mj-text>
+
+          <mj-divider border-width="1px" border-style="solid" border-color="#707070" />
+
+          <mj-text mj-class="footer-text" padding-top="0">
+            <a href="{{{Unsubscribe}}}" style="color:#4A4A4C;text-decoration:underline;">Unsubscribe from all emails</a> &nbsp; &nbsp; <a href="{{{EmailPreferenceCenter}}}" style="color:#4A4A4C;text-decoration:underline;">Update subscription preferences</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- footer end -->
+
+    </mj-wrapper>
+  </mj-body>
+</mjml>

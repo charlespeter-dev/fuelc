@@ -89,6 +89,14 @@ for (const [index, indicator] of carouselIndicators.entries()) {
 	})
 }
 
+// Bootstrap Carousel event
+
+const fc_homepageCarousel = document.getElementById('carouselExampleIndicators');
+
+fc_homepageCarousel.addEventListener('slide.bs.carousel', function () {
+	//console.log('slide.bs.carousel');
+})
+
 //// Cases Slider
 const casesIndicators = document.querySelector(
 	'#cases-slider .left-side .carousel-indicators'

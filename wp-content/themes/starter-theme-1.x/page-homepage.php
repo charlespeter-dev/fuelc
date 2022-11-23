@@ -34,7 +34,7 @@ $args = array(
 );
 $context['brands'] = Timber::get_posts($args)[0];
 $file = get_field('hero_video_bg');
-$context['file_url'] = $file['url'];
+$context['file_url'] = $file;
 $context['slick_slider'] = 'true';
 
 /**

@@ -27,6 +27,19 @@ $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
 
 /**
+ * page got password?
+ */
+
+$page_got_passwd = false;
+
+if (post_password_required($timber_post->ID)) {
+    $page_got_passwd = true;
+
+    $css_url = sprintf('%s/assets/css/%s.css', get_stylesheet_directory_uri(), 'password-form');
+    wp_enqueue_style('password-form', $css_url, [], false, 'screen');
+}
+
+/**
  * specific css/js
  */
 
@@ -47,5 +60,8 @@ if (file_exists($js_absolute_path)) {
 /**
  * render
  */
-
-Timber::render(array('page-' . $timber_post->post_name . '.twig', 'page.twig'), $context);
+if ($page_got_passwd) {
+    Timber::render('page-password.twig', $context);
+} else {
+    Timber::render(array('page-' . $timber_post->post_name . '.twig', 'page.twig'), $context);
+}

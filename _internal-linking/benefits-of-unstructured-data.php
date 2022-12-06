@@ -8,4 +8,9 @@ $links = [
     'https://fuelcycle.com/blog/what-is-unstructured-data/'    => 'unstructured data',
 ];
 
+
+$replace_counter = [
+    'https://fuelcycle.com/blog/what-is-unstructured-data/'    => 2,
+];
+
 require 'engine.php';

@@ -25,7 +25,7 @@ foreach ($links as $source => $keyword) {
         $start = $count = 0;
 
         while (($pos = stripos($content,  $needle, $start)) !== false) {
-            
+
             $count++;
             $start = $pos + 1;
 

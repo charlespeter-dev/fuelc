@@ -34,8 +34,13 @@ h1 {
   font-family: "Greycliff Medium", "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 40.74px;
-  line-height: 70px;
+  line-height: 45px;
   color: #000000;
+}
+@media screen and (min-width: 992px) {
+  h1 {
+    line-height: 70px;
+  }
 }
 
 h2 {

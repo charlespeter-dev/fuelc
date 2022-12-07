@@ -6,34 +6,40 @@
 	src: url(../fonts/GreycliffCF-Regular.otf);
 	font-weight: normal;
 }
+
 @font-face {
 	font-family: 'Greycliff Light';
 	src: url(../fonts/GreycliffCF-Light.otf);
 	font-weight: 300;
 }
+
 @font-face {
 	font-family: 'Greycliff Medium';
 	src: url(../fonts/GreycliffCF-Medium.otf);
 	font-weight: medium;
 }
+
 @font-face {
 	font-family: 'Greycliff Bold';
 	src: url(../fonts/GreycliffCF-Bold.otf);
 	font-weight: bold;
 }
+
 @font-face {
 	font-family: 'Greycliff Demi Bold';
 	src: url(../fonts/GreycliffCF-DemiBold.otf);
 }
 
-//? Fonts
 h1 {
 	font-family: $primary-font-medium;
 	font-weight: normal;
 	font-size: 40.74px;
-	line-height: 70px;
-	// text-align: center;
+	line-height: 45px;
 	color: #000000;
+
+	@media screen and (min-width: 992px) {
+		line-height: 70px;
+	}
 }
 
 h2 {
@@ -44,6 +50,7 @@ h2 {
 
 	color: #49494b;
 }
+
 h3 {
 	font-family: $primary-font-medium;
 	font-size: 24px;
@@ -58,6 +65,7 @@ h4 {
 	line-height: 26px;
 	// text-align: left;
 }
+
 p {
 	font-family: $primary-font-medium;
 
@@ -71,10 +79,12 @@ p {
 a {
 	text-decoration: none !important;
 }
+
 a:hover {
 	text-decoration: none !important;
 	color: $fc-purple !important;
 }
+
 textarea:focus,
 input:focus {
 	outline: none !important;
@@ -87,6 +97,7 @@ input:focus {
 .text-primary {
 	color: $fc-orange !important;
 }
+
 //? components
 
 .main-btn,
@@ -113,6 +124,7 @@ input:focus {
 	white-space: nowrap !important;
 	transition: all 1s;
 }
+
 .main-btn:hover,
 .search-filter-reset:hover,
 .fc-main-button a:hover {
@@ -129,6 +141,7 @@ input:focus {
 	text-align: left;
 	color: #e85948;
 	text-decoration: none !important;
+
 	i {
 		margin-left: 15px;
 
@@ -145,6 +158,7 @@ input:focus {
 	color: #e85948;
 	text-decoration: underline !important;
 }
+
 .main-link::after {
 	font-family: 'Font Awesome 5 Pro';
 	font-weight: 500;

@@ -18,7 +18,7 @@ foreach ($links as $source => $keyword) {
             'post_type' => 'post'
         ]);
 
-        $post_id = $query->post->ID;
+        $post_id = $query->post->ID; echo $post_id;
         $content = $query->post->post_content;
         $needle = $keyword;
         $len = strlen($needle);

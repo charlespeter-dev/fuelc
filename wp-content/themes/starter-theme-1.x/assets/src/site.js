@@ -197,8 +197,8 @@ function scrollFunction() {
 	}
 }
 
-const originalLogoSrc = document.querySelector('.nav-logo').src
-console.log(originalLogoSrc)
+// const originalLogoSrc = document.querySelector('.nav-logo').src
+const originalLogoSrc = 'https://fuelcycle.com/wp-content/uploads/2021/12/fuel-cycle-logo.svg';
 
 // Change Navbar Logo on Scroll
 jQuery(function () {
@@ -206,7 +206,7 @@ jQuery(function () {
 		if (jQuery(this).scrollTop() > 650) {
 			jQuery('.nav-logo').attr(
 				'src',
-				'https://fuelcyclettc.wpengine.com/wp-content/uploads/2021/12/fuelcycle_logo_sm@2x-e1645824041694.png'
+				'https://fuelcycle.com/wp-content/uploads/2021/12/fuelcycle_logo_sm@2x-e1645824041694.png'
 			)
 
 			jQuery('#main-navbar .nav-link').addClass('hidden')
@@ -241,14 +241,14 @@ jQuery(function () {
 function hover(element) {
 	element.setAttribute(
 		'src',
-		'http://fcwp.local/wp-content/uploads/2021/12/arrow-right-purple.svg'
+		'https://fuelcycle.com/wp-content/uploads/2021/12/arrow-right-purple.svg'
 	)
 }
 
 function unhover(element) {
 	element.setAttribute(
 		'src',
-		'http://fcwp.local/wp-content/uploads/2021/12/arrow-right-orange-1.svg'
+		'https://fuelcycle.com/wp-content/uploads/2021/12/arrow-right-orange-1.svg'
 	)
 }
 

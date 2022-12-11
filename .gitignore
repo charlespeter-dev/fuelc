@@ -100,3 +100,6 @@ composer.lock
 vendor
 *.sql
 ~$metadesc.xlsx
+wp-content/ewww
+imagify.conf
+wp-cli.phar

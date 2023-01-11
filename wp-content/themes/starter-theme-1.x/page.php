@@ -60,8 +60,15 @@ if (file_exists($js_absolute_path)) {
 /**
  * render
  */
+
+
 if ($page_got_passwd) {
     Timber::render('page-password.twig', $context);
 } else {
-    Timber::render(array('page-' . $timber_post->post_name . '.twig', 'page.twig'), $context);
+
+    if (in_array($timber_post->post_name, ['community', 'live'])) {
+        Timber::render('page.twig', $context);
+    } else {
+        Timber::render(array('page-' . $timber_post->post_name . '.twig', 'page.twig'), $context);
+    }
 }

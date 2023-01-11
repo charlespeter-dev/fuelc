@@ -49,4 +49,5 @@ if (file_exists($js_absolute_path)) {
  * render
  */
 
-Timber::render(array('page-' . $timber_post->post_name . '.twig', 'page.twig'), $context);
+// Timber::render(array('page-' . $timber_post->post_name . '.twig', 'page.twig'), $context);
+Timber::render(array('page.twig', 'page.twig'), $context);

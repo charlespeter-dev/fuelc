@@ -101,32 +101,13 @@
 						data-bs-ride="carousel"
 						data-bs-interval="false">
 						<div class="carousel-indicators">
-							<button type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="0"
-								class="active"
-								aria-current="true"
-								aria-label="Slide 1">
-
-							</button>
-							<button type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="1"
-								aria-label="Slide 2">
-
-							</button>
-							<button type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="2"
-								aria-label="Slide 3">
-
-							</button>
-							<button type="button"
-								data-bs-target="#carouselExampleIndicators"
-								data-bs-slide-to="3"
-								aria-label="Slide 4">
-
-							</button>
+							{% for key,tab in post.meta('slider_tabs') %}
+								<button type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="{{ key }}"
+									class="{{ key == 0 ? 'active' : '' }}" aria-label="Slide {{ key+1 }}">
+								</button>
+							{% endfor %}
 						</div>
 						<div class="carousel-inner">
 							{% for image in post.meta('slider_images') %}

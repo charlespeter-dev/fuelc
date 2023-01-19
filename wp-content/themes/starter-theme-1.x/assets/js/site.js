@@ -180,22 +180,22 @@ function hideSubnavs() {
 // 		$nav.toggleClass('scrolled', jQuery(this).scrollTop() > $nav.height())
 // 	})
 // })
-if (document.body.scrollTop === 0) {
-	document.getElementById('main-navbar').style.background = 'none'
-}
-window.onscroll = function () {
-	scrollFunction()
-}
-function scrollFunction() {
-	if (
-		document.body.scrollTop > 20 ||
-		document.documentElement.scrollTop > 20
-	) {
-		document.getElementById('main-navbar').style.background = 'white'
-	} else {
-		document.getElementById('main-navbar').style.background = 'none'
-	}
-}
+// if (document.body.scrollTop === 0) {
+// 	document.getElementById('main-navbar').style.background = 'none'
+// }
+// window.onscroll = function () {
+// 	scrollFunction()
+// }
+// function scrollFunction() {
+// 	if (
+// 		document.body.scrollTop > 20 ||
+// 		document.documentElement.scrollTop > 20
+// 	) {
+// 		document.getElementById('main-navbar').style.background = 'white'
+// 	} else {
+// 		document.getElementById('main-navbar').style.background = 'none'
+// 	}
+// }
 
 // const originalLogoSrc = document.querySelector('.nav-logo').src
 const originalLogoSrc = 'https://fuelcycle.com/wp-content/uploads/2021/12/fuel-cycle-logo.svg';

@@ -11,8 +11,12 @@
 	grid-template-columns: 1fr;
 
 	@media (min-width: 768px) {
-		min-height: 750px;
+		min-height: 650px;
 		grid-template-columns: 3fr 2fr;
+	}
+
+	@media (min-width: 992px) {
+		min-height: 850px;
 	}
 }
 

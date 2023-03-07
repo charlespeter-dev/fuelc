@@ -69,7 +69,7 @@
 				{{ post.recommended_posts_title }}
 			</h2>
 			<div class="recommended-posts-row">
-				{% for post in post.meta('recommended_posts') %}
+				{% for post in ttcposts %}
 					<div class="single-post-wrapper">
 						<div class="post-image-wrapper">
 							<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}" alt="{{ post.thumbnail.alt }}" class="post-image" /></a>

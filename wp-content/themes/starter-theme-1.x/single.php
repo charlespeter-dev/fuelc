@@ -13,6 +13,9 @@
 $context         = Timber::context();
 $timber_post     = Timber::get_post();
 $context['post'] = $timber_post;
+$args['search_filter_id'] = 27217;
+$context['ttcposts'] = new Timber\PostQuery($args);
+$context['pagination'] = Timber::get_pagination();
 
 /**
  * page got password?

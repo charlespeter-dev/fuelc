@@ -6,13 +6,13 @@
 
 					{% if options.call_to_action_bar_title %}
 					<h2>
-						{{ options.call_to_action_bar_title }}
+						{{ options.call_to_action_bar_title | raw }}
 					</h2>
 					{% endif %}
 
 					{% if options.call_to_action_bar_subtitle %}
 					<p>
-						{{ options.call_to_action_bar_subtitle }}
+						{{ options.call_to_action_bar_subtitle | raw }}
 					</p>
 					{% endif %}
 

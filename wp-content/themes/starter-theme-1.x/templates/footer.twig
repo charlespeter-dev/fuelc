@@ -3,12 +3,19 @@
 		<div class="container-fluid">
 			<div class="row form-container">
 				<div class="col-md-9">
+					
+					{% if options.call_to_action_bar_title %}
 					<h2>
 						{{ options.call_to_action_bar_title }}
 					</h2>
+					{% endif %}
+
+					{% if options.call_to_action_bar_subtitle %}
 					<p>
 						{{ options.call_to_action_bar_subtitle }}
 					</p>
+					{% endif %}
+
 				</div>
 				<div class="col-md-3 signup-button-wrapper">
 					<a href="{{ options.call_to_action_bar_button_link }}" class="main-btn white-btn">

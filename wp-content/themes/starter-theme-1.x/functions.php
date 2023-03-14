@@ -416,6 +416,18 @@ if (is_user_logged_in()) {
 			#main-navbar {
 				margin-top: 32px !important;
 			}
+
+			@media screen and (max-width: 782px) {
+				#main-navbar {
+					margin-top: 46px !important;
+				}
+			}
+
+			@media screen and (max-width: 600px) {
+				#wpadminbar {
+					position: fixed !important;
+				}
+			}
 		</style>
 
 <?php

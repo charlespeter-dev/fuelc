@@ -405,7 +405,19 @@ add_filter('wpseo_metabox_prio', function () {
 
 
 /**
- * hide admin bar in front
+ * adjust <nav> when user logged in
  */
 
-show_admin_bar(false);
+if (is_user_logged_in()) {
+	add_action('wp_head', function () {
+?>
+
+		<style type="text/css">
+			#main-navbar {
+				margin-top: 32px !important;
+			}
+		</style>
+
+<?php
+	});
+}

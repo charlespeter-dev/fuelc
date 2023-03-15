@@ -1,65 +1,119 @@
-// Header.js
+/**
+ * Top Nav
+ * 
+ * is now is based on Menu ID from Apprearance > Menus
+ * print wp_get_nav_menu_items('main-menu') to get the IDs
+ * 
+ * 14 - Products
+ * 15 - Solutions
+ * 32354 - Industies
+ * 16 - Resource Hub
+ * 17 - Company
+ * 18 - Contact
+ * 
+ ***/
 
-/* Show and hide Sub Nav Area 1 */
-const nav_link_1 = document.getElementById('nav-link-1')
-const sub_nav_area_1 = document.getElementById('sub-nav-area-1')
-nav_link_1.addEventListener('mouseover' || 'click', function () {
-	sub_nav_area_4.style.display = 'none'
-	sub_nav_area_3.style.display = 'none'
-	sub_nav_area_2.style.display = 'none'
-	sub_nav_area_1.style.display = 'block'
-})
-sub_nav_area_1.addEventListener('mouseleave', function () {
-	sub_nav_area_1.style.display = 'none'
-})
+document.addEventListener('DOMContentLoaded', function () {
 
-/* Show and hide Sub Nav Area 2 */
-const nav_link_2 = document.getElementById('nav-link-2')
-const sub_nav_area_2 = document.getElementById('sub-nav-area-2')
-nav_link_2.addEventListener('mouseover', function () {
-	sub_nav_area_4.style.display = 'none'
-	sub_nav_area_3.style.display = 'none'
-	sub_nav_area_2.style.display = 'block'
-	sub_nav_area_1.style.display = 'none'
-})
-sub_nav_area_2.addEventListener('mouseleave', function () {
-	sub_nav_area_2.style.display = 'none'
-})
+	const mainmenus = document.querySelectorAll('[id^="nav-link-"]');
+	const submenus = document.querySelectorAll('[id^="sub-nav-area-"]');
 
-/* Show and hide Sub Nav Area 3 */
-const nav_link_3 = document.getElementById('nav-link-3')
-const sub_nav_area_3 = document.getElementById('sub-nav-area-3')
-nav_link_3.addEventListener('mouseover', function () {
-	sub_nav_area_4.style.display = 'none'
-	sub_nav_area_3.style.display = 'block'
-	sub_nav_area_2.style.display = 'none'
-	sub_nav_area_1.style.display = 'none'
-})
-sub_nav_area_3.addEventListener('mouseleave', function () {
-	sub_nav_area_3.style.display = 'none'
-})
+	function closeSubmenus() {
+		submenus.forEach(function (submenu) {
+			submenu.style.display = 'none';
+		});
+	}
 
-/* Show and hide Sub Nav Area 4 */
-const nav_link_4 = document.getElementById('nav-link-4')
-const sub_nav_area_4 = document.getElementById('sub-nav-area-4')
-nav_link_4.addEventListener('mouseover', function () {
-	sub_nav_area_4.style.display = 'block'
-	sub_nav_area_3.style.display = 'none'
-	sub_nav_area_2.style.display = 'none'
-	sub_nav_area_1.style.display = 'none'
-})
-sub_nav_area_4.addEventListener('mouseleave', function () {
-	sub_nav_area_4.style.display = 'none'
-})
+	mainmenus.forEach(function (mainmenu) {
+		const id = mainmenu.dataset.id;
+		const submenu = document.querySelector(`#sub-nav-area-${id}`) ?? null;
+		mainmenu.addEventListener('mouseover', function (e) {
+			e.stopPropagation();
+			closeSubmenus();
+			if (submenu) {
+				submenu.style.display = 'block';
+			}
+		});
+	});
 
-/* hide Sub Nav Areas on hover of link 5 (contact) */
-const nav_link_5 = document.getElementById('nav-link-5')
-nav_link_5.addEventListener('mouseover', function () {
-	sub_nav_area_4.style.display = 'none'
-	sub_nav_area_3.style.display = 'none'
-	sub_nav_area_2.style.display = 'none'
-	sub_nav_area_1.style.display = 'none'
-})
+	submenus.forEach(function (submenu) {
+		submenu.addEventListener('mouseleave', function (e) {
+			e.stopPropagation();
+			closeSubmenus();
+		});
+	});
+});
+
+
+
+// /* Products */
+
+// products_main.addEventListener('mouseover', function () {
+// 	solutions_subm.style.display = 'none';
+// 	resource_subm.style.display = 'none';
+// 	company_subm.style.display = 'none';
+// });
+
+// products_subm.addEventListener('mouseleave', function () {
+// 	products_subm.style.display = 'none'
+// });
+
+// /* Solutions */
+
+// nav_link_2.addEventListener('mouseover', function () {
+// 	sub_nav_area_4.style.display = 'none'
+// 	sub_nav_area_3.style.display = 'none'
+// 	sub_nav_area_2.style.display = 'block'
+// 	sub_nav_area_1.style.display = 'none'
+// })
+// sub_nav_area_2.addEventListener('mouseleave', function () {
+// 	sub_nav_area_2.style.display = 'none'
+// })
+
+// /* Industies */
+
+
+// nav_link_32354.addEventListener('mouseover', function () {
+// 	sub_nav_area_4.style.display = 'none'
+// 	sub_nav_area_2.style.display = 'none'
+// 	sub_nav_area_1.style.display = 'none'
+// })
+// sub_nav_area_32354.addEventListener('mouseleave', function () {
+// 	sub_nav_area_32354.style.display = 'none'
+// })
+
+// /* Resource Hub */
+
+// nav_link_3.addEventListener('mouseover', function () {
+// 	sub_nav_area_4.style.display = 'none'
+// 	sub_nav_area_3.style.display = 'block'
+// 	sub_nav_area_2.style.display = 'none'
+// 	sub_nav_area_1.style.display = 'none'
+// })
+// sub_nav_area_3.addEventListener('mouseleave', function () {
+// 	sub_nav_area_3.style.display = 'none'
+// })
+
+// /* Company */
+
+// nav_link_4.addEventListener('mouseover', function () {
+// 	sub_nav_area_4.style.display = 'block'
+// 	sub_nav_area_3.style.display = 'none'
+// 	sub_nav_area_2.style.display = 'none'
+// 	sub_nav_area_1.style.display = 'none'
+// })
+// sub_nav_area_4.addEventListener('mouseleave', function () {
+// 	sub_nav_area_4.style.display = 'none'
+// })
+
+// /* Contact */
+
+// nav_link_5.addEventListener('mouseover', function () {
+// 	sub_nav_area_4.style.display = 'none'
+// 	sub_nav_area_3.style.display = 'none'
+// 	sub_nav_area_2.style.display = 'none'
+// 	sub_nav_area_1.style.display = 'none'
+// })
 
 /* Mobile Menu */
 function darken_screen(yesno) {
@@ -87,7 +141,7 @@ function close_offcanvas_single_layer() {
 
 function show_offcanvas(offcanvas_id) {
 	darken_screen(true)
-	document.getElementById(offcanvas_id).classList.add('show')
+	document.getElementById(offcanvas_id)?.classList.add('show')
 	document.body.classList.add('offcanvas-active')
 }
 
@@ -144,20 +198,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* Mobile Menu Links */
 /* Link 1 (left to right on desktop) */
-const navLink1 = document.getElementById('mobile-nav-link-1')
-navLink1.setAttribute('data-trigger', 'mobile_nav_submenu_1')
+// const navLink1 = document.getElementById('mobile-nav-link-14')
+// navLink1.setAttribute('data-trigger', 'mobile_nav_submenu_14')
 
-/* Link 2 */
-const navLink2 = document.getElementById('mobile-nav-link-2')
-navLink2.setAttribute('data-trigger', 'mobile_nav_submenu_2')
+// /* Link 2 */
+// const navLink2 = document.getElementById('mobile-nav-link-15')
+// navLink2.setAttribute('data-trigger', 'mobile_nav_submenu_15')
 
-/* Link 3 */
-const navLink3 = document.getElementById('mobile-nav-link-3')
-navLink3.setAttribute('data-trigger', 'mobile_nav_submenu_3')
+// /* Link 3 */
+// const navLink3 = document.getElementById('mobile-nav-link-16')
+// navLink3.setAttribute('data-trigger', 'mobile_nav_submenu_16')
 
-/* Link 3 */
-const navLink4 = document.getElementById('mobile-nav-link-4')
-navLink4.setAttribute('data-trigger', 'mobile_nav_submenu_4')
+// /* Link 3 */
+// const navLink4 = document.getElementById('mobile-nav-link-17')
+// navLink4.setAttribute('data-trigger', 'mobile_nav_submenu_17')
 
 /* Hide all subnavs for mobile and tablet */
 /* Toggle MobileNav when enlarging screen */
@@ -166,10 +220,10 @@ window.onresize = hideSubnavs
 function hideSubnavs() {
 	// console.log('screen resizing!');
 	if (screenSize < 992) {
-		sub_nav_area_4.style.display = 'none'
-		sub_nav_area_3.style.display = 'none'
-		sub_nav_area_2.style.display = 'none'
-		sub_nav_area_1.style.display = 'none'
+		const submenus = document.querySelectorAll('[id^="sub-nav-area-"]');
+		submenus.forEach(function (submenu) {
+			submenu.style.display = 'none';
+		});
 	} else {
 	}
 }

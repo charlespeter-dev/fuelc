@@ -152,6 +152,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		let offcanvas_id = everyelement.getAttribute('data-trigger')
 
 		everyelement.addEventListener('click', function (e) {
+			if (offcanvas_id == 'mobile_nav_submenu_18')
+				return;
+
 			e.preventDefault()
 			show_offcanvas(offcanvas_id)
 		})

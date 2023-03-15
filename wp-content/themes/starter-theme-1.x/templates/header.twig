@@ -423,7 +423,7 @@
 						<a id="mobile-nav-link-{{ item.ID }}"
 						data-trigger="mobile_nav_submenu_{{ item.ID }}"
 							class="nav-link mobile-nav-link"
-							href="{{ item.title == 'contact' ? '/contact' : 'javascript:;' }}">
+							href="{{ item.ID == 18 ? '/contact/' : 'javascript:;' }}">
 							{{ item.title }}
 							<img class="mobile-nav-link-arrow {{ item.title == 'contact' ? 'd-none' : '' }}"
 								src="{{ options.subnav_link_arrow.url }}"

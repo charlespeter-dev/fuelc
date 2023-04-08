@@ -43,8 +43,16 @@
       </mj-section>
       <!-- separator end -->
 
+      <!-- banner begin -->
+      <mj-section padding-top="0" padding-left="0" padding-right="0">
+        <mj-column>
+          <mj-image padding="0" href="https://fuelcycle.com/" src="https://storage.pardot.com/428582/1680760313EECTbIwu/2023___IIEX_Austin_2023_Banner.jpg" alt="" />
+        </mj-column>
+      </mj-section>
+      <!-- banner end -->
+
       <!-- resource-type begin -->
-      <mj-section padding-bottom="0">
+      <mj-section padding="0">
         <mj-column>
           <mj-text mj-class="maroon">
             WEBINAR

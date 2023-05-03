@@ -66,7 +66,7 @@ if ($page_got_passwd) {
     Timber::render('page-password.twig', $context);
 } else {
 
-    if (in_array($timber_post->post_name, ['community', 'live', 'market-research-cloud', 'contact', 'request-a-demo', 'solutions', 'about-us', 'fc-exchange'])) {
+    if (in_array($timber_post->post_name, ['community', 'live', 'market-research-cloud', 'contact', 'request-a-demo', 'solutions', 'about-us', 'fc-exchange', 'ignition'])) {
         Timber::render('page.twig', $context);
     } else {
         Timber::render(array('page-' . $timber_post->post_name . '.twig', 'page.twig'), $context);

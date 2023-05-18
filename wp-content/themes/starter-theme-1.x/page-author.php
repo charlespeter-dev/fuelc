@@ -26,6 +26,10 @@ foreach ($author_ids as $author_id) {
     $description = get_the_author_meta('description', $author_id);
     $url = get_author_posts_url($author_id);
     $post_ids = $authors_posts->posts;
+    // Get social media field data
+    $facebook_id = get_the_author_meta('facebook', $post->post_author);
+    $instagram_id = get_the_author_meta('instagram', $post->post_author);
+    $linkedin_id = get_the_author_meta('linkedin', $post->post_author);
 
     /**
      * excerpts
@@ -41,7 +45,10 @@ foreach ($author_ids as $author_id) {
         'display_name' => $display_name,
         'description' => $description,
         'url' => $url,
-        'post_ids' => $post_ids
+        'post_ids' => $post_ids,
+        'facebook_id' => $facebook_id,
+        'instagram_id' => $instagram_id,
+        'linkedin_id' => $linkedin_id
     ];
 }
 

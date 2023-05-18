@@ -2,9 +2,133 @@
 
 {% block content %}
 
+<section class="author-bio py-5 mt-5">
+	<div class="container container-1088">
+		{# Author Intro #}
+		<div class="container py-3">
+			<div class="row">
+				<div class="col-sm-12 col-lg-4">
+					<div class="author-info">
+						<img src="{{ author.profile_picture_url}}" alt="author-image" />
+						<h4 class="py-2 mb-2 author-name">{{ author.display_name }}!</h4>
+						{% if author.degrees_andor_titles %}
+							<ul class="author-title">
+								{% for degree in author.degrees_andor_titles %}
+									{% set name = degree.degrees %}
+									<li><p>{{ name }}</p></li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+						{% if  author.years_of_experience %}
+							<h6 class="author-exp">Years of experience working in relevant areas: {{ author.years_of_experience }}</h6>
+						{% endif %}
+						<div class="author-socials py-2 mb-2">
+							<a href="{{ author.facebook }}"><i class="fa-brands fa-facebook"></i></a>		
+							<a href="{{ author.instagram }}"><i class="fa-brands fa-instagram"></i></a>
+							<a href="{{ author.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-lg-8">
+					{% if  author.description %}
+						<div class="author-desc">
+							<p>{{ author.description }}</p>
+						</div>
+					{% endif %}
+				</div>
+			</row>
+		</div>
+		{# Author Work #}
+		<div class="container py-3">
+			<div class="row">
+				{# Published Works #}
+				<div class="col-sm-12 col-lg-4">
+					{% if author.published_works_list %}
+						<div class="author-publish-work">
+							<h5>Published Works</h5>
+							<ol>
+								{% for work in author.published_works_list %}
+									{% set title = work.publish_title %}
+									{% set url = work.publish_link %}
+									<li><a href="{{ url }}">{{ title }}</a></li>
+								{% endfor %}
+							</ol>
+						</div>
+					{% endif %}
+				</div>
+				{# Citations #}
+				<div class="col-sm-12 col-lg-4">
+					{% if author.citations %}
+						<div class="author-citation">
+							<h5>Citations</h5>
+							<ul>
+								{% for citations in author.citations %}
+									{% set details = citations.citation_details %}
+									<li><p>{{ details }}</p></li>
+								{% endfor %}
+							</ul>
+						</div>
+					{% endif %}
+				</div>
+				{# Conference appearances #}
+				<div class="col-sm-12 col-lg-4">
+				{% if author.conference_appearances %}
+					<div class="author-conference">
+						<h5>Conference Appearances</h5>
+						<ul>
+							{% for conference in author.conference_appearances %}
+								{% set name = conference.event_name %}
+								{% set date = conference.event_date %}
+								<li><p><span class="conf-date">{{ date }}</span> : {{ name }}</p></li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+		{# Author Job & Media #}
+		<div class="container py-3">
+			<div class="row">
+				{# Media Coverage #}
+				<div class="col-sm-12 col-lg-6">
+					{% if author.media_coverage %}
+						<div class="author-media">
+							<h5>Media Coverage</h5>
+							<ul>
+								{% for media in author.media_coverage %}
+									{% set outlet = media.media_outlet %}
+									{% set details = media.coverage_details %}
+									<li><p><span class="media-outlet">{{ outlet }}</span>: {{ details }}</p></li>
+								{% endfor %}
+							</ul>
+						</div>
+					{% endif %}
+				</div>
+				{# Past Jobs #}
+				<div class="col-sm-12 col-lg-6">
+					{% if author.past_jobs %}
+					<div class="author-jobs">
+						<h5>Past Jobs</h5>
+						<ul>
+							{% for jobs in author.past_jobs %}
+								{% set title = jobs.job_title %}
+								{% set employer = jobs.employer %}
+								<li>
+									<div class="job-title"><p>{{ title }}</p></div> 
+									<div class="company"><p>{{ employer }}</p><div>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-
-<section class="author py-5 mt-5">
+<section class="author py-3 mt-3">
 	<div class="container container-1088">
 		<span class="hub-featured-section-title results-section-title d-none d-xl-block">RECENT POSTS</span>
 	</div>

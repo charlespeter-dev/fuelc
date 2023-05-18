@@ -529,7 +529,7 @@
 
 @media (min-width: 768px) {
   .area-3,
-.area-4 {
+  .area-4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }

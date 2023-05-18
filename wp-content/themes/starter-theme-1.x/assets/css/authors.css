@@ -15,3 +15,16 @@
 .authors .author img {
   border-radius: 50%;
 }
+.authors .author .socials {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.authors .author .socials a {
+  font-size: 0.7rem;
+  color: #000116;
+  padding: 14px 17.3px;
+}
+.authors .author .socials a i {
+  font-size: 1.5rem;
+}

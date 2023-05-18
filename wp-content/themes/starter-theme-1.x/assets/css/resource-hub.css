@@ -2,6 +2,103 @@
   color: #e85948;
 }
 
+.author-bio {
+  /** 
+    Responsive styles
+  */
+}
+.author-bio .author-info {
+  display: flex;
+  flex-direction: column;
+}
+.author-bio .author-info img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.author-bio .author-info .author-name {
+  font-size: 1.5rem !important;
+  font-weight: 900;
+}
+.author-bio .author-info .author-title {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.author-bio .author-info .author-title li {
+  font-style: italic;
+  font-weight: 700;
+}
+.author-bio .author-info .author-exp {
+  font-weight: 900;
+}
+.author-bio .author-info .author-socials {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.author-bio .author-info .author-socials a {
+  font-size: 1rem;
+  color: #000116;
+  padding: 14px 17.3px;
+}
+.author-bio .author-info .author-socials a i {
+  font-size: 1.5rem;
+}
+.author-bio .author-citation ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.author-bio .author-citation ul p {
+  font-style: italic;
+}
+.author-bio .author-conference ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.author-bio .author-conference ul .conf-date {
+  font-weight: 900;
+  text-decoration: underline;
+}
+.author-bio .author-media ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.author-bio .author-media ul .media-outlet {
+  font-weight: 900;
+  text-decoration: underline;
+}
+.author-bio .author-jobs ul {
+  list-style-type: circle;
+}
+.author-bio .author-jobs ul li .job-title p {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.author-bio .author-jobs ul li .company p {
+  margin: 0;
+  font-style: italic;
+}
+@media screen and (min-width: 768px) {
+  .author-bio .author-info {
+    text-align: center;
+  }
+  .author-bio .author-info img {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    margin-bottom: 1rem;
+  }
+  .author-bio .author-info .author-socials {
+    justify-content: center;
+  }
+}
+
 #resource-hub {
   padding: 0 20px;
 }
@@ -487,7 +584,7 @@ input[type=checkbox]::before {
 }
 @media (max-width: 1199px) {
   #post-list-section .searchandfilter > ul > li.sf-field-search label,
-#post-list-section .searchandfilter > ul > li.sf-field-search input {
+  #post-list-section .searchandfilter > ul > li.sf-field-search input {
     width: 90%;
   }
 }

@@ -13,6 +13,32 @@
 $context         = Timber::context();
 $timber_post     = Timber::get_post();
 $context['post'] = $timber_post;
+
+// Add author's information to the context
+$author_id = $timber_post->post_author;
+$author = new Timber\User($author_id);
+
+// Get author's profile picture URL using ACF
+$profile_picture_url = get_field('profile_picture', 'user_' . $author_id)['url'];
+$author->profile_picture_url = $profile_picture_url;
+
+// Make excerpt of author's description
+$description = get_the_author_meta('description', $author_id);
+$description_words = explode(' ', $description);
+$excerpt_words = array_splice($description_words, 0, 30);
+$excerpt = implode(' ', $excerpt_words);
+$author->description_excerpt = $excerpt . '...';
+
+// Get author's social media field data
+$author->facebook = get_the_author_meta('facebook', $author_id);
+$author->instagram = get_the_author_meta('instagram', $author_id);
+$author->linkedin = get_the_author_meta('linkedin', $author_id);
+
+// Get author's bio page link
+$author->url = get_author_posts_url($author_id);
+
+$context['author'] = $author;
+
 $args['search_filter_id'] = 27217;
 $context['ttcposts'] = new Timber\PostQuery($args);
 $context['pagination'] = Timber::get_pagination();
@@ -24,10 +50,10 @@ $context['pagination'] = Timber::get_pagination();
 $page_got_passwd = false;
 
 if (post_password_required($timber_post->ID)) {
-    $page_got_passwd = true;
+	$page_got_passwd = true;
 
-    $css_url = sprintf('%s/assets/css/%s.css', get_stylesheet_directory_uri(), 'password-form');
-    wp_enqueue_style('password-form', $css_url, [], false, 'screen');
+	$css_url = sprintf('%s/assets/css/%s.css', get_stylesheet_directory_uri(), 'password-form');
+	wp_enqueue_style('password-form', $css_url, [], false, 'screen');
 }
 
 /**

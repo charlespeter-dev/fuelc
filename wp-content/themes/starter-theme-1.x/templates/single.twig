@@ -34,6 +34,27 @@
 				</div>
 			</section>
 		</article>
+		<section>
+			<div class="container py-3">
+				<div class="row autho-info-box">
+					<div class="col-sm-12 col-lg-4">
+						<img class="author-img" src="{{ author.profile_picture_url}}" alt="author-image" />
+					</div>
+					<div class="col-sm-12 col-lg-8">
+						<h2 class="author-title">{{ author.name }}</h2>
+						<div class="author-socials py-2 mb-2">
+							<a href="{{ author.facebook }}"><i class="fa-brands fa-facebook"></i></a>		
+							<a href="{{ author.instagram }}"><i class="fa-brands fa-instagram"></i></a>
+							<a href="{{ author.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+						</div>
+						<p class="author-desc">{{ author.description_excerpt }}</p>
+						<div>
+						<a class="main-btn brand-btn" href="{{ author.url }}">View Bio</a>
+					</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 	<div class="py-3"></div>
 	<div class="single-post-pagination-wrapper container container-1088">
@@ -97,7 +118,8 @@
 									{{ post.preview.length(10).force.read_more('') }}
 								{% endif %}
 								<a href="{{ post.link }}" class="read-more">
-									<i class="fa-regular fa-arrow-right view-link"></i>
+									{# <i class="fa-solid fa-arrow-right"></i> #}
+									<i class="fa-solid fa-arrow-right"></i>
 								</a>
 							</p>
 						</div>

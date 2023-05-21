@@ -18,7 +18,7 @@
 					</button>
 					<br />
 					<a href="{{ post.hero_link_url }}" class="hero-link-text">
-						{{ post.hero_link_text }} <i class="fa-regular fa-arrow-right view-link"></i>
+						{{ post.hero_link_text }} <i class="fa-solid fa-arrow-right"></i>
 					</a>
 					{# <a href="{{ post.hero_link_url }}">
 						<img src="{{ TimberImage(post.get_field('hero_link_icon')).src }}"
@@ -153,7 +153,7 @@
 				{{ post.logos_slider_paragraph }}
 			</p>
 			<a href="{{ post.logos_slider_link_url }}" class="logos-slider-link">
-				{{ post.logos_slider_link_text }}<i class="fa-regular fa-arrow-right view-link"></i>
+				{{ post.logos_slider_link_text }}<i class="fa-solid fa-arrow-right"></i>
 			</a>
 			<div class="logos-slider-wrapper">
 				<div id="carouselLogos"
@@ -248,7 +248,7 @@
 													{{ slide.paragraph }}
 												</p>
 												<a class="slide-link-text" href="{{ slide.link_text_url }}">
-													{{ slide.link_text }} <i class="fa-regular fa-arrow-right view-link"></i>
+													{{ slide.link_text }} <i class="fa-solid fa-arrow-right"></i>
 												</a>
 											</div>
 										</div>
@@ -358,7 +358,7 @@
 				{{ post.awards_paragraph }}
 			</p>
 			<a href="{{ post.awards_link_url }}" class="awards-link">
-				{{ post.awards_link_text }} <i class="fa-regular fa-arrow-right view-link"></i>
+				{{ post.awards_link_text }} <i class="fa-solid fa-arrow-right"></i>
 			</a>
 		</div>
 	</section>
@@ -393,11 +393,11 @@
 							<p class="single-post-excerpt">
 								{% if post.post_excerpt_custom %}
 									{{ post.post_excerpt_custom }}
-									<i class="fa-regular fa-arrow-right view-link"></i>
+									<i class="fa-solid fa-arrow-right"></i>
 								{% else %}
 									{{
 										post.preview.length(14).force.read_more(
-											'<i class="fa-regular fa-arrow-right view-link"></i>'
+											'<i class="fa-solid fa-arrow-right"></i>'
 										)
 									}}
 								{% endif %}

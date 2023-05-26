@@ -21,15 +21,25 @@ foreach ($author_ids as $author_id) {
         'order' => 'DESC'
     ]);
 
-    $profile_picture_url = get_field('profile_picture', 'user_' . $author_id)['url'];
+    // Get author's profile picture URL using ACF
+    $profile_picture = get_field('profile_picture', 'user_' . $author_id);
+    if (!empty($profile_picture)) {
+        $profile_picture_url = $profile_picture['url'];
+        $profile_picture = $profile_picture_url;
+    } else {
+        // Set a default profile picture URL or handle the case when no picture is available
+        $default_avatar_url = get_avatar_url($author_id);
+        $profile_picture_url = $default_avatar_url;
+    }
+    // $profile_picture_url = get_field('profile_picture', 'user_' . $author_id)['url'];
     $display_name = get_the_author_meta('display_name', $author_id);
     $description = get_the_author_meta('description', $author_id);
     $url = get_author_posts_url($author_id);
     $post_ids = $authors_posts->posts;
     // Get social media field data
-    $facebook_id = get_the_author_meta('facebook', $post->post_author);
-    $instagram_id = get_the_author_meta('instagram', $post->post_author);
-    $linkedin_id = get_the_author_meta('linkedin', $post->post_author);
+    $facebook_id = get_the_author_meta('facebook', $author_id);
+    $instagram_id = get_the_author_meta('instagram', $author_id);
+    $linkedin_id = get_the_author_meta('linkedin', $author_id);
 
     /**
      * excerpts

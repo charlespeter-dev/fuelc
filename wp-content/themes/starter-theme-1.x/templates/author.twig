@@ -23,9 +23,15 @@
 							<h6 class="author-exp">Years of experience working in relevant areas: {{ author.years_of_experience }}</h6>
 						{% endif %}
 						<div class="author-socials py-2 mb-2">
-							<a href="{{ author.facebook }}"><i class="fa-brands fa-facebook"></i></a>		
-							<a href="{{ author.instagram }}"><i class="fa-brands fa-instagram"></i></a>
-							<a href="{{ author.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+							{% if author.facebook %}
+								<a href="{{ author.facebook }}"><i class="fa-brands fa-facebook"></i></a>	
+							{% endif %}
+							{% if author.instagram %}
+								<a href="{{ author.instagram }}"><i class="fa-brands fa-instagram"></i></a>
+							{% endif %}
+							{% if author.linkedin %}
+								<a href="{{ author.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+							{% endif %}
 						</div>
 					</div>
 				</div>

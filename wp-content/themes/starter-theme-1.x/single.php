@@ -19,20 +19,38 @@ $author_id = $timber_post->post_author;
 $author = new Timber\User($author_id);
 
 // Get author's profile picture URL using ACF
-$profile_picture_url = get_field('profile_picture', 'user_' . $author_id)['url'];
-$author->profile_picture_url = $profile_picture_url;
+$profile_picture = get_field('profile_picture', 'user_' . $author_id);
+// Check if author's profile picture URL exists
+if (!empty($profile_picture)) {
+	$profile_picture_url = $profile_picture['url'];
+	$author->profile_picture_url = $profile_picture_url;
+} else {
+	// Set a default profile picture URL or handle the case when no picture is available
+	$default_avatar_url = get_avatar_url($author_id);
+	$author->profile_picture_url = $default_avatar_url;;
+}
 
-// Make excerpt of author's description
+
 $description = get_the_author_meta('description', $author_id);
-$description_words = explode(' ', $description);
-$excerpt_words = array_splice($description_words, 0, 30);
-$excerpt = implode(' ', $excerpt_words);
-$author->description_excerpt = $excerpt . '...';
+// Check if author's description exists
+if (!empty($description)) {
+	// Make excerpt of author's description
+	$description_words = explode(' ', $description);
+	$excerpt_words = array_splice($description_words, 0, 30);
+	$excerpt = implode(' ', $excerpt_words);
+	$author->description_excerpt = $excerpt . '...';
+} else {
+	// Handle the case when no description is available
+	$author->description_excerpt = 'No description available.';
+}
 
-// Get author's social media field data
+// Get author's Facebook
 $author->facebook = get_the_author_meta('facebook', $author_id);
+// Get author's Instagram
 $author->instagram = get_the_author_meta('instagram', $author_id);
+// Get author's LinkedIn
 $author->linkedin = get_the_author_meta('linkedin', $author_id);
+
 
 // Get author's bio page link
 $author->url = get_author_posts_url($author_id);

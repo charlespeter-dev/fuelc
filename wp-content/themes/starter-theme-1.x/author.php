@@ -22,8 +22,19 @@ $context = $timber::context();
 $context['ttcposts'] = new Timber\PostQuery($author_posts_args);
 $context['pagination'] = $timber::get_pagination();
 
+// Get author's profile picture URL using ACF
+$profile_picture = get_field('profile_picture', 'user_' . $author_id);
+if (!empty($profile_picture)) {
+	$profile_picture_url = $profile_picture['url'];
+	$profile_picture = $profile_picture_url;
+} else {
+	// Set a default profile picture URL or handle the case when no picture is available
+	$default_avatar_url = get_avatar_url($author_id);
+	$profile_picture = $default_avatar_url;
+}
+
 $author = [
-	'profile_picture_url' => get_field('profile_picture', 'user_' . $author_id)['url'],
+	'profile_picture_url' => $profile_picture,
 	'display_name' => get_the_author_meta('display_name', $author_id),
 	'description' => get_the_author_meta('description', $author_id),
 	'url' => get_author_posts_url($author_id),

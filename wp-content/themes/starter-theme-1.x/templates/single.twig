@@ -41,16 +41,26 @@
 						<img class="author-img" src="{{ author.profile_picture_url}}" alt="author-image" />
 					</div>
 					<div class="col-sm-12 col-lg-8">
-						<h2 class="author-title">Author: {{ author.name }}</h2>
+						{% if author.name %}
+							<h2 class="author-title">Author: {{ author.name }}</h2>
+						{% endif %}
 						<div class="author-socials py-2 mb-2">
-							<a href="{{ author.facebook }}"><i class="fa-brands fa-facebook"></i></a>		
-							<a href="{{ author.instagram }}"><i class="fa-brands fa-instagram"></i></a>
-							<a href="{{ author.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+							{% if author.facebook %}
+								<a href="{{ author.facebook }}"><i class="fa-brands fa-facebook"></i></a>	
+							{% endif %}
+							{% if author.instagram %}
+								<a href="{{ author.instagram }}"><i class="fa-brands fa-instagram"></i></a>
+							{% endif %}
+							{% if author.linkedin %}
+								<a href="{{ author.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+							{% endif %}
 						</div>
 						<p class="author-desc">{{ author.description_excerpt }}</p>
-						<div>
-						<a class="main-btn brand-btn" href="{{ author.url }}">View Bio</a>
-					</div>
+						{% if author.description_excerpt != 'No description available.' %}
+							<div>
+								<a class="main-btn brand-btn" href="{{ author.url }}">View Bio</a>
+							</div>
+						{% endif %}
 					</div>
 				</div>
 			</div>

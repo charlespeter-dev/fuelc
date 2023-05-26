@@ -24,15 +24,21 @@
 			<div class="col pt-4 text-center">
 				<div class="card author">
 					<div>
-						<img src="{{ author.profile_picture_url }}" alt="">
+						<img src="{{ author.profile_picture_url }}" alt="author-img">
 					</div>
 					<div class="display-name">
 						<h3>{{ author.display_name }}</h3>
 					</div>
 					<div class="socials">
-							<a href="{{ author.facebook_id }}"><i class="fa-brands fa-facebook"></i></a>		
+						{% if author.facebook_id %}
+							<a href="{{ author.facebook_id }}"><i class="fa-brands fa-facebook"></i></a>	
+						{% endif %}
+						{% if author.instagram_id %}
 							<a href="{{ author.instagram_id }}"><i class="fa-brands fa-instagram"></i></a>
+						{% endif %}
+						{% if author.linkedin_id %}
 							<a href="{{ author.linkedin_id }}"><i class="fa-brands fa-linkedin"></i></a>
+						{% endif %}
 					</div>
 					<div class="description">
 						{{ author.description }}

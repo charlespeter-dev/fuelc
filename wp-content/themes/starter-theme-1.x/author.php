@@ -40,18 +40,8 @@ $author = [
 	'url' => get_author_posts_url($author_id),
 	// Get the published works acf repeater field data
 	'years_of_experience' => get_field('years_of_experience', 'user_' . $author_id),
-	// Get the published works acf repeater field data
-	'published_works_list' => get_field('published_works​', 'user_' . $author_id),
-	// Get citations acf repeater field data
-	'citations' => get_field('citations', 'user_' . $author_id),
 	// Get degrees and/or titles​ acf repeater field data
 	'degrees_andor_titles' => get_field('degrees_andor_titles​', 'user_' . $author_id),
-	// Get conference appearances titles​ acf repeater field data
-	'conference_appearances' => get_field('conference_appearances', 'user_' . $author_id),
-	// Get media coverage appearances titles​ acf repeater field data
-	'media_coverage' => get_field('media_coverage', 'user_' . $author_id),
-	// Get past jobs coverage appearances titles​ acf repeater field data
-	'past_jobs' => get_field('past_jobs', 'user_' . $author_id),
 	// Get social media field data
 	'facebook' => get_the_author_meta('facebook', $post->post_author),
 	'instagram' => get_the_author_meta('instagram', $post->post_author),

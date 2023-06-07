@@ -435,3 +435,43 @@ if (is_user_logged_in()) {
 <?php
 	});
 }
+
+add_filter('wpseo_xml_sitemap_post_url', function ($url, $post) {
+
+	$excluded = [
+		'https://fuelcycle.com/blog/introducing-fuel-cycles-newest-sales-director/',
+		'https://fuelcycle.com/blog/mining-patient-ecosystem-market-research-can-help-understand-patients-journey/',
+		'https://fuelcycle.com/blog/reckoning-facebooks-missteps-personalize-ads-without-creeping-audience/',
+		'https://fuelcycle.com/blog/mobile-banking-leading-future-finance-whats-hang/',
+	];
+
+	$_pprredirect_url = get_post_meta($post->ID, '_pprredirect_url', true) ?? null;
+	$_pprredirect_type = get_post_meta($post->ID, '_pprredirect_type', true) ?? null;
+
+	if ($_pprredirect_url && $_pprredirect_type == 301) {
+
+		if (strpos($_pprredirect_url, 'fuelcycle.com') !== false && strpos(get_bloginfo('url'), 'fuelcycle.com') !== false) {
+			if (!in_array($_pprredirect_url, $excluded)) {
+				return $_pprredirect_url;
+			}
+		} else {
+
+			/**
+			 * debug mode in local
+			 * Yoast doesn't allow external URLs
+			 */
+
+			$_pprredirect_url = str_replace('fuelcycle.com', 'fuelc.test', $_pprredirect_url);
+
+			// $redirection = [
+			// 	'src' => get_the_permalink($post->ID),
+			// 	'dest' => $_pprredirect_url
+			// ];
+			// print_r($redirection);
+
+			return $_pprredirect_url;
+		}
+	}
+
+	return $url;
+}, 10, 2);

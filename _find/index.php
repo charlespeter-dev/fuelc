@@ -10,7 +10,7 @@ $results = [];
 
 if (isset($_GET['s']) && $_GET['s']) {
     global $wpdb;
-    $sql = "SELECT DISTINCT p.ID, p.post_type, p.post_title, pm.meta_key, pm.meta_value FROM `wp_posts` p LEFT JOIN `wp_postmeta` pm ON (p.ID = pm.post_id) WHERE pm.meta_key = '_elementor_data' AND pm.meta_value LIKE '%s' AND (p.post_type = 'page' OR p.post_type = 'post') AND p.post_status = 'publish' ORDER BY p.post_type";
+    $sql = "SELECT DISTINCT p.ID, p.post_type, p.post_title FROM `wp_posts` p LEFT JOIN `wp_postmeta` pm ON (p.ID = pm.post_id) WHERE pm.meta_key = '_elementor_data' AND pm.meta_value LIKE '%s' AND (p.post_type = 'page' OR p.post_type = 'post') AND p.post_status = 'publish' ORDER BY p.post_type";
     $sql = $wpdb->prepare($sql, '%' . $wpdb->esc_like($_GET['s']) . '%');
     $res_elementor = $wpdb->get_results($sql, ARRAY_A);
 

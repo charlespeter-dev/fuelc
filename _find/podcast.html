@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175"
+        style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+        src="https://embed.podcasts.apple.com/us/podcast/david-pennino-ceo-and-founder-of-logicsource/id1619104989?i=1000617044297"></iframe>
+
+    <script>
+
+        (function () {
+
+            var ldjson = document.querySelector('.yoast-schema-graph');
+
+            if (ldjson) {
+                if (ldjson.innerHTML) {
+                    var json = JSON.parse(ldjson.innerHTML);
+                    var type = json['@graph'][0]['@type'];
+                    return type.toString();
+                }
+            }
+            return undefined;
+        })()
+    </script>
+</body>
+
+</html>

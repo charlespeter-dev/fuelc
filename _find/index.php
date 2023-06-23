@@ -19,9 +19,11 @@ if (isset($_GET['s']) && $_GET['s']) {
             $excluded_ids[] = $r['ID'];
         }
 
+
+
         if ($excluded_ids) {
-            $sql = "SELECT DISTINCT p.ID, p.post_type, p.post_title FROM `wp_posts` p WHERE p.post_content LIKE '%s' AND p.ID NOT IN (%s) AND (p.post_type = 'page' OR p.post_type = 'post') AND p.post_status = 'publish' ORDER BY p.post_type";
-            $sql = $wpdb->prepare($sql, '%' . $wpdb->esc_like($_GET['s']) . '%', implode(',', $excluded_ids));
+            $sql = "SELECT DISTINCT p.ID, p.post_type, p.post_title FROM `wp_posts` p WHERE p.post_content LIKE '%s' AND p.ID NOT IN (" . implode(',', $excluded_ids) . ") AND (p.post_type = 'page' OR p.post_type = 'post') AND p.post_status = 'publish' ORDER BY p.post_type";
+            $sql = $wpdb->prepare($sql, '%' . $wpdb->esc_like($_GET['s']) . '%');
             $res_default = $wpdb->get_results($sql, ARRAY_A);
         }
     }
@@ -30,7 +32,6 @@ if (isset($_GET['s']) && $_GET['s']) {
         $results = array_merge($res_elementor, $res_default);
     }
 }
-
 
 ?>
 <!DOCTYPE html>

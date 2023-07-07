@@ -561,7 +561,7 @@ body.offcanvas-active {
     transform: translateX(0);
   }
   .mobile-offcanvas .container,
-  .mobile-offcanvas .container-fluid {
+.mobile-offcanvas .container-fluid {
     display: block;
   }
   .subnav-link-title {

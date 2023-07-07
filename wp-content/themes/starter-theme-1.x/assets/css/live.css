@@ -548,15 +548,15 @@
 }
 @media (max-width: 1199px) {
   #area-4,
-  #area-5,
-  #area-6 {
+#area-5,
+#area-6 {
     padding: 32px 16px;
   }
 }
 @media (max-width: 767px) {
   #area-4,
-  #area-5,
-  #area-6 {
+#area-5,
+#area-6 {
     padding: 20px 16px;
   }
 }
@@ -567,15 +567,15 @@
 }
 @media (max-width: 767px) {
   #area-4 .text-side,
-  #area-5 .text-side,
-  #area-6 .text-side {
+#area-5 .text-side,
+#area-6 .text-side {
     max-width: none;
   }
 }
 @media (max-width: 767px) {
   #area-4 .image-side,
-  #area-5 .image-side,
-  #area-6 .image-side {
+#area-5 .image-side,
+#area-6 .image-side {
     grid-row-start: 1;
     grid-row-end: 2;
     margin-bottom: 28px;

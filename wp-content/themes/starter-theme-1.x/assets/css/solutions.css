@@ -235,11 +235,11 @@ h3 {
     padding-top: 125px;
   }
   .row-wrapper-1,
-  .row-wrapper-2 {
+.row-wrapper-2 {
     margin-top: 50px;
   }
   .row-wrapper-1 img,
-  .row-wrapper-2 img {
+.row-wrapper-2 img {
     height: 325px;
     object-fit: cover;
   }

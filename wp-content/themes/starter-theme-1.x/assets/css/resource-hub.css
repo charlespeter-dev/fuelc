@@ -596,7 +596,7 @@ input[type=checkbox]::before {
 }
 @media (max-width: 1199px) {
   #post-list-section .searchandfilter > ul > li.sf-field-search label,
-  #post-list-section .searchandfilter > ul > li.sf-field-search input {
+#post-list-section .searchandfilter > ul > li.sf-field-search input {
     width: 90%;
   }
 }

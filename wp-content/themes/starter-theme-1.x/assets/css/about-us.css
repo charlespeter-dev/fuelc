@@ -139,14 +139,14 @@
 }
 @media (max-width: 767px) {
   .area-2,
-  .area-4 {
+.area-4 {
     display: flex;
     flex-direction: column;
   }
 }
 @media (max-width: 767px) {
   .area-2 .text-side,
-  .area-4 .text-side {
+.area-4 .text-side {
     padding: 0 12px;
     text-align: center;
   }
@@ -154,7 +154,7 @@
 
 @media (min-width: 768px) {
   .area-2,
-  .area-4 {
+.area-4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 36px;
@@ -329,7 +329,7 @@
 }
 @media (max-width: 991px) {
   .area-6 .text-side > h3,
-  .area-6 .text-side > p {
+.area-6 .text-side > p {
     text-align: center;
   }
 }

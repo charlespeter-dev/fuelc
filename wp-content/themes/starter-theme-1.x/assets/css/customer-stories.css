@@ -123,8 +123,8 @@
 
 @media (min-width: 768px) {
   .hero-subheading,
-  .hero-heading,
-  .hero-paragraph {
+.hero-heading,
+.hero-paragraph {
     color: white;
   }
 }

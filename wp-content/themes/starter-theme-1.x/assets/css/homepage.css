@@ -125,7 +125,7 @@
 }
 @media (max-width: 767px) {
   #tabbed-slider,
-  #logos-slider {
+#logos-slider {
     padding: 0;
   }
 }

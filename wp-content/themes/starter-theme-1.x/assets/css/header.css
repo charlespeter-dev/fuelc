@@ -23,7 +23,7 @@ header h2 {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 16px 0px;
 }
 #main-navbar .nav-container {
-  width: 1127.88px;
+  max-width: 1140px;
   padding-left: 15px;
   padding-right: 15px;
 }

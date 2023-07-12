@@ -433,7 +433,7 @@ if (is_user_logged_in()) {
 			}
 		</style>
 
-<?php
+	<?php
 	});
 }
 
@@ -476,3 +476,64 @@ add_filter('wpseo_xml_sitemap_post_url', function ($url, $post) {
 
 	return $url;
 }, 10, 2);
+
+function fc_get_latest_resource()
+{
+	$args = [
+		'category_name' => 'ebook,webinar,white-paper',
+		'order' => 'DESC',
+		'orderby' => 'date',
+		'posts_per_page' => 1
+	];
+
+	$results = new WP_Query($args);
+	wp_reset_postdata();
+
+	$post = $results->post;
+
+	/**
+	 * thumbnail
+	 */
+
+	$img = get_the_post_thumbnail($post->ID, 'medium', ['class' => 'featured-post-image']);
+
+	/**
+	 * categories
+	 */
+
+	$cats = [];
+	foreach (get_the_category($post->ID) as $c) {
+		$cat = get_category($c);
+		$cats[] = $cat->name;
+	}
+
+	$categories = implode(', ', $cats);
+
+	/**
+	 * title
+	 */
+
+	$title = get_the_title($post->ID);
+
+	/**
+	 * permalink
+	 */
+
+	$permalink = get_the_permalink($post->ID);
+
+	?>
+
+	<?= $img ?>
+	<div class="featured-post-text-area">
+		<span class="d-block featured-post-category"><?= $categories ?></span>
+		<a href="<?= $permalink ?>" class="subnav-link-a">
+			<span class="featured-post-title">
+				<?= $title ?>
+			</span>
+			<p class="featured-post-paragraph">
+				{{ options.subnav_3_col_2_paragraph }}
+			</p>
+		</a>
+
+	<?php
+}

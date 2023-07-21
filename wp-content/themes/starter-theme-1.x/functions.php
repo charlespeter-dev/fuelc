@@ -477,10 +477,14 @@ add_filter('wpseo_xml_sitemap_post_url', function ($url, $post) {
 	return $url;
 }, 10, 2);
 
+/**
+ * helper to echo the latest resources in the top nav
+ */
+
 function fc_get_latest_resource()
 {
 	$args = [
-		'category_name' => 'ebook,webinar,white-paper',
+		'category_name' => 'ebook,webinar,white-paper,guide-book,infographic,video,case-study,industry-report,podcast',
 		'order' => 'DESC',
 		'orderby' => 'date',
 		'posts_per_page' => 1
@@ -495,7 +499,14 @@ function fc_get_latest_resource()
 	 * thumbnail
 	 */
 
-	$img = get_the_post_thumbnail($post->ID, 'medium', ['class' => 'featured-post-image']);
+	$attachmend_id = get_field('featured_image', $post->ID) ?? null;
+
+	if (!$attachmend_id) {
+		$attachmend_id = get_post_thumbnail_id($post->ID);
+	}
+
+	$img = wp_get_attachment_image_url($attachmend_id, '_2x-nav-featured-image');
+
 
 	/**
 	 * categories
@@ -521,19 +532,142 @@ function fc_get_latest_resource()
 
 	$permalink = get_the_permalink($post->ID);
 
+	/**
+	 * excerpts
+	 */
+
+	$excerpts = get_the_excerpt($post->ID);
+
 	?>
 
-	<?= $img ?>
-	<div class="featured-post-text-area">
-		<span class="d-block featured-post-category"><?= $categories ?></span>
-		<a href="<?= $permalink ?>" class="subnav-link-a">
-			<span class="featured-post-title">
-				<?= $title ?>
+	<div class="subnav-3-right-wrapper">
+		<div class="line-divider"></div>
+		<div>
+			<img class="featured-post-image" src="<?= $img ?>" alt="" />
+		</div>
+		<div class="featured-post-text-area">
+			<span class="d-block featured-post-category mt-25px">
+				<?= $categories ?>
 			</span>
-			<p class="featured-post-paragraph">
-				{{ options.subnav_3_col_2_paragraph }}
-			</p>
-		</a>
+			<a href="<?= $permalink ?>" class="subnav-link-a">
+				<span class="featured-post-title">
+					<?= $title ?>
+				</span>
+				<p class="featured-post-paragraph">
+					<?= $excerpts ?>
+				</p>
+			</a>
+		</div>
+	</div>
 
-	<?php
+<?php
 }
+
+/**
+ * helper to echo the latest press in the top nav
+ */
+
+function fc_get_latest_press()
+{
+	$args = [
+		'category_name' => 'press',
+		'order' => 'DESC',
+		'orderby' => 'date',
+		'posts_per_page' => 1
+	];
+
+	$results = new WP_Query($args);
+	wp_reset_postdata();
+
+	$post = $results->post;
+
+	/**
+	 * thumbnail
+	 */
+
+	$attachmend_id = get_field('featured_image', $post->ID) ?? null;
+
+	if (!$attachmend_id) {
+		$attachmend_id = get_post_thumbnail_id($post->ID);
+	}
+
+	$img = wp_get_attachment_image_url($attachmend_id, '_2x-nav-featured-image');
+
+
+	/**
+	 * categories
+	 */
+
+	$cats = [];
+	foreach (get_the_category($post->ID) as $c) {
+		$cat = get_category($c);
+		$cats[] = $cat->name;
+	}
+
+	$categories = implode(', ', $cats);
+
+	/**
+	 * title
+	 */
+
+	$title = get_the_title($post->ID);
+
+	/**
+	 * permalink
+	 */
+
+	$permalink = get_the_permalink($post->ID);
+
+	/**
+	 * excerpts
+	 */
+
+	$excerpts = get_the_excerpt($post->ID);
+
+?>
+
+	<div class="subnav-3-right-wrapper">
+		<div class="line-divider"></div>
+		<div>
+			<img class="featured-post-image" src="<?= $img ?>" alt="" />
+		</div>
+		<div class="featured-post-text-area">
+			<span class="d-block featured-post-category mt-25px">
+				<?= $categories ?>
+			</span>
+			<a href="<?= $permalink ?>" class="subnav-link-a">
+				<span class="featured-post-title">
+					<?= $title ?>
+				</span>
+				<p class="featured-post-paragraph">
+					<?= $excerpts ?>
+				</p>
+			</a>
+		</div>
+	</div>
+
+<?php
+}
+
+/**
+ * helper to echo the ACF flexiable footer content only in pages
+ */
+
+function flexible_footer_content()
+{
+	if (is_page()) {
+		$options = get_fields('option') ?? null;
+		if ($options) {
+			echo $options['flexible_footer_content'];
+		}
+	}
+}
+
+/**
+ * register new image size for specific content
+ */
+
+add_action('after_setup_theme',  function () {
+	add_theme_support('post-thumbnails');
+	add_image_size('_2x-nav-featured-image', 260, 260, true);
+});

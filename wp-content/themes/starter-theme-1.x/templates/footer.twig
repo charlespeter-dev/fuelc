@@ -1,6 +1,7 @@
 <footer id="main-footer">
 	<div class="footer-bg">
 		<div class="container-fluid">
+			{{ function('flexible_footer_content') }}
 			<div class="row form-container">
 				<div class="col-md-9 d-flex align-items-center">
 
@@ -31,18 +32,18 @@
 						</p>
 						<ul>
 							{% for item in options.column_1_row %}
-								<li>
-									<div class="inline">
-										<div class="footer-cirlce">
-											{{ item.circle_text }}
-										</div>
+							<li>
+								<div class="inline">
+									<div class="footer-cirlce">
+										{{ item.circle_text }}
 									</div>
-									<div class="inline address-container">
-										<div class="address">
-											<a href="{{ item.address_link }}" target="_blank">{{ item.text }}</a>
-										</div>
+								</div>
+								<div class="inline address-container">
+									<div class="address">
+										<a href="{{ item.address_link }}" target="_blank">{{ item.text }}</a>
 									</div>
-								</li>
+								</div>
+							</li>
 							{% endfor %}
 						</ul>
 					</div>
@@ -53,7 +54,7 @@
 					</p>
 					<ul>
 						{% for item in options.column_2_link %}
-							<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+						<li><a href="{{ item.url }}">{{ item.text }}</a></li>
 						{% endfor %}
 					</ul>
 					<p class="footer-title d-none d-md-block">
@@ -61,7 +62,7 @@
 					</p>
 					<ul class="d-none d-md-block">
 						{% for item in options.column_2_link_bottom %}
-							<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+						<li><a href="{{ item.url }}">{{ item.text }}</a></li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -71,7 +72,7 @@
 					</p>
 					<ul>
 						{% for item in options.column_3_link %}
-							<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+						<li><a href="{{ item.url }}">{{ item.text }}</a></li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -81,11 +82,11 @@
 					</p>
 					<ul>
 						{% for item in options.column_4_link %}
-							<li>
-								<a href="{{ item.url }}" target="_blank">
-									<i class="fab {{ item.icon_code }}"></i>{{ item.text }}
-								</a>
-							</li>
+						<li>
+							<a href="{{ item.url }}" target="_blank">
+								<i class="fab {{ item.icon_code }}"></i>{{ item.text }}
+							</a>
+						</li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -96,7 +97,7 @@
 					</p>
 					<ul>
 						{% for item in options.column_5_link %}
-							<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+						<li><a href="{{ item.url }}">{{ item.text }}</a></li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -107,7 +108,7 @@
 					</p>
 					<ul class="">
 						{% for item in options.column_2_link_bottom %}
-							<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+						<li><a href="{{ item.url }}">{{ item.text }}</a></li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -119,7 +120,9 @@
 	</div>
 	<div class="py-3"></div>
 	<div class="back-to-top-icon-wrapper">
-		<a href="javascript:;"><img class="back-to-top-icon" src="{{ Image(options.back_to_top_icon).src }}" alt="{{ Image(options.back_to_top_icon).alt }}" /></a>
+		<a href="javascript:;"><img class="back-to-top-icon" src="{{ Image(options.back_to_top_icon).src }}"
+				alt="{{ Image(options.back_to_top_icon).alt }}" /></a>
 	</div>
 	<div class="py-5"></div>
 </footer>
+

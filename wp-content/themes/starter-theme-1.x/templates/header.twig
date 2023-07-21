@@ -404,32 +404,7 @@
 						</ul>
 					</div>
 					<div class="col-8">
-						<div class="subnav-3-right-wrapper">
-							<div class="line-divider"></div>
-							<div>
-								{% if options.subnav_3_title_2 %}
-								<span class="subnav-title">
-									{{ options.subnav_3_title_2 }}
-								</span>
-								{% endif %}
-								<img class="featured-post-image"
-									src="{{ options.subnav_3_col_2_image.url }}"
-									alt="{{ options.subnav_3_col_2_image.alt }}" />
-							</div>
-							<div class="featured-post-text-area">
-								<span class="d-block featured-post-category mt-25px">
-									{{ options.subnav_3_col_2_subtitle }}
-								</span>
-								<a href="{{ options.subnav_3_col_2_url }}" class="subnav-link-a">
-									<span class="featured-post-title">
-										{{ options.subnav_3_col_2_title }}
-									</span>
-									<p class="featured-post-paragraph">
-										{{ options.subnav_3_col_2_paragraph }}
-									</p>
-								</a>
-							</div>
-						</div>
+						{{ function('fc_get_latest_resource') }}
 					</div>
 				</div>
 			</div>
@@ -460,32 +435,7 @@
 						</ul>
 					</div>
 					<div class="col-8">
-						<div class="subnav-3-right-wrapper">
-							<div class="line-divider"></div>
-							<div>
-								{% if options.subnav_4_title_2 %}
-								<span class="subnav-title">
-									{{ options.subnav_4_title_2 }}
-								</span>
-								{% endif %}
-								<img class="featured-post-image"
-									src="{{ options.subnav_4_col_2_image.url }}"
-									alt="{{ options.subnav_4_col_2_image.alt }}" />
-							</div>
-							<div class="featured-post-text-area">
-								<span class="d-block featured-post-category mt-25px">
-									{{ options.subnav_4_col_2_subtitle }}
-								</span>
-								<a href="{{ options.subnav_4_col_2_url }}" class="subnav-link-a">
-									<span class="featured-post-title">
-										{{ options.subnav_4_col_2_title }}
-									</span>
-									<p class="featured-post-paragraph">
-										{{ options.subnav_4_col_2_paragraph }}
-									</p>
-								</a>
-							</div>
-						</div>
+						{{ function('fc_get_latest_press') }}
 					</div>
 				</div>
 			</div>

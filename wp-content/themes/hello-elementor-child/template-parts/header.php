@@ -507,7 +507,6 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 					<div class="w-100 pt-3">
 						<div class="subnav-border-right">
 							<span class="subnav-title">
-								{{ options.subnav_1_title_1 }}
 								<?= $options['subnav_1_title_1'] ?>
 							</span>
 							<img class="subnav-1-image img-fluid" src="{{ options.subnav_1_image.url }}" alt="{{ options.subnav_1_image.alt }}" />

@@ -326,3 +326,39 @@ add_action('after_setup_theme',  function () {
     add_theme_support('post-thumbnails');
     add_image_size('_2x-nav-featured-image', 260, 260, true);
 });
+
+/**
+ * acf options page
+ */
+
+if (function_exists('acf_add_options_page')) {
+
+
+    acf_add_options_page(array(
+        'page_title'         => 'Theme Fields',
+        'menu_title'        => 'Theme Fields',
+        'menu_slug'         => 'theme-general-fields',
+        'capability'        => 'edit_posts',
+        'redirect'                => false
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'         => 'Theme Header Fields',
+        'menu_title'        => 'Header Fields',
+        'parent_slug'        => 'theme-general-fields',
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'         => 'Theme Footer Fields',
+        'menu_title'        => 'Footer Fields',
+        'parent_slug'        => 'theme-general-fields',
+    ));
+}
+
+/**
+ * shove YOAST settings panel in editor to bottom
+ */
+
+add_filter('wpseo_metabox_prio', function () {
+    return 'low';
+});

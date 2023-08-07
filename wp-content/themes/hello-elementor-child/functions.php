@@ -94,7 +94,7 @@ add_filter('wpseo_xml_sitemap_post_url', function ($url, $post) {
  * helper to echo the latest resources in the top nav
  */
 
-function fc_get_latest_resource()
+function fc_get_latest_resource($mobile = false)
 {
     $args = [
         'category_name' => 'ebook,webinar,white-paper,guide-book,infographic,video,case-study,industry-report,podcast',
@@ -153,25 +153,46 @@ function fc_get_latest_resource()
 
     ?>
 
-    <div class="subnav-3-right-wrapper">
-        <div class="line-divider"></div>
-        <div>
-            <img class="featured-post-image" src="<?= $img ?>" alt="" />
-        </div>
-        <div class="featured-post-text-area">
-            <span class="d-block featured-post-category mt-25px">
-                <?= $categories ?>
-            </span>
-            <a href="<?= $permalink ?>" class="subnav-link-a">
-                <span class="featured-post-title">
-                    <?= $title ?>
+    <?php if (!$mobile) : ?>
+        <div class="subnav-3-right-wrapper">
+            <div class="line-divider"></div>
+            <div>
+                <img class="featured-post-image" src="<?= $img ?>" alt="" />
+            </div>
+            <div class="featured-post-text-area">
+                <span class="d-block featured-post-category mt-25px">
+                    <?= $categories ?>
                 </span>
-                <p class="featured-post-paragraph">
-                    <?= $excerpts ?>
-                </p>
-            </a>
+                <a href="<?= $permalink ?>" class="subnav-link-a">
+                    <span class="featured-post-title">
+                        <?= $title ?>
+                    </span>
+                    <p class="featured-post-paragraph">
+                        <?= $excerpts ?>
+                    </p>
+                </a>
+            </div>
         </div>
-    </div>
+    <?php else : ?>
+        <div class="subnav-3-right-wrapper-mobile">
+            <div>
+                <img class="featured-post-image img-fluid" src="<?= $img ?>" alt="" />
+            </div>
+            <div class="featured-post-text-area-mobile pr-1">
+                <span class="d-block featured-post-category">
+                    <?= $categories ?>
+                </span>
+                <a href="<?= $permalink ?>" class="subnav-link-a">
+                    <span class="featured-post-title featured-post-title-mobile">
+                        <?= $title ?>
+                    </span>
+                    <p class="featured-post-paragraph featured-post-paragraph-mobile">
+                        <?= $excerpts ?>
+                    </p>
+                </a>
+            </div>
+        </div>
+    <?php endif ?>
 
 <?php
 }
@@ -180,7 +201,7 @@ function fc_get_latest_resource()
  * helper to echo the latest press in the top nav
  */
 
-function fc_get_latest_press()
+function fc_get_latest_press($mobile = false)
 {
     $args = [
         'category_name' => 'press',
@@ -239,25 +260,46 @@ function fc_get_latest_press()
 
 ?>
 
-    <div class="subnav-3-right-wrapper">
-        <div class="line-divider"></div>
-        <div>
-            <img class="featured-post-image" src="<?= $img ?>" alt="" />
-        </div>
-        <div class="featured-post-text-area">
-            <span class="d-block featured-post-category mt-25px">
-                <?= $categories ?>
-            </span>
-            <a href="<?= $permalink ?>" class="subnav-link-a">
-                <span class="featured-post-title">
-                    <?= $title ?>
+    <?php if (!$mobile) : ?>
+        <div class="subnav-3-right-wrapper">
+            <div class="line-divider"></div>
+            <div>
+                <img class="featured-post-image" src="<?= $img ?>" alt="" />
+            </div>
+            <div class="featured-post-text-area">
+                <span class="d-block featured-post-category mt-25px">
+                    <?= $categories ?>
                 </span>
-                <p class="featured-post-paragraph">
-                    <?= $excerpts ?>
-                </p>
-            </a>
+                <a href="<?= $permalink ?>" class="subnav-link-a">
+                    <span class="featured-post-title">
+                        <?= $title ?>
+                    </span>
+                    <p class="featured-post-paragraph">
+                        <?= $excerpts ?>
+                    </p>
+                </a>
+            </div>
         </div>
-    </div>
+    <?php else : ?>
+        <div class="subnav-3-right-wrapper-mobile">
+            <div>
+                <img class="featured-post-image img-fluid" src="<?= $img ?>" alt="" />
+            </div>
+            <div class="featured-post-text-area-mobile pr-1">
+                <span class="d-block featured-post-category">
+                    <?= $categories ?>
+                </span>
+                <a href="<?= $permalink ?>" class="subnav-link-a">
+                    <span class="featured-post-title featured-post-title-mobile">
+                        <?= $title ?>
+                    </span>
+                    <p class="featured-post-paragraph featured-post-paragraph-mobile">
+                        <?= $excerpts ?>
+                    </p>
+                </a>
+            </div>
+        </div>
+    <?php endif ?>
 
 <?php
 }

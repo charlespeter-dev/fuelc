@@ -1,0 +1,30 @@
+.timber-oldfc {
+
+    --e-global-color-primary: #E85948;
+    --e-global-color-secondary: #CB198A;
+    --e-global-color-text: #49494B;
+    --e-global-color-accent: #613F97;
+    --e-global-color-b419c99: #FFFFFF;
+    --e-global-color-72c0b1b: #38195B;
+    --e-global-typography-primary-font-family: "greycliff-cf";
+    --e-global-typography-primary-font-weight: 500;
+    --e-global-typography-secondary-font-family: "greycliff-cf";
+    --e-global-typography-secondary-font-weight: 400;
+    --e-global-typography-text-font-family: "greycliff-cf";
+    --e-global-typography-text-font-weight: 400;
+    --e-global-typography-accent-font-family: "greycliff-cf";
+    --e-global-typography-accent-font-weight: 500;
+    --e-global-typography-0fe730f-font-family: "greycliff-cf";
+    --e-global-typography-0fe730f-font-weight: bold;
+    --e-global-typography-37fd63c-font-family: "greycliff-cf";
+    --e-global-typography-37fd63c-font-weight: 200;
+
+    @import "typography.scss";
+    @import "header.scss";
+    @import "footer.scss";
+
+    a {
+        text-decoration: none;
+        font-family: var(--e-global-typography-primary-font-family);
+    }
+}

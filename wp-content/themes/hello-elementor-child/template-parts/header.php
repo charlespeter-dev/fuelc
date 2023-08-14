@@ -13,8 +13,8 @@ if (!defined('ABSPATH')) {
 $options = get_fields('options');
 $theme_location = 'menu-1';
 $locations = get_nav_menu_locations();
-$menu_id   = $locations[$theme_location];
-$menu_object  = wp_get_nav_menu_object($menu_id);
+$menu_id = $locations[$theme_location];
+$menu_object = wp_get_nav_menu_object($menu_id);
 $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_cache' => false]);
 
 ?>
@@ -23,20 +23,26 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 
 <header>
 	<div class="bootstrap-container">
-		<div class="custom-header-menu">
+		<div class="timber-oldfc">
 			<div class="nav-wrapper position-relative">
 				<nav id="main-navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
 					<div class="container-fluid nav-container p-0">
 						<div class="w-100 d-flex nav-row-wrapper">
 							<div class="nav-brand-wrapper d-flex justify-content-between w-100">
 								<a class="navbar-brand" href="<?= get_bloginfo('url') ?>">
-									<img class="nav-logo" src="<?= $options['site_logo']['url'] ?>" alt="<?= $options['site_logo']['alt'] ?>">
+									<img class="nav-logo" src="<?= $options['site_logo']['url'] ?>"
+										alt="<?= $options['site_logo']['alt'] ?>">
 								</a>
 								<div class="burger-cta-wrapper">
-									<button id="hamburger-menu-icon" class="navbar-toggler" data-trigger="navbar_main" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+									<button id="hamburger-menu-icon" class="navbar-toggler" data-trigger="navbar_main"
+										type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+										aria-controls="navbarSupportedContent" aria-expanded="false"
+										aria-label="Toggle navigation">
 										<span class="navbar-toggler-icon"></span>
 									</button>
-									<a href="<?= $options['cta_button_link'] ?>" id="cta-btn-nav" class="main-btn cta-btn white-hover mobile-cta" style="color: <?= $options['cta_button_color'] ?>;">
+									<a href="<?= $options['cta_button_link'] ?>" id="cta-btn-nav"
+										class="main-btn cta-btn white-hover mobile-cta"
+										style="color: <?= $options['cta_button_color'] ?>;">
 										<?= $options['cta_button_text'] ?>
 									</a>
 								</div>
@@ -44,9 +50,10 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 							<div class="p-0 d-flex">
 								<div class="collapse navbar-collapse float-right" id="navbarSupportedContent">
 									<ul class="navbar-nav mr-auto">
-										<?php foreach ($menu_items as $item) : ?>
+										<?php foreach ($menu_items as $item): ?>
 											<li class="nav-item">
-												<a id="nav-link-<?= $item->ID ?>" data-id="<?= $item->ID ?>" class="nav-link" href="<?= $item->url ? $item->url : 'javascript:;' ?>">
+												<a id="nav-link-<?= $item->ID ?>" data-id="<?= $item->ID ?>"
+													class="nav-link" href="<?= $item->url ? $item->url : 'javascript:;' ?>">
 													<?= $item->title ?>
 													<img class="nav-arrow" src="<?= $options['nav_arrow']['url'] ?>" alt="">
 												</a>
@@ -56,7 +63,9 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 											<a href="javascript:;"><i class="fa-solid fa-angle-left"></i> MENU</a>
 										</li>
 										<li class="nav-item">
-											<a href="<?= $options['cta_button_link'] ?>" id="cta-btn-nav" class="main-btn cta-btn white-hover" style="color: <?= $options['cta_button_color'] ?>;">
+											<a href="<?= $options['cta_button_link'] ?>" id="cta-btn-nav"
+												class="main-btn cta-btn white-hover"
+												style="color: <?= $options['cta_button_color'] ?>;">
 												<?= $options['cta_button_text'] ?>
 											</a>
 										</li>
@@ -73,7 +82,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 										<?= $options['subnav_6_title_1'] ?>
 									</span>
 									<ul>
-										<?php foreach ($options['subnav_6_col_1_link'] as $item) : ?>
+										<?php foreach ($options['subnav_6_col_1_link'] as $item): ?>
 											<a href="<?= $item['url'] ?>" class="subnav-link-a">
 												<li class="subnav-li">
 													<div class="link-left">
@@ -96,7 +105,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 										<?= $options['subnav_6_title_2'] ?>
 									</span>
 									<ul>
-										<?php foreach ($options['subnav_6_col_2_link'] as $item) : ?>
+										<?php foreach ($options['subnav_6_col_2_link'] as $item): ?>
 											<a href="<?= $item['url'] ?>" class="subnav-link-a">
 												<li class="subnav-li">
 													<div class="link-left">
@@ -117,9 +126,9 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 									<span class="subnav-title" style="visibility: hidden; height: 10px;">
 										<?= $options['subnav_6_title_3'] ?>
 									</span>
-									<?php if (isset($options['subnav_6_col_3_link']) && $options['subnav_6_col_3_link']) : ?>
+									<?php if (isset($options['subnav_6_col_3_link']) && $options['subnav_6_col_3_link']): ?>
 										<ul>
-											<?php foreach ($options['subnav_6_col_3_link'] as $item) : ?>
+											<?php foreach ($options['subnav_6_col_3_link'] as $item): ?>
 												<a href="<?= $item['url'] ?>" class="subnav-link-a">
 													<li class="subnav-li">
 														<div class="link-left">
@@ -147,7 +156,8 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 									<span class="subnav-title">
 										<?= $options['subnav_1_title_1'] ?>
 									</span>
-									<img class="subnav-1-image img-fluid" src="<?= $options['subnav_1_image']['url'] ?>" alt="<?= $options['subnav_1_image']['alt'] ?>">
+									<img class="subnav-1-image img-fluid" src="<?= $options['subnav_1_image']['url'] ?>"
+										alt="<?= $options['subnav_1_image']['alt'] ?>">
 									<div class="link-left">
 										<span class="subnav-link-title mt-3">
 											<?= $options['subnav_1_heading_1'] ?>
@@ -169,11 +179,12 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 										<?= $options['subnav_1_title_2'] ?>
 									</span>
 									<ul>
-										<?php foreach ($options['subnav_1_col_2_link'] as $item) : ?>
+										<?php foreach ($options['subnav_1_col_2_link'] as $item): ?>
 											<a href="<?= $item['url'] ?>" class="subnav-link-a">
 												<li class="subnav-li">
 													<div class="link-icon-subnav">
-														<img src="<?= $item['icon']['url'] ?>" alt="<?= $item['icon']['alt'] ?>">
+														<img src="<?= $item['icon']['url'] ?>"
+															alt="<?= $item['icon']['alt'] ?>">
 													</div>
 													<div class="link-left">
 														<span class="subnav-link-title bold-smaller">
@@ -200,7 +211,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 										<?= $options['subnav_2_title_1'] ?>
 									</span>
 									<ul>
-										<?php foreach ($options['subnav_2_col_1_link'] as $item) : ?>
+										<?php foreach ($options['subnav_2_col_1_link'] as $item): ?>
 											<a href="<?= $item['url'] ?>" class="subnav-link-a">
 												<li class="subnav-li">
 													<div class="link-left">
@@ -223,7 +234,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 										<?= $options['subnav_2_title_2'] ?>
 									</span>
 									<ul>
-										<?php foreach ($options['subnav_2_col_2_link'] as $item) : ?>
+										<?php foreach ($options['subnav_2_col_2_link'] as $item): ?>
 											<a href="<?= $item['url'] ?>" class="subnav-link-a">
 												<li class="subnav-li">
 													<div class="link-left">
@@ -245,7 +256,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 										<?= $options['subnav_2_title_3'] ?>
 									</span>
 									<ul>
-										<?php foreach ($options['subnav_2_col_3_link'] as $item) : ?>
+										<?php foreach ($options['subnav_2_col_3_link'] as $item): ?>
 											<a href="<?= $item['url'] ?>" class="subnav-link-a">
 												<li class="subnav-li">
 													<div class="link-left">
@@ -273,7 +284,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 										<?= $options['subnav_5_title_1'] ?>
 									</span>
 									<ul>
-										<?php foreach ($options['subnav_5_col_1_link'] as $item) : ?>
+										<?php foreach ($options['subnav_5_col_1_link'] as $item): ?>
 											<a href="<?= $item['url'] ?>" class="subnav-link-a">
 												<li class="subnav-li">
 													<div class="link-left">
@@ -296,7 +307,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 										<?= $options['subnav_5_title_2'] ?>
 									</span>
 									<ul>
-										<?php foreach ($options['subnav_5_col_2_link'] as $item) : ?>
+										<?php foreach ($options['subnav_5_col_2_link'] as $item): ?>
 											<a href="<?= $item['url'] ?>" class="subnav-link-a">
 												<li class="subnav-li">
 													<div class="link-left">
@@ -318,7 +329,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 										<?= $options['subnav_5_title_3'] ?>
 									</span>
 									<ul>
-										<?php foreach ($options['subnav_5_col_3_link'] as $item) : ?>
+										<?php foreach ($options['subnav_5_col_3_link'] as $item): ?>
 											<a href="<?= $item['url'] ?>" class="subnav-link-a">
 												<li class="subnav-li">
 													<div class="link-left">
@@ -346,7 +357,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 										<?= $options['subnav_3_title_1'] ?>
 									</span>
 									<ul>
-										<?php foreach ($options['subnav_3_col_1_link'] as $item) : ?>
+										<?php foreach ($options['subnav_3_col_1_link'] as $item): ?>
 											<a href="<?= $item['url'] ?>" class="subnav-link-a">
 												<li class="subnav-li">
 													<div class="link-left">
@@ -374,7 +385,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 										<?= $options['subnav_4_title_1'] ?>
 									</span>
 									<ul>
-										<?php foreach ($options['subnav_4_col_1_link'] as $item) : ?>
+										<?php foreach ($options['subnav_4_col_1_link'] as $item): ?>
 											<a href="<?= $item['url'] ?>" class="subnav-link-a">
 												<li class="subnav-li">
 													<div class="link-left">
@@ -402,18 +413,23 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 					<div class="w-100 mobile-nav-wrapper-flex">
 						<div>
 							<ul class="navbar-nav navbar-nav-moible mt-3">
-								<?php foreach ($menu_items as $item) : ?>
+								<?php foreach ($menu_items as $item): ?>
 									<li class="nav-item">
-										<a id="mobile-nav-link-<?= $item->ID ?>" data-trigger="mobile_nav_submenu_<?= $item->ID ?>" class="nav-link mobile-nav-link" href="javascript:;">
+										<a id="mobile-nav-link-<?= $item->ID ?>"
+											data-trigger="mobile_nav_submenu_<?= $item->ID ?>"
+											class="nav-link mobile-nav-link" href="javascript:;">
 											<?= $item->title ?>
-											<img class="mobile-nav-link-arrow" src="<?= $options['subnav_link_arrow']['url'] ?>" alt="<?= $options['subnav_link_arrow']['alt'] ?>">
+											<img class="mobile-nav-link-arrow"
+												src="<?= $options['subnav_link_arrow']['url'] ?>"
+												alt="<?= $options['subnav_link_arrow']['alt'] ?>">
 										</a>
 									</li>
 								<?php endforeach ?>
 							</ul>
 						</div>
 						<ul class="navbar-nav navbar-nav-moible">
-							<li><span class="nav-link mobile-btn-close mobile-btn-close-back fc-orange">close</span></li>
+							<li><span class="nav-link mobile-btn-close mobile-btn-close-back fc-orange">close</span>
+							</li>
 						</ul>
 					</div>
 				</nav>
@@ -427,7 +443,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 								<?= $options['subnav_6_title_1'] ?>
 							</span>
 							<ul class="mobile-subnav-ul">
-								<?php foreach ($options['subnav_6_col_1_link'] as $item) : ?>
+								<?php foreach ($options['subnav_6_col_1_link'] as $item): ?>
 									<a href="<?= $item['url'] ?>" class="subnav-link-a">
 										<li class="subnav-li">
 											<div class="link-left">
@@ -449,7 +465,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 								<?= $options['subnav_6_title_2'] ?>
 							</span>
 							<ul class="mobile-subnav-ul">
-								<?php foreach ($options['subnav_6_col_2_link'] as $item) : ?>
+								<?php foreach ($options['subnav_6_col_2_link'] as $item): ?>
 									<a href="<?= $item['url'] ?>" class="subnav-link-a">
 										<li class="subnav-li">
 											<div class="link-icon-subnav d-none">
@@ -470,15 +486,15 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 						</div>
 						<div>
 
-							<?php if (isset($options['subnav_6_title_3']) && $options['subnav_6_title_3']) : ?>
+							<?php if (isset($options['subnav_6_title_3']) && $options['subnav_6_title_3']): ?>
 								<span class="subnav-title">
 									<?= $options['subnav_6_title_3'] ?>
 								</span>
 							<?php endif ?>
 
-							<?php if (isset($options['subnav_6_col_3_link']) && $options['subnav_6_col_3_link']) : ?>
+							<?php if (isset($options['subnav_6_col_3_link']) && $options['subnav_6_col_3_link']): ?>
 								<ul class="mobile-subnav-ul">
-									<?php foreach ($options['subnav_6_col_3_link'] as $item) : ?>
+									<?php foreach ($options['subnav_6_col_3_link'] as $item): ?>
 										<a href="<?= $item['url'] ?>" class="subnav-link-a">
 											<li class="subnav-li">
 												<div class="link-icon-subnav d-none">
@@ -499,7 +515,9 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 							<?php endif ?>
 
 							<ul class="navbar-nav navbar-nav-moible">
-								<li><span class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span></li>
+								<li><span
+										class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span>
+								</li>
 							</ul>
 							<div class="py-5"></div>
 						</div>
@@ -514,7 +532,8 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 							<span class="subnav-title">
 								<?= $options['subnav_1_title_1'] ?>
 							</span>
-							<img class="subnav-1-image img-fluid" src="<?= $options['subnav_1_image']['url'] ?>" alt="<?= $options['subnav_1_image']['alt'] ?>" />
+							<img class="subnav-1-image img-fluid" src="<?= $options['subnav_1_image']['url'] ?>"
+								alt="<?= $options['subnav_1_image']['alt'] ?>" />
 							<div class="link-left">
 								<span class="subnav-link-title subnav-link-title-heading">
 									<?= $options['subnav_1_heading_1'] ?>
@@ -539,7 +558,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 								<?= $options['subnav_1_title_2'] ?>
 							</span>
 							<ul class="mobile-subnav-ul mb-0">
-								<?php foreach ($options['subnav_1_col_2_link'] as $item) : ?>
+								<?php foreach ($options['subnav_1_col_2_link'] as $item): ?>
 									<a href="<?= $item['url'] ?>" class="subnav-link-a">
 										<li class="subnav-li">
 											<div class="link-icon-subnav">
@@ -560,7 +579,9 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 						</div>
 						<div>
 							<ul class="navbar-nav navbar-nav-moible">
-								<li><span class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span></li>
+								<li><span
+										class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span>
+								</li>
 							</ul>
 							<div class="py-5"></div>
 						</div>
@@ -576,7 +597,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 								<?= $options['subnav_2_title_1'] ?>
 							</span>
 							<ul class="mobile-subnav-ul">
-								<?php foreach ($options['subnav_2_col_1_link'] as $item) : ?>
+								<?php foreach ($options['subnav_2_col_1_link'] as $item): ?>
 									<a href="<?= $item['url'] ?>" class="subnav-link-a">
 										<li class="subnav-li">
 											<div class="link-left">
@@ -598,7 +619,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 								<?= $options['subnav_2_title_2'] ?>
 							</span>
 							<ul class="mobile-subnav-ul">
-								<?php foreach ($options['subnav_2_col_2_link'] as $item) : ?>
+								<?php foreach ($options['subnav_2_col_2_link'] as $item): ?>
 									<a href="<?= $item['url'] ?>" class="subnav-link-a">
 										<li class="subnav-li">
 											<div class="link-icon-subnav d-none">
@@ -618,14 +639,14 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 							</ul>
 						</div>
 						<div>
-							<?php if (isset($options['subnav_2_title_3']) && $options['subnav_2_title_3']) : ?>
+							<?php if (isset($options['subnav_2_title_3']) && $options['subnav_2_title_3']): ?>
 								<span class="subnav-title">
 									<?= $options['subnav_2_title_3'] ?>
 								</span>
 							<?php endif ?>
-							<?php if (isset($options['subnav_2_col_3_link']) && $options['subnav_2_col_3_link']) : ?>
+							<?php if (isset($options['subnav_2_col_3_link']) && $options['subnav_2_col_3_link']): ?>
 								<ul class="mobile-subnav-ul">
-									<?php foreach ($options['subnav_2_col_3_link'] as $item) : ?>
+									<?php foreach ($options['subnav_2_col_3_link'] as $item): ?>
 										<a href="<?= $item['url'] ?>" class="subnav-link-a">
 											<li class="subnav-li">
 												<div class="link-icon-subnav d-none">
@@ -645,7 +666,9 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 								</ul>
 							<?php endif ?>
 							<ul class="navbar-nav navbar-nav-moible">
-								<li><span class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span></li>
+								<li><span
+										class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span>
+								</li>
 							</ul>
 							<div class="py-5"></div>
 						</div>
@@ -661,7 +684,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 								<?= $options['subnav_5_title_1'] ?>
 							</span>
 							<ul class="mobile-subnav-ul">
-								<?php foreach ($options['subnav_5_col_1_link'] as $item) : ?>
+								<?php foreach ($options['subnav_5_col_1_link'] as $item): ?>
 									<a href="<?= $item['url'] ?>" class="subnav-link-a">
 										<li class="subnav-li">
 											<div class="link-left">
@@ -683,7 +706,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 								<?= $options['subnav_5_title_2'] ?>
 							</span>
 							<ul class="mobile-subnav-ul">
-								<?php foreach ($options['subnav_5_col_2_link'] as $item) : ?>
+								<?php foreach ($options['subnav_5_col_2_link'] as $item): ?>
 									<a href="<?= $item['url'] ?>" class="subnav-link-a">
 										<li class="subnav-li">
 											<div class="link-icon-subnav d-none">
@@ -703,14 +726,14 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 							</ul>
 						</div>
 						<div>
-							<?php if (isset($options['subnav_5_title_3']) && $options['subnav_5_title_3']) : ?>
+							<?php if (isset($options['subnav_5_title_3']) && $options['subnav_5_title_3']): ?>
 								<span class="subnav-title">
 									<?= $options['subnav_5_title_3'] ?>
 								</span>
 							<?php endif ?>
-							<?php if (isset($options['subnav_5_col_3_link']) && $options['subnav_5_col_3_link']) : ?>
+							<?php if (isset($options['subnav_5_col_3_link']) && $options['subnav_5_col_3_link']): ?>
 								<ul class="mobile-subnav-ul">
-									<?php foreach ($options['subnav_5_col_3_link'] as $item) : ?>
+									<?php foreach ($options['subnav_5_col_3_link'] as $item): ?>
 										<a href="<?= $item['url'] ?>" class="subnav-link-a">
 											<li class="subnav-li">
 												<div class="link-icon-subnav d-none">
@@ -730,7 +753,9 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 								</ul>
 							<?php endif ?>
 							<ul class="navbar-nav navbar-nav-moible">
-								<li><span class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span></li>
+								<li><span
+										class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span>
+								</li>
 							</ul>
 							<div class="py-5"></div>
 						</div>
@@ -753,7 +778,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 								<?= $options['subnav_3_title_1'] ?>
 							</span>
 							<ul class="mobile-subnav-ul">
-								<?php foreach ($options['subnav_3_col_1_link'] as $item) : ?>
+								<?php foreach ($options['subnav_3_col_1_link'] as $item): ?>
 									<a href="<?= $item['url'] ?>" class="subnav-link-a">
 										<li class="subnav-li mb-2 pb-1">
 											<div class="link-left">
@@ -768,7 +793,8 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 						</div>
 						<div class="mb-4 pb-3"></div>
 						<ul class="navbar-nav navbar-nav-moible">
-							<li><span class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span></li>
+							<li><span class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span>
+							</li>
 						</ul>
 						<div class="py-5"></div>
 					</div>
@@ -783,7 +809,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 								<?= $options['subnav_4_title_1'] ?>
 							</span>
 							<ul class="mobile-subnav-ul">
-								<?php foreach ($options['subnav_4_col_1_link'] as $item) : ?>
+								<?php foreach ($options['subnav_4_col_1_link'] as $item): ?>
 									<a href="<?= $item['url'] ?>" class="subnav-link-a">
 										<li class="subnav-li mb-2 pb-1">
 											<div class="link-left">
@@ -804,7 +830,8 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 						</div>
 						<div class="mb-4 pb-3"></div>
 						<ul class="navbar-nav navbar-nav-moible">
-							<li><span class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span></li>
+							<li><span class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">back</span>
+							</li>
 						</ul>
 						<div class="py-5"></div>
 					</div>

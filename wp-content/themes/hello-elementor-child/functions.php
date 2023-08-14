@@ -2,7 +2,7 @@
 
 add_action('wp_head', function () {
     wp_enqueue_style('bootstrap-container', get_stylesheet_directory_uri() . '/assets/css/bootstrap-container.css', [], HELLO_ELEMENTOR_VERSION);
-    wp_enqueue_style('custom-header-menu', get_stylesheet_directory_uri() . '/assets/css/custom-header-menu.css', [], time());
+    wp_enqueue_style('timber-oldfc', get_stylesheet_directory_uri() . '/assets/css/timber-oldfc.css', [], time());
 }, PHP_INT_MAX);
 
 add_action('wp_enqueue_scripts', function () {

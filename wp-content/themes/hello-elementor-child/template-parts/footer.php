@@ -15,7 +15,7 @@ $options = get_fields('options');
 ?>
 
 <div class="bootstrap-container">
-	<div class="custom-header-menu">
+	<div class="timber-oldfc">
 
 		<footer id="main-footer">
 			<div class="footer-bg">

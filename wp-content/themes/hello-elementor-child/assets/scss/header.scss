@@ -25,10 +25,9 @@ header h2 {
     box-shadow: rgb(0 0 0 / 15%) 0px 0px 16px 0px;
 
     .nav-container {
-        // width: 1127.88px;
         max-width: 1140px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
 
         a {
             font-family: $primary-font;

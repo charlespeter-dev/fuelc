@@ -19,12 +19,22 @@
     --e-global-typography-37fd63c-font-family: "greycliff-cf";
     --e-global-typography-37fd63c-font-weight: 200;
 
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+
     @import "typography.scss";
     @import "header.scss";
+    @import "post.scss";
+    @import "resource-hub.scss";
     @import "footer.scss";
 
     a {
         text-decoration: none;
         font-family: var(--e-global-typography-primary-font-family);
+    }
+
+    .container-1140 {
+        max-width: 1140px;
+        margin: 0 auto;
     }
 }

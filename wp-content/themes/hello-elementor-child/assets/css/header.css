@@ -24,8 +24,8 @@ header h2 {
 }
 #main-navbar .nav-container {
   max-width: 1140px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
 #main-navbar .nav-container a {
   font-family: "greycliff-cf", "Open Sans", sans-serif;

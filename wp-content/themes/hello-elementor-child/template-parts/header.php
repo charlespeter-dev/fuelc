@@ -26,7 +26,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 		<div class="timber-oldfc">
 			<div class="nav-wrapper position-relative">
 				<nav id="main-navbar" class="navbar navbar-expand-lg navbar-light fixed-top">
-					<div class="container-fluid nav-container p-0">
+					<div class="container-fluid nav-container">
 						<div class="w-100 d-flex nav-row-wrapper">
 							<div class="nav-brand-wrapper d-flex justify-content-between w-100">
 								<a class="navbar-brand" href="<?= get_bloginfo('url') ?>">

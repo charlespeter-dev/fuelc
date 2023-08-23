@@ -1,6 +1,7 @@
 <?php
 
 add_action('wp_head', function () {
+    wp_enqueue_style('font-awesome-v6', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css', [], HELLO_ELEMENTOR_VERSION);
     wp_enqueue_style('bootstrap-container', get_stylesheet_directory_uri() . '/assets/css/bootstrap-container.css', [], HELLO_ELEMENTOR_VERSION);
     wp_enqueue_style('timber-oldfc', get_stylesheet_directory_uri() . '/assets/css/timber-oldfc.css', [], time());
 }, PHP_INT_MAX);
@@ -15,7 +16,7 @@ add_action('wp_enqueue_scripts', function () {
 
 if (is_user_logged_in()) {
     add_action('wp_head', function () {
-?>
+        ?>
 
         <style type="text/css">
             #main-navbar {
@@ -45,7 +46,7 @@ if (is_user_logged_in()) {
             }
         </style>
 
-    <?php
+        <?php
     });
 }
 
@@ -153,7 +154,7 @@ function fc_get_latest_resource($mobile = false)
 
     ?>
 
-    <?php if (!$mobile) : ?>
+    <?php if (!$mobile): ?>
         <div class="subnav-3-right-wrapper">
             <div class="line-divider"></div>
             <div>
@@ -173,7 +174,7 @@ function fc_get_latest_resource($mobile = false)
                 </a>
             </div>
         </div>
-    <?php else : ?>
+    <?php else: ?>
         <div class="subnav-3-right-wrapper-mobile">
             <div>
                 <img class="featured-post-image img-fluid" src="<?= $img ?>" alt="" />
@@ -194,7 +195,7 @@ function fc_get_latest_resource($mobile = false)
         </div>
     <?php endif ?>
 
-<?php
+    <?php
 }
 
 /**
@@ -258,9 +259,9 @@ function fc_get_latest_press($mobile = false)
 
     $excerpts = get_the_excerpt($post->ID);
 
-?>
+    ?>
 
-    <?php if (!$mobile) : ?>
+    <?php if (!$mobile): ?>
         <div class="subnav-3-right-wrapper">
             <div class="line-divider"></div>
             <div>
@@ -280,7 +281,7 @@ function fc_get_latest_press($mobile = false)
                 </a>
             </div>
         </div>
-    <?php else : ?>
+    <?php else: ?>
         <div class="subnav-3-right-wrapper-mobile">
             <div>
                 <img class="featured-post-image img-fluid" src="<?= $img ?>" alt="" />
@@ -301,7 +302,7 @@ function fc_get_latest_press($mobile = false)
         </div>
     <?php endif ?>
 
-<?php
+    <?php
 }
 
 /**
@@ -322,7 +323,7 @@ function flexible_footer_content()
  * register new image size for specific content
  */
 
-add_action('after_setup_theme',  function () {
+add_action('after_setup_theme', function () {
     add_theme_support('post-thumbnails');
     add_image_size('_2x-nav-featured-image', 260, 260, true);
 });
@@ -334,25 +335,31 @@ add_action('after_setup_theme',  function () {
 if (function_exists('acf_add_options_page')) {
 
 
-    acf_add_options_page(array(
-        'page_title'         => 'Theme Fields',
-        'menu_title'        => 'Theme Fields',
-        'menu_slug'         => 'theme-general-fields',
-        'capability'        => 'edit_posts',
-        'redirect'                => false
-    ));
+    acf_add_options_page(
+        array(
+            'page_title' => 'Theme Fields',
+            'menu_title' => 'Theme Fields',
+            'menu_slug' => 'theme-general-fields',
+            'capability' => 'edit_posts',
+            'redirect' => false
+        )
+    );
 
-    acf_add_options_sub_page(array(
-        'page_title'         => 'Theme Header Fields',
-        'menu_title'        => 'Header Fields',
-        'parent_slug'        => 'theme-general-fields',
-    ));
+    acf_add_options_sub_page(
+        array(
+            'page_title' => 'Theme Header Fields',
+            'menu_title' => 'Header Fields',
+            'parent_slug' => 'theme-general-fields',
+        )
+    );
 
-    acf_add_options_sub_page(array(
-        'page_title'         => 'Theme Footer Fields',
-        'menu_title'        => 'Footer Fields',
-        'parent_slug'        => 'theme-general-fields',
-    ));
+    acf_add_options_sub_page(
+        array(
+            'page_title' => 'Theme Footer Fields',
+            'menu_title' => 'Footer Fields',
+            'parent_slug' => 'theme-general-fields',
+        )
+    );
 }
 
 /**

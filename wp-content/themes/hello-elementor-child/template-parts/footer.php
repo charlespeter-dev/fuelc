@@ -24,7 +24,7 @@ $options = get_fields('options');
 					<div class="gradient-bg">
 
 						<div class="row">
-							<div class="col-md-9 d-flex align-items-center">
+							<div class="col-md-9">
 								<?php if (isset($options['call_to_action_bar_title']) && $options['call_to_action_bar_title']): ?>
 									<h2>
 										<?= $options['call_to_action_bar_title'] ?>
@@ -36,10 +36,13 @@ $options = get_fields('options');
 									</p>
 								<?php endif ?>
 							</div>
-							<div class="col-md-3 signup-button-wrapper">
-								<a href="<?= $options['call_to_action_bar_button_link'] ?>" class="main-btn white-btn">
-									<?= $options['call_to_action_bar_button_text'] ?>
-								</a>
+							<div class="col-md-3">
+								<div class="signup-button-wrapper mt-4 mt-lg-0">
+									<a href="<?= $options['call_to_action_bar_button_link'] ?>"
+										class="main-btn white-btn">
+										<?= $options['call_to_action_bar_button_text'] ?>
+									</a>
+								</div>
 							</div>
 						</div>
 

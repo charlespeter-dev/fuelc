@@ -26,6 +26,7 @@
     @import "header.scss";
     @import "post.scss";
     @import "resource-hub.scss";
+    @import "authors.scss";
     @import "footer.scss";
 
     a {
@@ -36,5 +37,10 @@
     .container-1140 {
         max-width: 1140px;
         margin: 0 auto;
+    }
+
+    .horizontal-line-clean {
+        max-width: 100%;
+        border-top: 1px solid rgba(73, 73, 75, 0.2);
     }
 }

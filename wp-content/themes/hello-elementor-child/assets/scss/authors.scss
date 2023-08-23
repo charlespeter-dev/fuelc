@@ -1,0 +1,37 @@
+.authors {
+  margin-top: 85px;
+
+  .author {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 10px;
+    padding: 15px 30px 15px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    >div {
+      padding-block: 1rem;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+
+      a {
+        font-size: 0.7rem;
+        color: #000116;
+        padding: 14px 17.3px;
+
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

@@ -103,3 +103,5 @@ vendor
 wp-content/ewww
 imagify.conf
 wp-cli.phar
+vendor
+composer.lock

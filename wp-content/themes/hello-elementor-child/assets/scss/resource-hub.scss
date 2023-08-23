@@ -147,7 +147,7 @@
 }
 
 #resource-hub {
-  
+
   .horizontal-line-clean {
     @media (max-width: 1199px) {
       margin: 24px 0 !important;
@@ -246,7 +246,12 @@
 
 .hub-featured-post-title {
   font-size: 28px;
-  margin-bottom: 20px;
+  margin-block-start: 20px;
+  margin-block-end: 20px;
+
+  @media screen and (min-width: 992px) {
+    margin-block-start: 0;
+  }
 }
 
 .hub-featured-post-paragraph {
@@ -631,11 +636,6 @@ input[type="checkbox"]::before {
 }
 
 #post-list-section {
-  padding: 0 20px;
-
-  @media (max-width: 767px) {
-    padding: 0 4px;
-  }
 
   .category-post-list-grid {
     @media (max-width: 1199px) {

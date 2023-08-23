@@ -86,7 +86,7 @@
   background-color: #e85948 !important;
   min-width: 151px;
   padding-bottom: 16px !important;
-  padding-top: 14px !important;
+  padding-top: 16px !important;
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 4px !important;
@@ -727,6 +727,7 @@
 .timber-oldfc .single-post-title {
   font-family: "greycliff-cf", "Open Sans", sans-serif;
   font-size: 15px;
+  font-weight: 700;
   line-height: 17px;
   margin-bottom: 5px;
   color: #e85948;
@@ -1098,7 +1099,13 @@
 }
 .timber-oldfc .hub-featured-post-title {
   font-size: 28px;
-  margin-bottom: 20px;
+  margin-block-start: 20px;
+  margin-block-end: 20px;
+}
+@media screen and (min-width: 992px) {
+  .timber-oldfc .hub-featured-post-title {
+    margin-block-start: 0;
+  }
 }
 .timber-oldfc .hub-featured-post-paragraph {
   font-size: 13px;
@@ -1407,14 +1414,6 @@
     display: none;
   }
 }
-.timber-oldfc #post-list-section {
-  padding: 0 20px;
-}
-@media (max-width: 767px) {
-  .timber-oldfc #post-list-section {
-    padding: 0 4px;
-  }
-}
 @media (max-width: 1199px) {
   .timber-oldfc #post-list-section .category-post-list-grid {
     grid-template-columns: 1fr;
@@ -1619,7 +1618,7 @@
 }
 .timber-oldfc .main-footer .gradient-bg h2 {
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 @media (max-width: 767px) {
   .timber-oldfc .main-footer .gradient-bg h2 {

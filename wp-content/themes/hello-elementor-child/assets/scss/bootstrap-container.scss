@@ -1,3 +1,11 @@
 .bootstrap-container {
+    --bs-border-width: 1px;
+    --bs-border-color: #dee2e6;
+    --bs-border-radius: .25rem;
+    --bs-pagination-border-radius: .25rem;
+    --bs-pagination-border-width: 1px;
+    --bs-pagination-border-color: #dee2e6;
+    --bs-pagination-hover-bg: #e9ecef;
+
     @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 }

@@ -1,0 +1,170 @@
+<main id="content">
+
+	<div class="bootstrap-container">
+		<div class="timber-oldfc">
+			<div class="container-1140">
+				<div class="container">
+
+					<section id="resource-hub" class="margin-top-for-nav">
+
+						<div class="horizontal-line-clean mb-5"></div>
+						<div class="row">
+							<div class="col-12 col-md-7">
+								<span class="hub-featured-subtitle">
+									{{ post.subtitle }}
+								</span>
+								<h1 class="section-title">
+									{{ post.section_title }}
+								</h1>
+							</div>
+							<div class="col-12 col-md-5 d-flex align-items-center">
+								<div>
+									{{ post.intro_text }}
+								</div>
+							</div>
+						</div>
+						<div class="horizontal-line-clean my-5"></div>
+
+						<div class="row">
+							<span class="hub-featured-section-title">
+								{{ post.featured_section_title }}
+							</span>
+							<div class="col-12 col-md-7">
+								<img class="img-fluid hub-featured-post-image"
+									src="{{ Image(post.meta('featured_post_image')).src }}"
+									alt="{{ Image(post.meta('featured_post_image')).alt }}" />
+							</div>
+							<div class="col-12 col-md-5">
+								<h2 class="hub-featured-post-title">
+									{{ post.featured_post_title }}
+								</h2>
+								<p class="hub-featured-post-paragraph">
+									{{ post.featured_post_paragraph }}
+								</p>
+								<a class="hub-featured-post-link" href="{{ post.featured_post_link_url }}">
+									{{ post.featured_post_link_text }} <i class="fa-solid fa-arrow-right"></i>
+								</a>
+							</div>
+						</div>
+
+						<section id="pagination-anchor"></section>
+						<div class="horizontal-line-clean my-5"></div>
+
+					</section>
+
+					<section id="post-list-section">
+
+						<div>
+							<span class="hub-featured-section-title results-section-title d-none d-xl-block">
+								<?= $post_results_section_title ?>
+							</span>
+						</div>
+
+						<div>
+							<div class="category-post-list-grid">
+								<div class="flex-column nav-pills category-filters" id="v-pills-tab" role="tablist"
+									aria-orientation="vertical">
+									<span class="hub-featured-section-title mt-0 filter-by-title">
+										{{ post.post_filters_section_title }}
+									</span>
+									{{ filter_id | shortcodes }}
+								</div>
+								<div class="category-results-wrapper">
+									<span class="hub-featured-section-title results-section-title d-xl-none">{{
+										post.post_results_section_title }}</span>
+									<div class="tab-content category-results" id="v-pills-tabContent">
+										{% for post in ttcposts %}
+										<div class="single-post-wrapper">
+											<div class="post-image-wrapper">
+												<a href="{{ post.link }}"><img src="{{ post.thumbnail.src }}"
+														alt="{{ post.thumbnail.alt }}" class="post-image" /></a>
+												<div class="post-image-badge">
+													{% for category in post.categories %}
+													{{ category }}{% if loop.length > 1 and loop.index < loop.length
+														%},{% endif %} {% endfor %} </div>
+												</div>
+												<div class="post-text-wrapper">
+													<span class="post-categories">
+														{% for category in post.categories %}
+														{{ category }}{% if loop.length > 1 and loop.index < loop.length
+															%},{% endif %} {% endfor %} </span>
+															<span class="single-post-title">
+																<a href="{{ post.link }}">
+																	{{ (post.title|length) > 95 ? (post.title|slice(0,
+																	95)) ~ '...' : post.title }}
+																</a>
+															</span>
+															<p class="single-post-excerpt">
+																{% if post.post_excerpt_custom %}
+																{{ post.post_excerpt_custom }}
+																{% else %}
+																{{ post.preview.length(10).force.read_more('') }}
+																{% endif %}
+																<a href="{{ post.link }}" class="read-more"><i
+																		class="fa-solid fa-arrow-right"></i></a>
+															</p>
+												</div>
+											</div>
+											{% endfor %}
+										</div>
+										<div class="pagination-bootstrap">
+											<nav>
+												<ul class="pagination justify-content-center">
+													<li class="page-item">
+														{% if ttcposts.pagination.prev %}
+														<a class="page-link" href="{{ ttcposts.pagination.prev.link }}"
+															aria-label="Previous">
+															<span aria-hidden="true">&laquo;</span>
+															<span class="sr-only">Previous</span>
+														</a>
+
+														{% else %}
+														<a class="page-link" disabled>
+															<span aria-hidden="true">&laquo;</span>
+															<span class="sr-only">Previous</span>
+														</a>
+														{% endif %}
+
+													</li>
+													{% for page in ttcposts.pagination.pages %}
+													{% if page.link %}
+													<li class="page-item"><a href="{{ page.link }}"
+															class="page-link {{ page.class }}">{{ page.title }}</a></li>
+													{% else %}
+													<li
+														class="page-item {% if 'current' in page.class %} active {% endif %}">
+														<a class="page-link {{ page.class }}">{{ page.title }}</a>
+													</li>
+													{% endif %}
+													{% endfor %}
+
+													{% if ttcposts.pagination.next %}
+													<a class="page-link" href="{{ ttcposts.pagination.next.link }}"
+														aria-label="Next">
+														<span aria-hidden="true">&raquo;</span>
+														<span class="sr-only">Next</span>
+													</a>
+
+													{% else %}
+													<a class="page-link" disabled>
+														<span aria-hidden="true">&raquo;</span>
+														<span class="sr-only">Next</span>
+													</a>
+													{% endif %}
+													</li>
+												</ul>
+											</nav>
+										</div>
+									</div>
+								</div>
+							</div>
+					</section>
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</main>

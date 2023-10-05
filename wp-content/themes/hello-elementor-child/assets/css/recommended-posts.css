@@ -9,6 +9,7 @@
 }
 .single-post-pagination a {
   color: #e85948;
+  font-weight: 500;
 }
 
 .divider-line {
@@ -19,11 +20,14 @@
 .single-post-pagination {
   position: relative;
 }
+.single-post-pagination .newest-title {
+  font-weight: 500;
+}
 
 .previous-post-link::before {
   content: url("../images/arrow-orange-left.svg");
   position: absolute;
-  left: -25px;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -31,7 +35,7 @@
 .next-post-link::before {
   content: url("../images/arrow-right-orange.svg");
   position: absolute;
-  right: -25px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
 }

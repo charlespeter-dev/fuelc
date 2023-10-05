@@ -22,6 +22,11 @@
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
 
+    *:not(.fa-brands):not(.fa-solid):not(.fab) {
+        font-family: greycliff-cf, "Open Sans", sans-serif;
+        font-weight: 500;
+    }
+
     @import "typography.scss";
     @import "header.scss";
     @import "post.scss";
@@ -42,5 +47,11 @@
     .horizontal-line-clean {
         max-width: 100%;
         border-top: 1px solid rgba(73, 73, 75, 0.2);
+    }
+
+    .post-type-post {
+        a {
+            color: #e85948;
+        }
     }
 }

@@ -35,3 +35,45 @@
     }
   }
 }
+
+.autho-info-box {
+  .author-img-container {
+    display: flex;
+    justify-content: center;
+
+    .author-img {
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .author-title,
+  .author-desc {
+    display: block;
+    text-align: center;
+
+    @media screen and (min-width: 992px) {
+      text-align: left;
+    }
+  }
+
+  .author-socials {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    @media screen and (min-width: 992px) {
+      text-align: left;
+      justify-content: flex-start;
+    }
+
+    a {
+      color: #000116;
+      margin-right: 1rem;
+
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

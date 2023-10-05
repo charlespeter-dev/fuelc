@@ -37,6 +37,38 @@ else:
 	global $timber;
 	$context = $timber::context();
 	$post = new Timber\Post();
+	$ttcposts = new Timber\PostQuery(['search_filter_id' => 27217]);
+
+	/**
+	 * author
+	 */
+
+	$author_id = $post->post_author;
+	$author = new Timber\User($author_id);
+
+	$profile_picture = get_field('profile_picture', 'user_' . $author_id);
+	if (!empty($profile_picture)) {
+		$profile_picture_url = $profile_picture['url'];
+		$author->profile_picture_url = $profile_picture_url;
+	} else {
+		$default_avatar_url = get_avatar_url($author_id);
+		$author->profile_picture_url = $default_avatar_url;
+	}
+
+	$description = get_the_author_meta('description', $author_id);
+	if (!empty($description)) {
+		$description_words = explode(' ', $description);
+		$excerpt_words = array_splice($description_words, 0, 30);
+		$excerpt = implode(' ', $excerpt_words);
+		$author->description_excerpt = $excerpt . '...';
+	} else {
+		$author->description_excerpt = '';
+	}
+
+	$author->facebook = get_the_author_meta('facebook', $author_id);
+	$author->instagram = get_the_author_meta('instagram', $author_id);
+	$author->linkedin = get_the_author_meta('linkedin', $author_id);
+	$author->url = get_author_posts_url($author_id);
 
 	?>
 
@@ -80,6 +112,155 @@ else:
 							<?php endif ?>
 
 						</article>
+
+						<section class="py-3">
+							<div class="horizontal-line"></div>
+							<div class="row autho-info-box py-4">
+								<div class="col-sm-12 col-lg-4">
+									<div class="author-img-container mb-4">
+										<img class="author-img" src="<?= $author->profile_picture_url ?>"
+											alt="Author Image">
+									</div>
+								</div>
+								<div class="col-sm-12 col-lg-8">
+
+									<?php if ($author->name): ?>
+										<h2 class="author-title">Author:
+											<?= $author->name ?>
+										</h2>
+									<?php endif ?>
+
+									<div class="author-socials py-2 mb-2">
+										<?php if ($author->facebook): ?>
+											<a href="<?= $author->facebook ?>">
+												<i class="fa-brands fa-facebook"></i>
+											</a>
+										<?php endif ?>
+
+										<?php if ($author->instagram): ?>
+											<a href="<?= $author->instagram ?>">
+												<i class="fa-brands fa-instagram"></i>
+											</a>
+										<?php endif ?>
+
+										<?php if ($author->instagram): ?>
+											<a href="<?= $author->linkedin ?>">
+												<i class="fa-brands fa-linkedin"></i>
+											</a>
+										<?php endif ?>
+									</div>
+
+									<?php if ($author->description_excerpt): ?>
+										<div class="author-desc">
+											<p>
+												<?= $author->description_excerpt ?>
+											</p>
+											<div>
+												<a class="main-btn brand-btn" href="<?= $author->url ?>">
+													<?= __('View Bio') ?>
+												</a>
+											</div>
+										</div>
+									<?php else: ?>
+										<p>
+											<?= __('No description available.') ?>
+										</p>
+									<?php endif ?>
+
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="py-3"></div>
+							<div class="horizontal-line"></div>
+
+							<div class="single-post-pagination">
+								<div class="newest mb-3 mb-sm-0">
+									<?php if ($post->prev): ?>
+										<div class="newest-title">
+											<?= __('OLDER') ?>
+										</div>
+										<a href="<?= $post->prev->link ?>" class="previous-post-link">
+											<?= $post->prev->title ?>
+										</a>
+									<?php endif ?>
+								</div>
+								<div class="divider-line"></div>
+								<div class="older mb-3 mb-sm-0">
+									<?php if ($post->next): ?>
+										<div class="newest-title">
+											<?= __('NEWER') ?>
+										</div>
+										<a href="<?= $post->next->link ?>" class="next-post-link">
+											<?= $post->next->title ?>
+										</a>
+									<?php endif ?>
+								</div>
+							</div>
+
+							<div class="py-3"></div>
+							<div class="horizontal-line"></div>
+						</section>
+
+						<section>
+							<div class="py-3"></div>
+							<div class="recommended-posts-wrapper py-5">
+								<section class="recommended-posts">
+
+									<div class="recommended-posts-label">
+										<?= $post->recommended_posts_label ?>
+									</div>
+
+									<h2 class="recommended-posts-title">
+										<?= $post->recommended_posts_title ?>
+									</h2>
+
+									<div class="recommended-posts-row">
+										<?php foreach ($ttcposts as $ttcpost): ?>
+
+											<div class="single-post-wrapper">
+
+												<div class="post-image-wrapper">
+													<a href="<?= $ttcpost->link ?>">
+														<img src="<?= $ttcpost->thumbnail->src ?>" alt="" class="post-image">
+													</a>
+												</div>
+
+												<div class="post-text-wrapper">
+
+													<span class="post-categories">
+														<?php foreach ($ttcpost->categories as $category): ?>
+															<?= $category ?>
+														<?php endforeach ?>
+													</span>
+
+													<span class="single-post-title">
+														<a href="<?= $ttcpost->link ?>">
+															<?= count(explode(' ', $ttcpost->title)) > 9 ? implode(' ', array_slice(explode(' ', $ttcpost->title), 0, 9)) . "..." : $ttcpost->title ?>
+														</a>
+													</span>
+
+													<p class="single-post-excerpt">
+														<?php if ($ttcpost->post_excerpt_custom): ?>
+															<?= $ttcpost->post_excerpt_custom ?>
+														<?php else: ?>
+															<?= implode(' ', array_slice(explode(' ', $ttcpost->preview), 0, 9)) . "..." ?>
+														<?php endif ?>
+														<a href="<?= $ttcpost->link ?>" class="read-more">
+															<i class="fa-solid fa-arrow-right"></i>
+														</a>
+													</p>
+
+												</div>
+
+											</div>
+
+										<?php endforeach ?>
+									</div>
+								</section>
+							</div>
+						</section>
 
 					</div>
 				</div>

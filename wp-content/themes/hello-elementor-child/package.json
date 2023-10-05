@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.3.1",
-    "sass": "^1.64.2"
+    "bootstrap": "^5.3.2",
+    "sass": "^1.68.0"
   }
 }

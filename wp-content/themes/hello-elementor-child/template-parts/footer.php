@@ -19,7 +19,7 @@ $options = get_fields('options');
 		<div class="container-1140">
 			<div class="container">
 
-				<footer class="main-footer">
+				<footer class="main-footer py-5">
 
 					<div class="gradient-bg">
 

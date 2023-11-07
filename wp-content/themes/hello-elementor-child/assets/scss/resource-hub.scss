@@ -428,10 +428,7 @@ input[type="checkbox"]::before {
 .page-item.active .page-link {
   background-color: $fc-orange !important;
   border-color: $fc-orange !important;
-}
-
-.page-item.active .page-link:hover {
-  color: white !important;
+  color: #FFF;
 }
 
 .pagination-bootstrap .page-link {

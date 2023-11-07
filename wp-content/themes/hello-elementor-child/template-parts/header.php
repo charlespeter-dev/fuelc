@@ -21,7 +21,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 
 <span class="screen-darken d-lg-none"></span>
 
-<header>
+<header style="display: none;">
 	<div class="bootstrap-container">
 		<div class="timber-oldfc">
 			<div class="nav-wrapper position-relative">
@@ -31,7 +31,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 							<div class="nav-brand-wrapper d-flex justify-content-between w-100">
 								<a class="navbar-brand" href="<?= get_bloginfo('url') ?>">
 									<img class="nav-logo" src="<?= $options['site_logo']['url'] ?>"
-										alt="<?= $options['site_logo']['alt'] ?>">
+										alt="<?= $options['site_logo']['alt'] ?>" style="width: 187px; height: 31px;">
 								</a>
 								<div class="burger-cta-wrapper">
 									<button id="hamburger-menu-icon" class="navbar-toggler" data-trigger="navbar_main"
@@ -841,3 +841,9 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 		</div>
 	</div>
 </header>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		document.querySelector('header').style.display = 'block';
+	});
+</script>

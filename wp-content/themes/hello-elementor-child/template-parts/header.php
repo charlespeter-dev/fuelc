@@ -31,7 +31,7 @@ $menu_items = wp_get_nav_menu_items($menu_object->term_id, ['update_post_term_ca
 							<div class="nav-brand-wrapper d-flex justify-content-between w-100">
 								<a class="navbar-brand" href="<?= get_bloginfo('url') ?>">
 									<img class="nav-logo" src="<?= $options['site_logo']['url'] ?>"
-										alt="<?= $options['site_logo']['alt'] ?>" style="width: 187px; height: 31px;">
+										alt="<?= $options['site_logo']['alt'] ?>">
 								</a>
 								<div class="burger-cta-wrapper">
 									<button id="hamburger-menu-icon" class="navbar-toggler" data-trigger="navbar_main"

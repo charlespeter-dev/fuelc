@@ -152,6 +152,25 @@ if (is_user_logged_in()) {
 
         <?php
     });
+} else {
+    add_action('wp_head', function () {
+        ?>
+
+        <style type="text/css">
+
+            main {
+                margin-top: 85px;
+            }
+
+            @media screen and (max-width: 992px) {
+                main {
+                    margin-top: 66px;
+                }
+            }
+        </style>
+
+        <?php
+    });
 }
 
 

@@ -209,6 +209,7 @@
 .timber-oldfc #main-navbar .nav-container .nav-logo {
   height: 30.89px;
   margin-top: 4px;
+  width: auto;
 }
 .timber-oldfc #main-navbar .nav-container .float-right {
   justify-content: right;

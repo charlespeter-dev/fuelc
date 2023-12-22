@@ -106,3 +106,4 @@ wp-cli.phar
 vendor
 composer.lock
 cache
+wp-rocket-config

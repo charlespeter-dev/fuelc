@@ -21,7 +21,7 @@ $options = get_fields('options');
 
 				<footer class="main-footer py-5">
 
-					<div class="gradient-bg">
+					<div class="gradient-bg d-none">
 
 						<div class="row">
 							<div class="col-md-9">

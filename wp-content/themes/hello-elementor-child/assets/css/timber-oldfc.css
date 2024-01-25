@@ -19,7 +19,6 @@
   --e-global-typography-37fd63c-font-weight: 200;
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
-  /* Mobile Navigation */
   /* ============ mobile view ============ */
   /* End Mobile Navigation */
   /* Individual Post block - Found on Post Page */
@@ -195,16 +194,21 @@
   font-weight: 500;
   font-size: 13px;
   text-align: left;
-  margin-right: 15px;
   line-height: 1;
 }
 .timber-oldfc #main-navbar .nav-container .nav-item {
   display: flex;
   align-items: center;
 }
-.timber-oldfc #main-navbar .nav-container .nav-item a {
+.timber-oldfc #main-navbar .nav-container .nav-item > a {
   color: #49494b;
   white-space: nowrap;
+  margin-right: 15px;
+}
+@media screen and (min-width: 992px) {
+  .timber-oldfc #main-navbar .nav-container .nav-item > a {
+    margin-right: 55px;
+  }
 }
 .timber-oldfc #main-navbar .nav-container .nav-logo {
   height: 30.89px;
@@ -283,14 +287,67 @@
   display: none;
   background-color: #f8f8f8;
   position: absolute;
-  top: 84px;
+  top: 72px;
   right: 0;
   left: 0;
 }
-@media screen and (min-width: 992px) {
-  .timber-oldfc .sub-nav-wrapper {
-    display: block;
-  }
+.timber-oldfc .sub-nav-wrapper-inner {
+  background-color: #fff;
+  min-width: 600px;
+  box-shadow: inset rgba(0, 0, 0, 0.15) 0 10px 20px 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  --bs-border-style: solid;
+}
+.timber-oldfc .sub-nav-wrapper-inner .left-submenus,
+.timber-oldfc .sub-nav-wrapper-inner .right-submenus {
+  margin: 0;
+  padding: 1.5rem;
+}
+.timber-oldfc .sub-nav-wrapper-inner .left-submenus .subtitle,
+.timber-oldfc .sub-nav-wrapper-inner .right-submenus .subtitle {
+  color: #E85948 !important;
+}
+.timber-oldfc .sub-nav-wrapper-inner .left-submenus small,
+.timber-oldfc .sub-nav-wrapper-inner .right-submenus small {
+  display: block;
+  line-height: 20px;
+}
+.timber-oldfc .sub-nav-wrapper-inner .left-submenus {
+  border-bottom-left-radius: 10px;
+}
+.timber-oldfc .sub-nav-wrapper-inner .right-submenus {
+  border-bottom-right-radius: 10px;
+}
+.timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html {
+  padding: 1.5rem;
+  background-color: #38195B;
+  color: #FFF;
+  height: 100%;
+  border-bottom-right-radius: 10px;
+}
+.timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html h2 {
+  color: #FFF;
+  font-size: 25px;
+  line-height: 28px;
+  text-wrap: balance;
+  margin-bottom: 1rem;
+}
+.timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html p {
+  color: #FFF;
+  line-height: 20px;
+}
+.timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html .cta-container a {
+  display: inline-block;
+  background-color: #FFF;
+  color: #38195B;
+  padding: 0.7rem 1rem;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+.timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html .cta-container a:hover {
+  color: #FFF !important;
+  background-color: #CB198A;
 }
 .timber-oldfc .subnav-title {
   font-size: 10px;
@@ -520,12 +577,66 @@
   margin-bottom: 20px;
 }
 .timber-oldfc .mobile-nav {
-  align-items: flex-start !important;
-  padding-left: 32px;
-  padding-right: 10px;
-  padding-top: 15px !important;
-  margin-top: 66px;
+  padding-inline: 2rem;
+  margin-top: 45px;
   background-color: #f8f8f8;
+}
+.timber-oldfc .mobile-nav .left-submenus,
+.timber-oldfc .mobile-nav .right-submenus {
+  margin: 0;
+}
+.timber-oldfc .mobile-nav .left-submenus .subtitle,
+.timber-oldfc .mobile-nav .right-submenus .subtitle {
+  color: #E85948 !important;
+}
+.timber-oldfc .mobile-nav .left-submenus small,
+.timber-oldfc .mobile-nav .right-submenus small {
+  display: block;
+  line-height: 20px;
+}
+.timber-oldfc .mobile-nav .left-submenus {
+  padding-block-start: 1.5rem;
+}
+.timber-oldfc .mobile-nav .right-submenus .custom-html {
+  padding-block: 1.5rem;
+  background-color: #38195B;
+  color: #FFF;
+  height: 100%;
+  position: relative;
+}
+.timber-oldfc .mobile-nav .right-submenus .custom-html::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: calc(-50vw + 50%);
+  z-index: -1;
+  background-color: #38195B;
+}
+.timber-oldfc .mobile-nav .right-submenus .custom-html h2 {
+  color: #FFF;
+  font-size: 25px;
+  line-height: 28px;
+  text-wrap: balance;
+  margin-bottom: 1rem;
+}
+.timber-oldfc .mobile-nav .right-submenus .custom-html p {
+  color: #FFF;
+  line-height: 20px;
+}
+.timber-oldfc .mobile-nav .right-submenus .custom-html .cta-container a {
+  display: inline-block;
+  background-color: #FFF;
+  color: #38195B;
+  padding: 0.7rem 1rem;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+.timber-oldfc .mobile-nav .right-submenus .custom-html .cta-container a:hover {
+  color: #FFF !important;
+  background-color: #CB198A;
 }
 .timber-oldfc .mobile-nav-wrapper-flex {
   display: flex;
@@ -630,7 +741,7 @@
     position: fixed !important;
     top: 0;
     left: 0;
-    height: calc(100% - 65px);
+    height: calc(100% - 45px);
     z-index: 1200;
     width: 80%;
     overflow-y: scroll;

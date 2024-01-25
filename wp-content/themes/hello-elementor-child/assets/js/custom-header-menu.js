@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			e.stopPropagation();
 			closeSubmenus();
 			if (submenu) {
-				submenu.style.display = 'block';
+				submenu.style.display = 'flex';
 			}
 		});
 	});

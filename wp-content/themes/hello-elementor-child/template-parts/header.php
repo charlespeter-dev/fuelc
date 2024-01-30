@@ -76,7 +76,6 @@ foreach ($query->posts as $id) {
 												<a id="nav-link-<?= $nav['parent_id'] ?>" data-id="<?= $nav['parent_id'] ?>"
 													class="nav-link" href="javascript:;">
 													<?= $nav['parent_name'] ?>
-													<img class="nav-arrow" src="<?= $options['nav_arrow']['url'] ?>" alt="">
 												</a>
 
 

@@ -32,10 +32,13 @@ header h2 {
         a {
             font-family: $primary-font;
             font-weight: 500;
-            font-size: 13px;
+            font-size: 14px;
             text-align: left;
-
             line-height: 1;
+
+            &.subtitle {
+                font-size: 12px;
+            }
         }
 
         .nav-item {
@@ -45,10 +48,9 @@ header h2 {
             >a {
                 color: #49494b;
                 white-space: nowrap;
-                margin-right: 15px;
 
                 @media screen and (min-width: 992px) {
-                    margin-right: 55px;
+                    padding-inline: 2.5rem;
                 }
             }
         }
@@ -189,7 +191,7 @@ header h2 {
 
             .custom-html {
                 padding: 1.5rem;
-                background-color: #38195B;
+                background-color: #29003F;
                 color: #FFF;
                 height: 100%;
                 border-bottom-right-radius: 10px;
@@ -535,7 +537,7 @@ header h2 {
 
         .custom-html {
             padding-block: 1.5rem;
-            background-color: #38195B;
+            background-color: #29003F;
             color: #FFF;
             height: 100%;
             position: relative;
@@ -549,7 +551,7 @@ header h2 {
                 top: 0;
                 left: calc(-50vw + 50%);
                 z-index: -1;
-                background-color: #38195B;
+                background-color: #29003F;
             }
 
             h2 {

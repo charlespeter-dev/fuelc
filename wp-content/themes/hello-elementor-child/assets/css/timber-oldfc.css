@@ -192,9 +192,12 @@
 .timber-oldfc #main-navbar .nav-container a {
   font-family: "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   text-align: left;
   line-height: 1;
+}
+.timber-oldfc #main-navbar .nav-container a.subtitle {
+  font-size: 12px;
 }
 .timber-oldfc #main-navbar .nav-container .nav-item {
   display: flex;
@@ -203,11 +206,10 @@
 .timber-oldfc #main-navbar .nav-container .nav-item > a {
   color: #49494b;
   white-space: nowrap;
-  margin-right: 15px;
 }
 @media screen and (min-width: 992px) {
   .timber-oldfc #main-navbar .nav-container .nav-item > a {
-    margin-right: 55px;
+    padding-inline: 2.5rem;
   }
 }
 .timber-oldfc #main-navbar .nav-container .nav-logo {
@@ -321,7 +323,7 @@
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html {
   padding: 1.5rem;
-  background-color: #38195B;
+  background-color: #29003F;
   color: #FFF;
   height: 100%;
   border-bottom-right-radius: 10px;
@@ -599,7 +601,7 @@
 }
 .timber-oldfc .mobile-nav .right-submenus .custom-html {
   padding-block: 1.5rem;
-  background-color: #38195B;
+  background-color: #29003F;
   color: #FFF;
   height: 100%;
   position: relative;
@@ -613,7 +615,7 @@
   top: 0;
   left: calc(-50vw + 50%);
   z-index: -1;
-  background-color: #38195B;
+  background-color: #29003F;
 }
 .timber-oldfc .mobile-nav .right-submenus .custom-html h2 {
   color: #FFF;

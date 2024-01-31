@@ -111,7 +111,7 @@ add_action('wp_head', function () {
 }, PHP_INT_MAX);
 
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('custom-header-menu', get_stylesheet_directory_uri() . '/assets/js/custom-header-menu.js', [], HELLO_ELEMENTOR_VERSION, true);
+    wp_enqueue_script('custom-header-menu', get_stylesheet_directory_uri() . '/assets/js/custom-header-menu.js?t=' . time(), [], time(), true);
 });
 
 /**

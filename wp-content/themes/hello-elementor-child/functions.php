@@ -492,12 +492,12 @@ add_filter('wpseo_metabox_prio', function () {
     return 'low';
 });
 
-/**
- * Activate WordPress Maintenance Mode
- */
+// /**
+//  * Activate WordPress Maintenance Mode
+//  */
 
-add_action('get_header', function () {
-    if (!current_user_can('edit_themes') || !is_user_logged_in()) {
-        wp_die('<h1>Under Maintenance</h1><br>Website under planned maintenance. Please check back later.');
-    }
-});
+// add_action('get_header', function () {
+//     if (!current_user_can('edit_themes') || !is_user_logged_in()) {
+//         wp_die('<h1>Under Maintenance</h1><br>Website under planned maintenance. Please check back later.');
+//     }
+// });

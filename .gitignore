@@ -107,3 +107,4 @@ vendor
 composer.lock
 cache
 wp-rocket-config
+upgrade-temp-backup

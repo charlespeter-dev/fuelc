@@ -258,40 +258,40 @@ function hideSubnavs() {
 const originalLogoSrc = 'https://fuelcycle.com/wp-content/uploads/2021/12/fuel-cycle-logo.svg';
 
 // Change Navbar Logo on Scroll
-jQuery(function () {
-	jQuery(window).scroll(function () {
-		if (jQuery(this).scrollTop() > 650) {
-			jQuery('.nav-logo').attr(
-				'src',
-				'https://fuelcycle.com/wp-content/uploads/2021/12/fuelcycle_logo_sm@2x-e1645824041694.png'
-			)
+// jQuery(function () {
+// 	jQuery(window).scroll(function () {
+// 		if (jQuery(this).scrollTop() > 650) {
+// 			jQuery('.nav-logo').attr(
+// 				'src',
+// 				'https://fuelcycle.com/wp-content/uploads/2021/12/fuelcycle_logo_sm@2x-e1645824041694.png'
+// 			)
 
-			jQuery('#main-navbar .nav-link').addClass('hidden')
-			jQuery('.nav-icon img').addClass('hidden')
-			jQuery(
-				'#main-navbar .nav-container .nav-item.menu-expand'
-			).removeClass('hidden')
-			jQuery('#main-navbar .nav-container .nav-item.menu-expand').click(
-				function () {
-					jQuery('#main-navbar .nav-link').removeClass('hidden')
-					jQuery('.nav-icon img').removeClass('hidden')
-					jQuery(
-						'#main-navbar .nav-container .nav-item.menu-expand'
-					).addClass('hidden')
-				}
-			)
-		}
-		if (jQuery(this).scrollTop() < 650) {
-			jQuery('.nav-logo').attr('src', `${originalLogoSrc}`)
+// 			jQuery('#main-navbar .nav-link').addClass('hidden')
+// 			jQuery('.nav-icon img').addClass('hidden')
+// 			jQuery(
+// 				'#main-navbar .nav-container .nav-item.menu-expand'
+// 			).removeClass('hidden')
+// 			jQuery('#main-navbar .nav-container .nav-item.menu-expand').click(
+// 				function () {
+// 					jQuery('#main-navbar .nav-link').removeClass('hidden')
+// 					jQuery('.nav-icon img').removeClass('hidden')
+// 					jQuery(
+// 						'#main-navbar .nav-container .nav-item.menu-expand'
+// 					).addClass('hidden')
+// 				}
+// 			)
+// 		}
+// 		if (jQuery(this).scrollTop() < 650) {
+// 			jQuery('.nav-logo').attr('src', `${originalLogoSrc}`)
 
-			jQuery('#main-navbar .nav-link').removeClass('hidden')
-			jQuery('.nav-icon img').removeClass('hidden')
-			jQuery('#main-navbar .nav-container .nav-item.menu-expand').addClass(
-				'hidden'
-			)
-		}
-	})
-})
+// 			jQuery('#main-navbar .nav-link').removeClass('hidden')
+// 			jQuery('.nav-icon img').removeClass('hidden')
+// 			jQuery('#main-navbar .nav-container .nav-item.menu-expand').addClass(
+// 				'hidden'
+// 			)
+// 		}
+// 	})
+// })
 
 // Change Nav Orange Arrow on Hover
 

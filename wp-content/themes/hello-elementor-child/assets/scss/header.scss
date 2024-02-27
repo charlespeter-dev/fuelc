@@ -48,6 +48,7 @@ header h2 {
             >a {
                 color: #49494b;
                 white-space: nowrap;
+                font-size: 15px;
 
                 @media screen and (min-width: 992px) {
                     padding-inline: 2.5rem;
@@ -162,7 +163,7 @@ header h2 {
     &-inner {
         background-color: #fff;
         min-width: 600px;
-        box-shadow: inset rgba(0, 0, 0, 0.15) 0 10px 20px 0px;
+        // box-shadow: inset rgba(0, 0, 0, 0.15) 0 10px 20px 0px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         --bs-border-style: solid;
@@ -173,7 +174,7 @@ header h2 {
             padding: 1.5rem;
 
             .subtitle {
-                color: #E85948 !important;
+                color: #38195b !important;
             }
 
             small {

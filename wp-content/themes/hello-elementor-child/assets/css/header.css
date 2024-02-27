@@ -44,6 +44,7 @@ header h2 {
 #main-navbar .nav-container .nav-item > a {
   color: #49494b;
   white-space: nowrap;
+  font-size: 15px;
 }
 @media screen and (min-width: 992px) {
   #main-navbar .nav-container .nav-item > a {
@@ -149,7 +150,6 @@ header h2 {
 .sub-nav-wrapper-inner {
   background-color: #fff;
   min-width: 600px;
-  box-shadow: inset rgba(0, 0, 0, 0.15) 0 10px 20px 0px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   --bs-border-style: solid;
@@ -161,7 +161,7 @@ header h2 {
 }
 .sub-nav-wrapper-inner .left-submenus .subtitle,
 .sub-nav-wrapper-inner .right-submenus .subtitle {
-  color: #E85948 !important;
+  color: #38195b !important;
 }
 .sub-nav-wrapper-inner .left-submenus small,
 .sub-nav-wrapper-inner .right-submenus small {

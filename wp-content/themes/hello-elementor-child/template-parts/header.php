@@ -161,7 +161,7 @@ foreach ($query->posts as $id) {
 										<li class="nav-item">
 											<a href="<?= $options['cta_button_link'] ?>" id="cta-btn-nav"
 												class="main-btn cta-btn white-hover"
-												style="color: <?= $options['cta_button_color'] ?>;">
+												style="color: <?= $options['cta_button_color'] ?>; background-color: #38195b !important; border: #38195b;">
 												<?= $options['cta_button_text'] ?>
 											</a>
 										</li>

@@ -290,9 +290,10 @@
   display: none;
   background-color: #f8f8f8;
   position: absolute;
-  top: 72px;
+  top: 74px;
   right: 0;
   left: 0;
+  filter: drop-shadow(0 0 0.75rem #bbb);
 }
 .timber-oldfc .sub-nav-wrapper-inner {
   background-color: #fff;

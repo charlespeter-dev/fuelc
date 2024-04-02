@@ -97,16 +97,33 @@ foreach ($query->posts as $id) {
 
 																			<?php foreach ($groups['group_links'] as $i => $group_link): ?>
 
-																				<a href="<?= $group_link['link']['url'] ?>"
-																					class="list-group-item list-group-item-action border-0 <?= (!$i) ? 'text-uppercase pb-2 subtitle' : '' ?>">
-																					<?= $group_link['link']['title'] ?>
+																				<?php if (trim($group_link['link']['url']) == '#'): ?>
 
-																					<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
-																						<small>
-																							<?= $group_link['link_subtitle'] ?>
-																						</small>
-																					<?php endif ?>
-																				</a>
+																					<div
+																						class="list-group-item list-group-item-action border-0 text-uppercase pb-2 subtitle">
+																						<?= $group_link['link']['title'] ?>
+
+																						<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
+																							<small>
+																								<?= $group_link['link_subtitle'] ?>
+																							</small>
+																						<?php endif ?>
+																					</div>
+
+																				<?php else: ?>
+
+																					<a href="<?= $group_link['link']['url'] ?>"
+																						class="list-group-item list-group-item-action border-0">
+																						<?= $group_link['link']['title'] ?>
+
+																						<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
+																							<small>
+																								<?= $group_link['link_subtitle'] ?>
+																							</small>
+																						<?php endif ?>
+																					</a>
+
+																				<?php endif ?>
 
 																			<?php endforeach ?>
 																		</div>
@@ -128,12 +145,36 @@ foreach ($query->posts as $id) {
 
 																			<?php foreach ($groups['group_links'] as $i => $group_link): ?>
 
-																				<a href="<?= $group_link['link']['url'] ?>"
-																					class="list-group-item list-group-item-action border-0 <?= (!$i) ? 'text-uppercase pb-3 subtitle' : '' ?>">
-																					<?= $group_link['link']['title'] ?>
-																				</a>
+																				<?php if (trim($group_link['link']['url']) == '#'): ?>
+
+																					<div
+																						class="list-group-item list-group-item-action border-0 text-uppercase pb-2 subtitle">
+																						<?= $group_link['link']['title'] ?>
+
+																						<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
+																							<small>
+																								<?= $group_link['link_subtitle'] ?>
+																							</small>
+																						<?php endif ?>
+																					</div>
+
+																				<?php else: ?>
+
+																					<a href="<?= $group_link['link']['url'] ?>"
+																						class="list-group-item list-group-item-action border-0">
+																						<?= $group_link['link']['title'] ?>
+
+																						<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
+																							<small>
+																								<?= $group_link['link_subtitle'] ?>
+																							</small>
+																						<?php endif ?>
+																					</a>
+
+																				<?php endif ?>
 
 																			<?php endforeach ?>
+
 																		</div>
 
 																	<?php endforeach ?>

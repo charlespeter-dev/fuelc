@@ -163,6 +163,7 @@ header h2 {
 .sub-nav-wrapper-inner .left-submenus .subtitle,
 .sub-nav-wrapper-inner .right-submenus .subtitle {
   color: #38195b !important;
+  font-size: 14px;
 }
 .sub-nav-wrapper-inner .left-submenus small,
 .sub-nav-wrapper-inner .right-submenus small {

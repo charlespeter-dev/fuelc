@@ -310,6 +310,7 @@
 .timber-oldfc .sub-nav-wrapper-inner .left-submenus .subtitle,
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .subtitle {
   color: #38195b !important;
+  font-size: 14px;
 }
 .timber-oldfc .sub-nav-wrapper-inner .left-submenus small,
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus small {

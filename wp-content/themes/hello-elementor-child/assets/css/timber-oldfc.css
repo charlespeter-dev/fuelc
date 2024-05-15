@@ -191,8 +191,8 @@
 }
 .timber-oldfc #main-navbar .nav-container a {
   font-family: "greycliff-cf", "Open Sans", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 15px !important;
   text-align: left;
   line-height: 1;
 }
@@ -206,7 +206,7 @@
 .timber-oldfc #main-navbar .nav-container .nav-item > a {
   color: #49494b;
   white-space: nowrap;
-  font-size: 15px;
+  font-size: 15px !important;
 }
 @media screen and (min-width: 992px) {
   .timber-oldfc #main-navbar .nav-container .nav-item > a {

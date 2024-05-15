@@ -31,8 +31,8 @@ header h2 {
 
         a {
             font-family: $primary-font;
-            font-weight: 500;
-            font-size: 14px;
+            font-weight: 600;
+            font-size: 15px !important;
             text-align: left;
             line-height: 1;
 
@@ -48,7 +48,7 @@ header h2 {
             >a {
                 color: #49494b;
                 white-space: nowrap;
-                font-size: 15px;
+                font-size: 15px !important;
 
                 @media screen and (min-width: 992px) {
                     padding-inline: 2.5rem;

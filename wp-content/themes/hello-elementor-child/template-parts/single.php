@@ -92,198 +92,197 @@ else:
 
 		<div class="bootstrap-container">
 			<div class="timber-oldfc">
-				<div class="container-1140">
-					<div class="container">
 
-						<div class="py-3"></div>
+				<div class="container">
 
-						<article class="post-type-<?= $post->post_type ?>" id="post-<?= $post->ID ?>">
+					<div class="py-3"></div>
 
-							<?php if ($post->categories): ?>
-								<span class="blog-tag">
-									<?php foreach ($post->categories as $category): ?>
-										<?= $category->name ?>
-									<?php endforeach ?>
-								</span>
-							<?php endif ?>
+					<article class="post-type-<?= $post->post_type ?>" id="post-<?= $post->ID ?>">
 
-							<?php if ($post->title): ?>
-								<h1 class="article-h1">
-									<?= $post->title ?>
-								</h1>
-							<?php endif ?>
-
-							<?php if ($post->thumbnail): ?>
-								<div class="my-3 py-1"></div>
-								<img src="<?= $post->thumbnail->src ?>" alt="" class="img-fluid post-featured-img">
-								<div class="my-3 py-1"></div>
-							<?php endif ?>
-
-							<?php if ($post->content): ?>
-								<section class="article-content">
-									<div class="article-body">
-										<?= $post->content ?>
-									</div>
-								</section>
-							<?php endif ?>
-
-						</article>
-
-						<?php if ($show_author): ?>
-
-							<section class="py-3">
-								<div class="horizontal-line"></div>
-								<div class="row autho-info-box py-4">
-									<div class="col-sm-12 col-lg-4">
-										<div class="author-img-container mb-4">
-											<img class="author-img" src="<?= $author->profile_picture_url ?>"
-												alt="Author Image">
-										</div>
-									</div>
-									<div class="col-sm-12 col-lg-8">
-
-										<?php if ($author->name): ?>
-											<h2 class="author-title">Author:
-												<?= $author->name ?>
-											</h2>
-										<?php endif ?>
-
-										<div class="author-socials py-2 mb-2">
-											<?php if ($author->facebook): ?>
-												<a href="<?= $author->facebook ?>">
-													<i class="fa-brands fa-facebook"></i>
-												</a>
-											<?php endif ?>
-
-											<?php if ($author->instagram): ?>
-												<a href="<?= $author->instagram ?>">
-													<i class="fa-brands fa-instagram"></i>
-												</a>
-											<?php endif ?>
-
-											<?php if ($author->instagram): ?>
-												<a href="<?= $author->linkedin ?>">
-													<i class="fa-brands fa-linkedin"></i>
-												</a>
-											<?php endif ?>
-										</div>
-
-										<?php if ($author->description_excerpt): ?>
-											<div class="author-desc">
-												<p>
-													<?= $author->description_excerpt ?>
-												</p>
-												<div>
-													<a class="main-btn brand-btn" href="<?= $author->url ?>">
-														<?= __('View Bio') ?>
-													</a>
-												</div>
-											</div>
-										<?php else: ?>
-											<p>
-												<?= __('No description available.') ?>
-											</p>
-										<?php endif ?>
-
-									</div>
-								</div>
-							</section>
-
+						<?php if ($post->categories): ?>
+							<span class="blog-tag">
+								<?php foreach ($post->categories as $category): ?>
+									<?= $category->name ?>
+								<?php endforeach ?>
+							</span>
 						<?php endif ?>
 
-						<section>
-							<div class="py-3"></div>
-							<div class="horizontal-line"></div>
+						<?php if ($post->title): ?>
+							<h1 class="article-h1">
+								<?= $post->title ?>
+							</h1>
+						<?php endif ?>
 
-							<div class="single-post-pagination">
-								<div class="newest mb-3 mb-sm-0">
-									<?php if ($post->prev): ?>
-										<div class="newest-title">
-											<?= __('OLDER') ?>
-										</div>
-										<a href="<?= $post->prev->link ?>" class="previous-post-link">
-											<?= $post->prev->title ?>
-										</a>
-									<?php endif ?>
+						<?php if ($post->thumbnail): ?>
+							<div class="my-3 py-1"></div>
+							<img src="<?= $post->thumbnail->src ?>" alt="" class="img-fluid post-featured-img">
+							<div class="my-3 py-1"></div>
+						<?php endif ?>
+
+						<?php if ($post->content): ?>
+							<section class="article-content">
+								<div class="article-body">
+									<?= $post->content ?>
 								</div>
-								<div class="divider-line"></div>
-								<div class="older mb-3 mb-sm-0">
-									<?php if ($post->next): ?>
-										<div class="newest-title">
-											<?= __('NEWER') ?>
-										</div>
-										<a href="<?= $post->next->link ?>" class="next-post-link">
-											<?= $post->next->title ?>
-										</a>
-									<?php endif ?>
-								</div>
-							</div>
+							</section>
+						<?php endif ?>
 
-							<div class="py-3"></div>
+					</article>
+
+					<?php if ($show_author): ?>
+
+						<section class="py-3">
 							<div class="horizontal-line"></div>
-						</section>
+							<div class="row autho-info-box py-4">
+								<div class="col-sm-12 col-lg-4">
+									<div class="author-img-container mb-4">
+										<img class="author-img" src="<?= $author->profile_picture_url ?>" alt="Author Image">
+									</div>
+								</div>
+								<div class="col-sm-12 col-lg-8">
 
-						<section>
-							<div class="py-3"></div>
-							<div class="recommended-posts-wrapper py-5">
-								<section class="recommended-posts">
+									<?php if ($author->name): ?>
+										<h2 class="author-title">Author:
+											<?= $author->name ?>
+										</h2>
+									<?php endif ?>
 
-									<div class="recommended-posts-label">
-										<?= $post->recommended_posts_label ?>
+									<div class="author-socials py-2 mb-2">
+										<?php if ($author->facebook): ?>
+											<a href="<?= $author->facebook ?>">
+												<i class="fa-brands fa-facebook"></i>
+											</a>
+										<?php endif ?>
+
+										<?php if ($author->instagram): ?>
+											<a href="<?= $author->instagram ?>">
+												<i class="fa-brands fa-instagram"></i>
+											</a>
+										<?php endif ?>
+
+										<?php if ($author->instagram): ?>
+											<a href="<?= $author->linkedin ?>">
+												<i class="fa-brands fa-linkedin"></i>
+											</a>
+										<?php endif ?>
 									</div>
 
-									<h2 class="recommended-posts-title">
-										<?= $post->recommended_posts_title ?>
-									</h2>
+									<?php if ($author->description_excerpt): ?>
+										<div class="author-desc">
+											<p>
+												<?= $author->description_excerpt ?>
+											</p>
+											<div>
+												<a class="main-btn brand-btn" href="<?= $author->url ?>">
+													<?= __('View Bio') ?>
+												</a>
+											</div>
+										</div>
+									<?php else: ?>
+										<p>
+											<?= __('No description available.') ?>
+										</p>
+									<?php endif ?>
 
-									<div class="recommended-posts-row">
-										<?php foreach ($ttcposts as $ttcpost): ?>
+								</div>
+							</div>
+						</section>
 
-											<div class="single-post-wrapper">
+					<?php endif ?>
 
-												<div class="post-image-wrapper">
+					<section>
+						<div class="py-3"></div>
+						<div class="horizontal-line"></div>
+
+						<div class="single-post-pagination">
+							<div class="newest mb-3 mb-sm-0">
+								<?php if ($post->prev): ?>
+									<div class="newest-title">
+										<?= __('OLDER') ?>
+									</div>
+									<a href="<?= $post->prev->link ?>" class="previous-post-link">
+										<?= $post->prev->title ?>
+									</a>
+								<?php endif ?>
+							</div>
+							<div class="divider-line"></div>
+							<div class="older mb-3 mb-sm-0">
+								<?php if ($post->next): ?>
+									<div class="newest-title">
+										<?= __('NEWER') ?>
+									</div>
+									<a href="<?= $post->next->link ?>" class="next-post-link">
+										<?= $post->next->title ?>
+									</a>
+								<?php endif ?>
+							</div>
+						</div>
+
+						<div class="py-3"></div>
+						<div class="horizontal-line"></div>
+					</section>
+
+					<section>
+						<div class="py-3"></div>
+						<div class="recommended-posts-wrapper py-5">
+							<section class="recommended-posts">
+
+								<div class="recommended-posts-label">
+									<?= $post->recommended_posts_label ?>
+								</div>
+
+								<h2 class="recommended-posts-title">
+									<?= $post->recommended_posts_title ?>
+								</h2>
+
+								<div class="recommended-posts-row">
+									<?php foreach ($ttcposts as $ttcpost): ?>
+
+										<div class="single-post-wrapper">
+
+											<div class="post-image-wrapper">
+												<a href="<?= $ttcpost->link ?>">
+													<img src="<?= $ttcpost->thumbnail->src ?>" alt="" class="post-image">
+												</a>
+											</div>
+
+											<div class="post-text-wrapper">
+
+												<span class="post-categories">
+													<?php foreach ($ttcpost->categories as $category): ?>
+														<?= $category ?>
+													<?php endforeach ?>
+												</span>
+
+												<span class="single-post-title">
 													<a href="<?= $ttcpost->link ?>">
-														<img src="<?= $ttcpost->thumbnail->src ?>" alt="" class="post-image">
+														<?= count(explode(' ', $ttcpost->title)) > 9 ? implode(' ', array_slice(explode(' ', $ttcpost->title), 0, 9)) . "..." : $ttcpost->title ?>
 													</a>
-												</div>
+												</span>
 
-												<div class="post-text-wrapper">
-
-													<span class="post-categories">
-														<?php foreach ($ttcpost->categories as $category): ?>
-															<?= $category ?>
-														<?php endforeach ?>
-													</span>
-
-													<span class="single-post-title">
-														<a href="<?= $ttcpost->link ?>">
-															<?= count(explode(' ', $ttcpost->title)) > 9 ? implode(' ', array_slice(explode(' ', $ttcpost->title), 0, 9)) . "..." : $ttcpost->title ?>
-														</a>
-													</span>
-
-													<p class="single-post-excerpt">
-														<?php if ($ttcpost->post_excerpt_custom): ?>
-															<?= $ttcpost->post_excerpt_custom ?>
-														<?php else: ?>
-															<?= implode(' ', array_slice(explode(' ', $ttcpost->preview), 0, 9)) . "..." ?>
-														<?php endif ?>
-														<a href="<?= $ttcpost->link ?>" class="read-more">
-															<i class="fa-solid fa-arrow-right"></i>
-														</a>
-													</p>
-
-												</div>
+												<p class="single-post-excerpt">
+													<?php if ($ttcpost->post_excerpt_custom): ?>
+														<?= $ttcpost->post_excerpt_custom ?>
+													<?php else: ?>
+														<?= implode(' ', array_slice(explode(' ', $ttcpost->preview), 0, 9)) . "..." ?>
+													<?php endif ?>
+													<a href="<?= $ttcpost->link ?>" class="read-more">
+														<i class="fa-solid fa-arrow-right"></i>
+													</a>
+												</p>
 
 											</div>
 
-										<?php endforeach ?>
-									</div>
-								</section>
-							</div>
-						</section>
+										</div>
 
-					</div>
+									<?php endforeach ?>
+								</div>
+							</section>
+						</div>
+					</section>
+
 				</div>
+
 			</div>
 		</div>
 

@@ -57,6 +57,17 @@ header h2 {
                 @media screen and (min-width: 992px) {
                     padding-inline: 2.5rem;
                 }
+
+                &.main-btn {
+                    background-color: #38195b !important;
+                    border: #38195b;
+                    transition: background-color 100ms ease-in-out;
+
+                    &:hover {
+                        background-color: #CB198A !important;
+                        color: #ffffff !important;
+                    }
+                }
             }
         }
 

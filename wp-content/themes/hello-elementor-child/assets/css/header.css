@@ -56,6 +56,15 @@ header h2 {
     padding-inline: 2.5rem;
   }
 }
+#main-navbar .nav-container .nav-item > a.main-btn {
+  background-color: #38195b !important;
+  border: #38195b;
+  transition: background-color 100ms ease-in-out;
+}
+#main-navbar .nav-container .nav-item > a.main-btn:hover {
+  background-color: #CB198A !important;
+  color: #ffffff !important;
+}
 #main-navbar .nav-container .nav-logo {
   height: 30.89px;
   margin-top: 4px;

@@ -58,10 +58,8 @@ foreach ($query->posts as $id) {
 										aria-label="Toggle navigation">
 										<span class="navbar-toggler-icon"></span>
 									</button>
-									<a href="<?= $options['cta_button_link'] ?>" id="cta-btn-nav"
-										class="main-btn cta-btn white-hover mobile-cta"
-										style="color: <?= $options['cta_button_color'] ?>;">
-										<?= $options['cta_button_text'] ?>
+									<a href="<?= $options['cta_button_link'] ?>" id="cta-btn-nav-mobile"
+										class="main-btn cta-btn white-hover mobile-cta"><?= $options['cta_button_text'] ?>
 									</a>
 								</div>
 							</div>
@@ -200,10 +198,8 @@ foreach ($query->posts as $id) {
 											<a href="javascript:;"><i class="fa-solid fa-angle-left"></i> MENU</a>
 										</li>
 										<li class="nav-item">
-											<a href="<?= $options['cta_button_link'] ?>" id="cta-btn-nav"
-												class="main-btn cta-btn white-hover"
-												style="color: <?= $options['cta_button_color'] ?>; background-color: #38195b !important; border: #38195b;">
-												<?= $options['cta_button_text'] ?>
+											<a href="<?= $options['cta_button_link'] ?>" id="cta-btn-nav-desktop"
+												class="main-btn cta-btn white-hover"><?= $options['cta_button_text'] ?>
 											</a>
 										</li>
 									</ul>

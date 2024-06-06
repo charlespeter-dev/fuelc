@@ -43,6 +43,17 @@ header h2 {
             &.subtitle {
                 font-size: 12px;
             }
+
+            &.main-btn {
+                background-color: #38195b !important;
+                border: #38195b;
+                transition: background-color 100ms ease-in-out;
+
+                &:hover {
+                    background-color: #CB198A !important;
+                    color: #ffffff !important;
+                }
+            }
         }
 
         .nav-item {
@@ -56,17 +67,6 @@ header h2 {
 
                 @media screen and (min-width: 992px) {
                     padding-inline: 2.5rem;
-                }
-
-                &.main-btn {
-                    background-color: #38195b !important;
-                    border: #38195b;
-                    transition: background-color 100ms ease-in-out;
-
-                    &:hover {
-                        background-color: #CB198A !important;
-                        color: #ffffff !important;
-                    }
                 }
             }
         }
@@ -538,7 +538,7 @@ header h2 {
         margin: 0;
 
         .subtitle {
-            color: #E85948 !important;
+            color: #38195b !important;
         }
 
         small {

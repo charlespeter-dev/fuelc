@@ -223,9 +223,6 @@ foreach ($query->posts as $id) {
 											data-trigger="mobile_nav_submenu_<?= $nav['parent_id'] ?>"
 											class="nav-link mobile-nav-link" href="javascript:;">
 											<?= $nav['parent_name'] ?>
-											<img class="mobile-nav-link-arrow"
-												src="<?= $options['subnav_link_arrow']['url'] ?>"
-												alt="<?= $options['subnav_link_arrow']['alt'] ?>">
 										</a>
 									</li>
 								<?php endforeach ?>

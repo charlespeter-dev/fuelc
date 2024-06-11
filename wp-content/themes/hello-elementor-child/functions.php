@@ -3,7 +3,7 @@
  * Timber for legacy functions
  */
 
-require_once (__DIR__ . '/vendor/autoload.php');
+require_once(__DIR__ . '/vendor/autoload.php');
 $timber = new Timber\Timber();
 
 /**
@@ -180,7 +180,6 @@ add_filter('wpseo_xml_sitemap_post_url', function ($url, $post) {
         'https://fuelcycle.com/blog/mining-patient-ecosystem-market-research-can-help-understand-patients-journey/',
         'https://fuelcycle.com/blog/reckoning-facebooks-missteps-personalize-ads-without-creeping-audience/',
         'https://fuelcycle.com/blog/mobile-banking-leading-future-finance-whats-hang/',
-        'https://fuelcycle.com/customer-stories/ro-co/'
     ];
 
     $_pprredirect_url = get_post_meta($post->ID, '_pprredirect_url', true) ?? null;
@@ -199,7 +198,7 @@ add_filter('wpseo_xml_sitemap_post_url', function ($url, $post) {
              * Yoast doesn't allow external URLs
              */
 
-            $_pprredirect_url = str_replace('fuelcycle.com', 'fuelcycle.test', $_pprredirect_url);
+            $_pprredirect_url = str_replace('fuelcycle.com', 'fuelc.test', $_pprredirect_url);
 
             // $redirection = [
             // 	'src' => get_the_permalink($post->ID),

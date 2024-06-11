@@ -509,6 +509,15 @@ header h2 {
 .mobile-nav .left-submenus .subtitle,
 .mobile-nav .right-submenus .subtitle {
   color: #38195b !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+.mobile-nav .left-submenus .list-group > a,
+.mobile-nav .right-submenus .list-group > a {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #49494b;
+  padding-block-end: 0;
 }
 .mobile-nav .left-submenus small,
 .mobile-nav .right-submenus small {
@@ -598,6 +607,9 @@ header h2 {
 }
 .mobile-nav-link {
   max-width: 155px;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #49494b;
 }
 
 .mobile-nav-link-arrow {

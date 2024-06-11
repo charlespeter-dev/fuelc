@@ -606,6 +606,15 @@
 .timber-oldfc .mobile-nav .left-submenus .subtitle,
 .timber-oldfc .mobile-nav .right-submenus .subtitle {
   color: #38195b !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+.timber-oldfc .mobile-nav .left-submenus .list-group > a,
+.timber-oldfc .mobile-nav .right-submenus .list-group > a {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #49494b;
+  padding-block-end: 0;
 }
 .timber-oldfc .mobile-nav .left-submenus small,
 .timber-oldfc .mobile-nav .right-submenus small {
@@ -692,6 +701,9 @@
 }
 .timber-oldfc .mobile-nav-link {
   max-width: 155px;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #49494b;
 }
 .timber-oldfc .mobile-nav-link-arrow {
   margin-left: auto;

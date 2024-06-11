@@ -280,7 +280,7 @@ foreach ($query->posts as $id) {
 											<?php foreach ($groups['group_links'] as $i => $group_link): ?>
 
 												<a href="<?= $group_link['link']['url'] ?>"
-													class="list-group-item list-group-item-action border-0 <?= (!$i) ? 'text-uppercase pb-3 subtitle' : '' ?>">
+													class="list-group-item list-group-item-action border-0 <?= (!$i) ? 'text-uppercase pb-0 subtitle' : '' ?>">
 													<?= $group_link['link']['title'] ?>
 												</a>
 

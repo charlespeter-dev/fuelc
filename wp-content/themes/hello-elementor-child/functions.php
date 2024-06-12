@@ -3,7 +3,7 @@
  * Timber for legacy functions
  */
 
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once (__DIR__ . '/vendor/autoload.php');
 $timber = new Timber\Timber();
 
 /**
@@ -172,6 +172,10 @@ if (is_user_logged_in()) {
     });
 }
 
+/**
+ * 1. will exclude certains URL from the sitemap.xml
+ * 2. will identify which URL is a redirection and return the final destinantion instead
+ */
 
 add_filter('wpseo_xml_sitemap_post_url', function ($url, $post) {
 
@@ -187,18 +191,32 @@ add_filter('wpseo_xml_sitemap_post_url', function ($url, $post) {
 
     if ($_pprredirect_url && $_pprredirect_type == 301) {
 
+        // ---------------------------------------------
+        // check again if the 'dest' have redirection
+        // ---------------------------------------------
+
+        $new_pprredirect_url = get_page_by_path(parse_url($_pprredirect_url)['path'], OBJECT, ['post', 'page']);
+        $_pprredirect_url_l2 = get_post_meta($new_pprredirect_url->ID, '_pprredirect_url', true) ?? null;
+        $_pprredirect_type_l2 = get_post_meta($new_pprredirect_url->ID, '_pprredirect_type', true) ?? null;
+
         if (strpos($_pprredirect_url, 'fuelcycle.com') !== false && strpos(get_bloginfo('url'), 'fuelcycle.com') !== false) {
+
             if (!in_array($_pprredirect_url, $excluded)) {
+
+                if ($_pprredirect_url_l2 && $_pprredirect_type_l2 == 301) {
+                    return $_pprredirect_url_l2;
+                }
+
                 return $_pprredirect_url;
             }
         } else {
 
-            /**
-             * debug mode in local
-             * Yoast doesn't allow external URLs
-             */
+            // -------------------------------
+            // debug mode in local
+            // Yoast doesn't allow external URLs
+            // -------------------------------
 
-            $_pprredirect_url = str_replace('fuelcycle.com', 'fuelc.test', $_pprredirect_url);
+            $_pprredirect_url = str_replace('fuelcycle.com', 'fuelcycle.test', $_pprredirect_url);
 
             // $redirection = [
             // 	'src' => get_the_permalink($post->ID),

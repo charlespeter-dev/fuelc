@@ -188,22 +188,26 @@ add_filter('wpseo_xml_sitemap_post_url', function ($url, $post) {
 
     $_pprredirect_url = get_post_meta($post->ID, '_pprredirect_url', true) ?? null;
     $_pprredirect_type = get_post_meta($post->ID, '_pprredirect_type', true) ?? null;
+    $_pprredirect_active = get_post_meta($post->ID, '_pprredirect_active', true) ?? null;
 
-    if ($_pprredirect_url && $_pprredirect_type == 301) {
+    if ($_pprredirect_url && $_pprredirect_type == 301 && $_pprredirect_active) {
 
         // ---------------------------------------------
         // check again if the 'dest' have redirection
         // ---------------------------------------------
 
-        $new_pprredirect_url = get_page_by_path(parse_url($_pprredirect_url)['path'], OBJECT, ['post', 'page']);
+        $basename = basename(parse_url($_pprredirect_url)['path']);
+        $new_pprredirect_url = get_page_by_path($basename, OBJECT, ['post', 'page']);
+
         $_pprredirect_url_l2 = get_post_meta($new_pprredirect_url->ID, '_pprredirect_url', true) ?? null;
         $_pprredirect_type_l2 = get_post_meta($new_pprredirect_url->ID, '_pprredirect_type', true) ?? null;
+        $_pprredirect_active_l2 = get_post_meta($new_pprredirect_url->ID, '_pprredirect_active', true) ?? null;
 
         if (strpos($_pprredirect_url, 'fuelcycle.com') !== false && strpos(get_bloginfo('url'), 'fuelcycle.com') !== false) {
 
             if (!in_array($_pprredirect_url, $excluded)) {
 
-                if ($_pprredirect_url_l2 && $_pprredirect_type_l2 == 301) {
+                if ($_pprredirect_url_l2 && $_pprredirect_type_l2 == 301 && $_pprredirect_active_l2) {
                     return $_pprredirect_url_l2;
                 }
 
@@ -217,14 +221,24 @@ add_filter('wpseo_xml_sitemap_post_url', function ($url, $post) {
             // -------------------------------
 
             $_pprredirect_url = str_replace('fuelcycle.com', 'fuelcycle.test', $_pprredirect_url);
+            $_pprredirect_url_l2 = str_replace('fuelcycle.com', 'fuelcycle.test', $_pprredirect_url_l2);
 
             // $redirection = [
-            // 	'src' => get_the_permalink($post->ID),
-            // 	'dest' => $_pprredirect_url
+            //     'src' => get_the_permalink($post->ID),
+            //     'dest1' => $_pprredirect_url,
+            //     'dest2' => $_pprredirect_url_l2
             // ];
+
             // print_r($redirection);
 
-            return $_pprredirect_url;
+            if (!in_array($_pprredirect_url, $excluded)) {
+
+                if ($_pprredirect_url_l2 && $_pprredirect_type_l2 == 301 && $_pprredirect_active_l2) {
+                    return $_pprredirect_url_l2;
+                }
+
+                return $_pprredirect_url;
+            }
         }
     }
 

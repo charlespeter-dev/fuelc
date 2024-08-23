@@ -191,7 +191,7 @@
 }
 .timber-oldfc #main-navbar .nav-container a {
   font-family: "greycliff-cf", "Open Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 13px !important;
   text-align: left;
   line-height: 1;
@@ -205,12 +205,13 @@
   font-size: 12px;
 }
 .timber-oldfc #main-navbar .nav-container a.main-btn {
-  background-color: #38195b !important;
-  border: #38195b;
+  color: #ffffff !important;
+  background-color: #CA1B89 !important;
+  border: none !important;
   transition: background-color 100ms ease-in-out;
 }
 .timber-oldfc #main-navbar .nav-container a.main-btn:hover {
-  background-color: #CB198A !important;
+  background-color: #CA1B89 !important;
   color: #ffffff !important;
 }
 .timber-oldfc #main-navbar .nav-container .nav-item {
@@ -357,15 +358,15 @@
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html .cta-container a {
   display: inline-block;
-  background-color: #FFF;
-  color: #38195B;
+  background-color: #CA1B89;
+  color: #FFF;
   padding: 0.7rem 1rem;
   border-radius: 3px;
   transition: all 0.2s ease-in-out;
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html .cta-container a:hover {
   color: #FFF !important;
-  background-color: #CB198A;
+  background-color: #CA1B89;
 }
 .timber-oldfc .subnav-title {
   font-size: 10px;
@@ -612,7 +613,7 @@
 .timber-oldfc .mobile-nav .left-submenus .list-group > a,
 .timber-oldfc .mobile-nav .right-submenus .list-group > a {
   font-size: 15px !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   color: #49494b;
   padding-block-end: 0;
 }
@@ -655,15 +656,15 @@
 }
 .timber-oldfc .mobile-nav .right-submenus .custom-html .cta-container a {
   display: inline-block;
-  background-color: #FFF;
-  color: #38195B;
+  background-color: #CA1B89;
+  color: #FFF;
   padding: 0.7rem 1rem;
   border-radius: 3px;
   transition: all 0.2s ease-in-out;
 }
 .timber-oldfc .mobile-nav .right-submenus .custom-html .cta-container a:hover {
   color: #FFF !important;
-  background-color: #CB198A;
+  background-color: #CA1B89;
 }
 .timber-oldfc .mobile-nav-wrapper-flex {
   display: flex;
@@ -702,7 +703,7 @@
 .timber-oldfc .mobile-nav-link {
   max-width: 155px;
   font-size: 15px !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
   color: #49494b;
 }
 .timber-oldfc .mobile-nav-link-arrow {
@@ -1943,7 +1944,7 @@
   margin-right: 35px;
 }
 .timber-oldfc .main-footer ul li i {
-  color: #e85948;
+  color: #cb198a;
   margin-right: 8px;
 }
 .timber-oldfc .main-footer ul li i:hover {

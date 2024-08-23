@@ -31,7 +31,7 @@ header h2 {
 
         a {
             font-family: $primary-font;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 13px !important;
             text-align: left;
             line-height: 1;
@@ -45,12 +45,13 @@ header h2 {
             }
 
             &.main-btn {
-                background-color: #38195b !important;
-                border: #38195b;
+                color: #ffffff !important;
+                background-color: #CA1B89 !important;
+                border: none !important;
                 transition: background-color 100ms ease-in-out;
 
                 &:hover {
-                    background-color: #CB198A !important;
+                    background-color: #CA1B89 !important;
                     color: #ffffff !important;
                 }
             }
@@ -230,15 +231,15 @@ header h2 {
                 .cta-container {
                     a {
                         display: inline-block;
-                        background-color: #FFF;
-                        color: #38195B;
+                        background-color: #CA1B89;
+                        color: #FFF;
                         padding: 0.7rem 1rem;
                         border-radius: 3px;
                         transition: all .2s ease-in-out;
 
                         &:hover {
                             color: #FFF !important;
-                            background-color: #CB198A;
+                            background-color: #CA1B89;
                         }
                     }
                 }
@@ -546,7 +547,7 @@ header h2 {
         .list-group {
             >a {
                 font-size: 15px !important;
-                font-weight: 600 !important;
+                font-weight: 700 !important;
                 color: #49494b;
                 padding-block-end: 0;
             }
@@ -599,15 +600,15 @@ header h2 {
             .cta-container {
                 a {
                     display: inline-block;
-                    background-color: #FFF;
-                    color: #38195B;
+                    background-color: #CA1B89;
+                    color: #FFF;
                     padding: 0.7rem 1rem;
                     border-radius: 3px;
                     transition: all .2s ease-in-out;
 
                     &:hover {
                         color: #FFF !important;
-                        background-color: #CB198A;
+                        background-color: #CA1B89;
                     }
                 }
             }
@@ -658,7 +659,7 @@ header h2 {
 .mobile-nav-link {
     max-width: 155px;
     font-size: 15px !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     color: #49494b;
 }
 

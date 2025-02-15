@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <title>Pardot Form Block Domains</title>
+
+    <style rel="stylesheet">
+        code.error {
+            line-height: 2rem;
+            font-size: 2rem;
+            color: #F43;
+            padding: 2rem;
+            display: block;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            const FILENAME = "pardot-form-block-domains.md";
+            const set = (t) => document.getElementById('content').innerHTML = t;
+            const pull = fetch(FILENAME, { headers: { 'Accept': 'text/markdown' } })
+                .then((res) => {
+                    if (!res.ok)
+                        throw new Error(`${res.statusText} (${res.status})`);
+
+                    return res.text();
+                });
+
+            pull.then((text) => set(marked.parse(text)))
+                .catch((err) => set(`<code class="error">Failed to load ${FILENAME}: ${err.message}</code>`));
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container box" style="margin:5rem auto;padding:4rem">
+        <div id="content"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,20 +1,17 @@
 <?php
 
 require_once(__DIR__ . '/vendor/autoload.php');
-$timber = new Timber\Timber();
-$timber::$dirname = ['template-parts/twigs'];
-$timber::$autoescape = false;
+Timber\Timber::init();
 
-$context = $timber::context();
-$timber_post = new Timber\Post();
+$context = Timber::context();
+$timber_post = Timber::get_post();
 $context['post'] = $timber_post;
 $args['search_filter_id'] = 27217;
-$context['ttcposts'] = new Timber\PostQuery($args);
-$context['pagination'] = $timber::get_pagination();
+$context['ttcposts'] = Timber::get_posts($args);
+$context['pagination'] = Timber::get_pagination();
 
 get_header();
 
-$timber::render(["page-{$timber_post->post_name}.twig"], $context);
+Timber::render(["template-parts/twigs/content-hub-template.twig"], $context);
 
 get_footer();
-

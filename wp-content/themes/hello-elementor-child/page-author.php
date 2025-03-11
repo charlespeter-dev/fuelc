@@ -64,13 +64,11 @@ foreach ($author_ids as $author_id) {
 }
 
 require_once(__DIR__ . '/vendor/autoload.php');
-$timber = new Timber\Timber();
-$timber::$dirname = ['template-parts/twigs'];
-$timber::$autoescape = false;
+Timber\Timber::init();
 
-$context = $timber::context();
+$context = Timber::context();
 $context['authors'] = $authors;
 
 get_header();
-$timber::render('authors.twig', $context);
+Timber::render('template-parts/twigs/authors.twig', $context);
 get_footer();

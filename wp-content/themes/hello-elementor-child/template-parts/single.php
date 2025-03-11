@@ -35,60 +35,58 @@ if (!is_single()):
 else:
 
 	require_once(__DIR__ . '/vendor/autoload.php');
-	$timber = new Timber\Timber();
-	$timber::$dirname = ['template-parts/twigs'];
-	$timber::$autoescape = false;
+	Timber\Timber::init();
 
-	$context = $timber::context();
-	$post = new Timber\Post();
-	$ttcposts = new Timber\PostQuery(['search_filter_id' => 27217]);
+	$context = Timber::context();
+	$post = Timber::get_post();
+	$ttcposts = Timber::get_posts(['search_filter_id' => 27217]);
 
 	//
 	// check if post under 'Platform Updates'
 	// yes? do not display the author
 	//
 
-	$show_author = true;
+	$show_author = false;
 
-	if ($post->categories) {
-		foreach ($post->categories as $category) {
-			if ($category->slug == 'platform-updates') {
-				$show_author = false;
-				break;
-			}
-		}
-	}
+	// if ($post->categories) {
+	// 	foreach ($post->categories as $category) {
+	// 		if ($category->slug == 'platform-updates') {
+	// 			$show_author = false;
+	// 			break;
+	// 		}
+	// 	}
+	// }
 
 	/**
 	 * author
 	 */
 
-	$author_id = $post->post_author;
-	$author = new Timber\User($author_id);
+	// $author_id = $post->post_author;
+	// $author = Timber::get_user($author_id);
 
-	$profile_picture = get_field('profile_picture', 'user_' . $author_id);
-	if (!empty($profile_picture)) {
-		$profile_picture_url = $profile_picture['url'];
-		$author->profile_picture_url = $profile_picture_url;
-	} else {
-		$default_avatar_url = get_avatar_url($author_id);
-		$author->profile_picture_url = $default_avatar_url;
-	}
+	// $profile_picture = get_field('profile_picture', 'user_' . $author_id);
+	// if (!empty($profile_picture)) {
+	// 	$profile_picture_url = $profile_picture['url'];
+	// 	$author->profile_picture_url = $profile_picture_url;
+	// } else {
+	// 	$default_avatar_url = get_avatar_url($author_id);
+	// 	$author->profile_picture_url = $default_avatar_url;
+	// }
 
-	$description = get_the_author_meta('description', $author_id);
-	if (!empty($description)) {
-		$description_words = explode(' ', $description);
-		$excerpt_words = array_splice($description_words, 0, 30);
-		$excerpt = implode(' ', $excerpt_words);
-		$author->description_excerpt = $excerpt . '...';
-	} else {
-		$author->description_excerpt = '';
-	}
+	// $description = get_the_author_meta('description', $author_id);
+	// if (!empty($description)) {
+	// 	$description_words = explode(' ', $description);
+	// 	$excerpt_words = array_splice($description_words, 0, 30);
+	// 	$excerpt = implode(' ', $excerpt_words);
+	// 	$author->description_excerpt = $excerpt . '...';
+	// } else {
+	// 	$author->description_excerpt = '';
+	// }
 
-	$author->facebook = get_the_author_meta('facebook', $author_id);
-	$author->instagram = get_the_author_meta('instagram', $author_id);
-	$author->linkedin = get_the_author_meta('linkedin', $author_id);
-	$author->url = get_author_posts_url($author_id);
+	// $author->facebook = get_the_author_meta('facebook', $author_id);
+	// $author->instagram = get_the_author_meta('instagram', $author_id);
+	// $author->linkedin = get_the_author_meta('linkedin', $author_id);
+	// $author->url = get_author_posts_url($author_id);
 
 	?>
 
@@ -132,67 +130,6 @@ else:
 						<?php endif ?>
 
 					</article>
-
-					<?php if ($show_author): ?>
-
-						<section class="py-3">
-							<div class="horizontal-line"></div>
-							<div class="row autho-info-box py-4">
-								<div class="col-sm-12 col-lg-4">
-									<div class="author-img-container mb-4">
-										<img class="author-img" src="<?= $author->profile_picture_url ?>" alt="Author Image">
-									</div>
-								</div>
-								<div class="col-sm-12 col-lg-8">
-
-									<?php if ($author->name): ?>
-										<h2 class="author-title">Author:
-											<?= $author->name ?>
-										</h2>
-									<?php endif ?>
-
-									<div class="author-socials py-2 mb-2">
-										<?php if ($author->facebook): ?>
-											<a href="<?= $author->facebook ?>">
-												<i class="fa-brands fa-facebook"></i>
-											</a>
-										<?php endif ?>
-
-										<?php if ($author->instagram): ?>
-											<a href="<?= $author->instagram ?>">
-												<i class="fa-brands fa-instagram"></i>
-											</a>
-										<?php endif ?>
-
-										<?php if ($author->instagram): ?>
-											<a href="<?= $author->linkedin ?>">
-												<i class="fa-brands fa-linkedin"></i>
-											</a>
-										<?php endif ?>
-									</div>
-
-									<?php if ($author->description_excerpt): ?>
-										<div class="author-desc">
-											<p>
-												<?= $author->description_excerpt ?>
-											</p>
-											<div>
-												<a class="main-btn brand-btn" href="<?= $author->url ?>">
-													<?= __('View Bio') ?>
-												</a>
-											</div>
-										</div>
-									<?php else: ?>
-										<p>
-											<?= __('No description available.') ?>
-										</p>
-									<?php endif ?>
-
-								</div>
-							</div>
-						</section>
-
-					<?php endif ?>
 
 					<section>
 						<div class="py-3"></div>

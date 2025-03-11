@@ -34,7 +34,11 @@ if (!is_single()):
 
 else:
 
-	global $timber;
+	require_once(__DIR__ . '/vendor/autoload.php');
+	$timber = new Timber\Timber();
+	$timber::$dirname = ['template-parts/twigs'];
+	$timber::$autoescape = false;
+
 	$context = $timber::context();
 	$post = new Timber\Post();
 	$ttcposts = new Timber\PostQuery(['search_filter_id' => 27217]);

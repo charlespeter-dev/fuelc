@@ -63,7 +63,10 @@ foreach ($author_ids as $author_id) {
     ];
 }
 
-global $timber;
+require_once(__DIR__ . '/vendor/autoload.php');
+$timber = new Timber\Timber();
+$timber::$dirname = ['template-parts/twigs'];
+$timber::$autoescape = false;
 
 $context = $timber::context();
 $context['authors'] = $authors;

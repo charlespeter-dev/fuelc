@@ -1,103 +1,85 @@
 <?php
-/**
- * Timber for legacy functions
- */
 
-require_once (__DIR__ . '/vendor/autoload.php');
-$timber = new Timber\Timber();
 
-/**
- *  Sets the directories (inside your theme) to find .twig files
- */
+// class StarterSite extends Timber\Site
+// {
 
-$timber::$dirname = ['template-parts/twigs'];
+//     public function __construct()
+//     {
+//         add_filter('timber/twig', array($this, 'add_to_twig'));
+//         add_action('init', array($this, 'register_brands_post_type'));
+//         parent::__construct();
+//     }
 
-/**
- * By default, Timber does NOT autoescape values. Want to enable Twig's autoescape?
- * No prob! Just set this value to true
- */
+//     public function register_brands_post_type()
+//     {
+//         $labels = array(
+//             'name' => _x('Brands', 'Post Type General Name', 'brands'),
+//             'singular_name' => _x('Brand', 'Post Type Singular Name', 'brand'),
+//             'menu_name' => __('Brands', 'brands'),
+//             'name_admin_bar' => __('Brands', 'brands'),
+//             'archives' => __('Brand Archives', 'brands'),
+//             'attributes' => __('Brand Attributes', 'brands'),
+//             'parent_item_colon' => __('Parent Brand:', 'brands'),
+//             'all_items' => __('All Brands', 'brands'),
+//             'add_new_item' => __('Add New Brand', 'brands'),
+//             'add_new' => __('Add New Brand', 'brands'),
+//             'new_item' => __('New Brand', 'brands'),
+//             'edit_item' => __('Edit Brand', 'brands'),
+//             'update_item' => __('Update Brand', 'brands'),
+//             'view_item' => __('View Brand', 'brands'),
+//             'view_items' => __('View Brands', 'brands'),
+//             'search_items' => __('Search Brands', 'brands'),
+//             'not_found' => __('Not found', 'brands'),
+//             'not_found_in_trash' => __('Not found in Trash', 'brands'),
+//             'featured_image' => __('Featured Image', 'brands'),
+//             'set_featured_image' => __('Set featured image', 'brands'),
+//             'remove_featured_image' => __('Remove featured image', 'brands'),
+//             'use_featured_image' => __('Use as featured image', 'brands'),
+//             'insert_into_item' => __('Insert into brand', 'brands'),
+//             'uploaded_to_this_item' => __('Uploaded to this brand', 'brands'),
+//             'items_list' => __('Brands list', 'brands'),
+//             'items_list_navigation' => __('Brands list navigation', 'brands'),
+//             'filter_items_list' => __('Filter brands list', 'brands'),
+//         );
+//         $args = array(
+//             'label' => __('Brand', 'brands'),
+//             'description' => __('Brand', 'brands'),
+//             'labels' => $labels,
+//             'show_in_rest' => true,
+//             'supports' => array(
+//                 'title',
+//                 'editor',
+//                 'thumbnail',
+//                 'revisions',
+//             ),
+//             'taxonomies' => array('event_type', 'post_tag'),
+//             'hierarchical' => false,
+//             'public' => true,
+//             'show_ui' => true,
+//             'show_in_menu' => true,
+//             'menu_position' => 7,
+//             'menu_icon' => 'dashicons-admin-site-alt',
+//             'show_in_admin_bar' => true,
+//             'show_in_nav_menus' => true,
+//             'can_export' => true,
+//             'has_archive' => false,
+//             'exclude_from_search' => false,
+//             'publicly_queryable' => true,
+//             'capability_type' => 'post',
+//             'rewrite' => true
+//         );
+//         register_post_type('brand', $args);
+//     }
 
-$timber::$autoescape = false;
+//     public function add_to_twig($twig)
+//     {
+//         $twig->addExtension(new Twig\Extension\StringLoaderExtension());
+//         return $twig;
+//     }
+// }
 
-class StarterSite extends Timber\Site
-{
-
-    public function __construct()
-    {
-        add_filter('timber/twig', array($this, 'add_to_twig'));
-        add_action('init', array($this, 'register_brands_post_type'));
-        parent::__construct();
-    }
-
-    public function register_brands_post_type()
-    {
-        $labels = array(
-            'name' => _x('Brands', 'Post Type General Name', 'brands'),
-            'singular_name' => _x('Brand', 'Post Type Singular Name', 'brand'),
-            'menu_name' => __('Brands', 'brands'),
-            'name_admin_bar' => __('Brands', 'brands'),
-            'archives' => __('Brand Archives', 'brands'),
-            'attributes' => __('Brand Attributes', 'brands'),
-            'parent_item_colon' => __('Parent Brand:', 'brands'),
-            'all_items' => __('All Brands', 'brands'),
-            'add_new_item' => __('Add New Brand', 'brands'),
-            'add_new' => __('Add New Brand', 'brands'),
-            'new_item' => __('New Brand', 'brands'),
-            'edit_item' => __('Edit Brand', 'brands'),
-            'update_item' => __('Update Brand', 'brands'),
-            'view_item' => __('View Brand', 'brands'),
-            'view_items' => __('View Brands', 'brands'),
-            'search_items' => __('Search Brands', 'brands'),
-            'not_found' => __('Not found', 'brands'),
-            'not_found_in_trash' => __('Not found in Trash', 'brands'),
-            'featured_image' => __('Featured Image', 'brands'),
-            'set_featured_image' => __('Set featured image', 'brands'),
-            'remove_featured_image' => __('Remove featured image', 'brands'),
-            'use_featured_image' => __('Use as featured image', 'brands'),
-            'insert_into_item' => __('Insert into brand', 'brands'),
-            'uploaded_to_this_item' => __('Uploaded to this brand', 'brands'),
-            'items_list' => __('Brands list', 'brands'),
-            'items_list_navigation' => __('Brands list navigation', 'brands'),
-            'filter_items_list' => __('Filter brands list', 'brands'),
-        );
-        $args = array(
-            'label' => __('Brand', 'brands'),
-            'description' => __('Brand', 'brands'),
-            'labels' => $labels,
-            'show_in_rest' => true,
-            'supports' => array(
-                'title',
-                'editor',
-                'thumbnail',
-                'revisions',
-            ),
-            'taxonomies' => array('event_type', 'post_tag'),
-            'hierarchical' => false,
-            'public' => true,
-            'show_ui' => true,
-            'show_in_menu' => true,
-            'menu_position' => 7,
-            'menu_icon' => 'dashicons-admin-site-alt',
-            'show_in_admin_bar' => true,
-            'show_in_nav_menus' => true,
-            'can_export' => true,
-            'has_archive' => false,
-            'exclude_from_search' => false,
-            'publicly_queryable' => true,
-            'capability_type' => 'post',
-            'rewrite' => true
-        );
-        register_post_type('brand', $args);
-    }
-
-    public function add_to_twig($twig)
-    {
-        $twig->addExtension(new Twig\Extension\StringLoaderExtension());
-        return $twig;
-    }
-}
-
-new StarterSite();
+// new StarterSite();
 
 /**
  * styles & scripts

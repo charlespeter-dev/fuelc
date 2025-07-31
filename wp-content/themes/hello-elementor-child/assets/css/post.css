@@ -62,7 +62,7 @@
 
 /* Individual Post block - Found on Post Page */
 .post-categories {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-size: 13px;
   color: #49494b;
   display: block;
@@ -81,7 +81,7 @@
 }
 
 .single-post-title {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 700;
   line-height: 17px;
@@ -92,7 +92,7 @@
 
 .single-post-excerpt {
   font-size: 15px;
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   line-height: 16px;
   margin-bottom: 0;
 }
@@ -147,7 +147,7 @@
   border: 1px solid white;
   padding: 4px 6px;
   letter-spacing: 1px;
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   line-height: 1;
 }
 

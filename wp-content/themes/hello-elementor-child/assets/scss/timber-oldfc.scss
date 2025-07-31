@@ -23,7 +23,7 @@
     --bs-gutter-y: 0;
 
     *:not(.fa-brands):not(.fa-solid):not(.fab) {
-        font-family: greycliff-cf, "Open Sans", sans-serif;
+        font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
         font-weight: 500;
     }
 
@@ -36,7 +36,7 @@
 
     a {
         text-decoration: none;
-        font-family: var(--e-global-typography-primary-font-family);
+        font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
     }
 
     .container-1140 {

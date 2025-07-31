@@ -25,11 +25,11 @@
   /* Individual Post block */
 }
 .timber-oldfc *:not(.fa-brands):not(.fa-solid):not(.fab) {
-  font-family: greycliff-cf, "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 500;
 }
 .timber-oldfc h1 {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 40.74px;
   line-height: 45px;
@@ -41,24 +41,24 @@
   }
 }
 .timber-oldfc h2 {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 40px;
   color: #49494b;
 }
 .timber-oldfc h3 {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-size: 24px;
 }
 .timber-oldfc h4 {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 18px !important;
   line-height: 26px;
 }
 .timber-oldfc p {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
@@ -96,7 +96,7 @@
   justify-self: center;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   display: inline-block;
-  font-family: "greycliff-cf", "Open Sans", sans-serif !important;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif !important;
   font-size: 14px !important;
   line-height: 1 !important;
   text-align: center !important;
@@ -113,7 +113,7 @@
   transition: all 1s;
 }
 .timber-oldfc .main-link {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 13px;
   line-height: 20px;
@@ -149,7 +149,7 @@
   justify-self: center;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   display: inline-block;
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 13px;
   line-height: 20px;
@@ -190,7 +190,7 @@
   padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
 .timber-oldfc #main-navbar .nav-container a {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 13px !important;
   text-align: left;
@@ -416,7 +416,7 @@
   font-weight: 200;
 }
 .timber-oldfc .subnav-link-title.bold-smaller {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.2;
@@ -581,7 +581,7 @@
   top: 1px;
 }
 .timber-oldfc .subnav-paragraph {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-size: 10px;
   font-weight: 300;
   line-height: 16px;
@@ -859,7 +859,7 @@
   margin-bottom: 28px;
 }
 .timber-oldfc .post-categories {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-size: 13px;
   color: #49494b;
   display: block;
@@ -875,7 +875,7 @@
   border-radius: 6px;
 }
 .timber-oldfc .single-post-title {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 700;
   line-height: 17px;
@@ -885,7 +885,7 @@
 }
 .timber-oldfc .single-post-excerpt {
   font-size: 15px;
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   line-height: 16px;
   margin-bottom: 0;
 }
@@ -932,7 +932,7 @@
   border: 1px solid white;
   padding: 4px 6px;
   letter-spacing: 1px;
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   line-height: 1;
 }
 @media screen and (min-width: 768px) {
@@ -1252,7 +1252,7 @@
   margin-left: 12px;
 }
 .timber-oldfc .post-categories {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-size: 13px;
   color: #49494b;
   display: block;
@@ -1268,7 +1268,7 @@
   border-radius: 6px;
 }
 .timber-oldfc .single-post-title {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-size: 15px;
   line-height: 17px;
   margin-bottom: 5px;
@@ -1277,7 +1277,7 @@
 }
 .timber-oldfc .single-post-excerpt {
   font-size: 15px;
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   line-height: 16px;
   margin-bottom: 0;
 }
@@ -1325,7 +1325,7 @@
   border: 1px solid white;
   padding: 4px 6px;
   letter-spacing: 1px;
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   line-height: 1;
 }
 .timber-oldfc .sf-field-tag h4 {
@@ -1850,7 +1850,7 @@
   color: #613f97 !important;
 }
 .timber-oldfc .main-footer .footer-title {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 700 !important;
   font-size: 18px;
   line-height: 26px;
@@ -1906,7 +1906,7 @@
 }
 .timber-oldfc .main-footer ul li {
   display: flex;
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   text-align: left;
   list-style-type: none;
   margin: 0;
@@ -1929,7 +1929,7 @@
   border-radius: 50%;
   text-align: center;
   padding-top: 6px;
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
@@ -2001,7 +2001,7 @@
 }
 .timber-oldfc a {
   text-decoration: none;
-  font-family: var(--e-global-typography-primary-font-family);
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
 }
 .timber-oldfc .container-1140 {
   max-width: 1140px;

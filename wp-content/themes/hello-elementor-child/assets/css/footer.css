@@ -68,7 +68,7 @@
   color: #613f97 !important;
 }
 .main-footer .footer-title {
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 700 !important;
   font-size: 18px;
   line-height: 26px;
@@ -124,7 +124,7 @@
 }
 .main-footer ul li {
   display: flex;
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   text-align: left;
   list-style-type: none;
   margin: 0;
@@ -147,7 +147,7 @@
   border-radius: 50%;
   text-align: center;
   padding-top: 6px;
-  font-family: "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;

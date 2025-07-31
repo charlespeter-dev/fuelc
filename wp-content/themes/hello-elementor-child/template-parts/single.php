@@ -34,7 +34,13 @@ if (!is_single()):
 
 else:
 
-	require_once(__DIR__ . '../vendor/autoload.php');
+	if (PHP_OS_FAMILY === 'Linux') {
+		$autoload_path = '/www/newfuelcycle_240/public/wp-content/themes/hello-elementor-child/vendor/autoload.php';
+	} else {
+		$autoload_path = __DIR__ . '../vendor/autoload.php';
+	}
+
+	require_once($autoload_path);
 	Timber\Timber::init();
 
 	$context = Timber::context();

@@ -31,13 +31,13 @@ header h2 {
 
         a {
             font-family: $primary-font;
-            font-weight: 700;
-            font-size: 13px !important;
+            font-weight: 300;
+            font-size: 13px;
             text-align: left;
             line-height: 1;
 
             @media screen and (min-width: 992px) {
-                font-size: 15px !important;
+                font-size: 16px;
             }
 
             &.subtitle {
@@ -46,13 +46,13 @@ header h2 {
 
             &.main-btn {
                 color: #ffffff !important;
-                background-color: #CA1B89 !important;
+                background-color: #1C003A !important;
                 border: none !important;
                 transition: background-color 100ms ease-in-out;
 
                 &:hover {
-                    background-color: #CA1B89 !important;
-                    color: #ffffff !important;
+                    background-color: #f2f3fe !important;
+                    color: #5449ce !important;
                 }
             }
         }
@@ -62,9 +62,15 @@ header h2 {
             align-items: center;
 
             >a {
-                color: #49494b;
                 white-space: nowrap;
-                font-size: 15px !important;
+                color: #49494b;
+                display: flex;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                font-family: $lora-font;
+                font-size: 20px;
+                line-height: 26px;
+                font-weight: 500;
 
                 @media screen and (min-width: 992px) {
                     padding-inline: 2.5rem;
@@ -122,12 +128,7 @@ header h2 {
     justify-content: space-between;
 }
 
-.nav-link {
-    color: #49494b !important;
-    display: flex !important;
-    padding-top: 23px !important;
-    padding-bottom: 23px !important;
-}
+.nav-link {}
 
 .nav-link.hidden {
     visibility: hidden;
@@ -172,7 +173,7 @@ header h2 {
     display: none;
     background-color: #f8f8f8;
     position: absolute;
-    top: 74px;
+    top: 72px;
     right: 0;
     left: 0;
     filter: drop-shadow(0 0 .75rem #bbb);
@@ -191,8 +192,12 @@ header h2 {
             padding: 1.5rem;
 
             .subtitle {
-                color: #38195b !important;
+                color: #5449CE;
                 font-size: 14px;
+                font-family: $lora-font;
+                font-size: 20px;
+                line-height: 26px;
+                font-weight: 500;
             }
 
             small {
@@ -209,37 +214,43 @@ header h2 {
             border-bottom-right-radius: 10px;
 
             .custom-html {
-                padding: 1.5rem;
-                background-color: #29003F;
+                padding: 2rem;
+                background-color: #5449CE;
                 color: #FFF;
                 height: 100%;
                 border-bottom-right-radius: 10px;
 
                 h2 {
                     color: #FFF;
-                    font-size: 25px;
-                    line-height: 28px;
-                    text-wrap: balance;
+                    font-family: $lora-font;
+                    font-size: 40px;
+                    line-height: 50px;
+                    text-wrap: pretty;
                     margin-bottom: 1rem;
+                    letter-spacing: 1px;
+                    font-weight: 300;
                 }
 
                 p {
                     color: #FFF;
-                    line-height: 20px;
+                    font-size: 16px;
+                    font-weight: 300;
                 }
 
                 .cta-container {
                     a {
                         display: inline-block;
-                        background-color: #CA1B89;
+                        background-color: transparent;
                         color: #FFF;
-                        padding: 0.7rem 1rem;
-                        border-radius: 3px;
+                        border: 2px solid #FFF;
+                        padding: 0.7rem 1.5rem;
+                        border-radius: 8px;
                         transition: all .2s ease-in-out;
+                        font-size: 12px !important;
 
                         &:hover {
-                            color: #FFF !important;
-                            background-color: #CA1B89;
+                            color: #5449ce !important;
+                            background-color: #f2f3fe;
                         }
                     }
                 }
@@ -546,9 +557,15 @@ header h2 {
 
         .list-group {
             >a {
-                font-size: 15px !important;
-                font-weight: 700 !important;
-                color: #49494b;
+
+                &.subtitle {
+                    font-family: $lora-font;
+                    font-size: 20px !important;
+                    line-height: 30px !important;
+                    font-weight: 500 !important;
+                    color: #5449CE;
+                }
+
                 padding-block-end: 0;
             }
         }
@@ -566,8 +583,8 @@ header h2 {
     .right-submenus {
 
         .custom-html {
-            padding-block: 1.5rem;
-            background-color: #29003F;
+            padding-block: 2rem;
+            background-color: #5449CE;
             color: #FFF;
             height: 100%;
             position: relative;
@@ -581,15 +598,18 @@ header h2 {
                 top: 0;
                 left: calc(-50vw + 50%);
                 z-index: -1;
-                background-color: #29003F;
+                background-color: #5449CE;
             }
 
             h2 {
                 color: #FFF;
-                font-size: 25px;
-                line-height: 28px;
-                text-wrap: balance;
+                font-family: $lora-font;
+                font-size: 40px;
+                line-height: 50px;
+                text-wrap: pretty;
                 margin-bottom: 1rem;
+                letter-spacing: 1px;
+                font-weight: 300;
             }
 
             p {
@@ -600,15 +620,17 @@ header h2 {
             .cta-container {
                 a {
                     display: inline-block;
-                    background-color: #CA1B89;
+                    background-color: transparent;
                     color: #FFF;
-                    padding: 0.7rem 1rem;
-                    border-radius: 3px;
+                    border: 2px solid #FFF;
+                    padding: 0.7rem 1.5rem;
+                    border-radius: 8px;
                     transition: all .2s ease-in-out;
+                    font-size: 12px !important;
 
                     &:hover {
-                        color: #FFF !important;
-                        background-color: #CA1B89;
+                        color: #5449ce !important;
+                        background-color: #f2f3fe;
                     }
                 }
             }
@@ -658,8 +680,10 @@ header h2 {
 
 .mobile-nav-link {
     max-width: 155px;
-    font-size: 15px !important;
-    font-weight: 700 !important;
+    font-family: $lora-font;
+    font-size: 20px !important;
+    line-height: 30px !important;
+    font-weight: 500 !important;
     color: #49494b;
 }
 

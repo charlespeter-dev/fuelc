@@ -75,12 +75,12 @@
 	}
 
 	.footer-title {
-		font-family: $primary-font;
-		font-weight: 700 !important;
-		font-size: 18px;
+		font-family: $lora-font;
+		font-weight: 500;
+		font-size: 20px;
 		line-height: 26px;
 		text-align: left;
-		color: #49494b;
+		color: #5449CE;
 	}
 
 	@media screen and (min-width: 1200px) {
@@ -118,6 +118,9 @@
 		}
 
 		li {
+
+			align-items: center;
+
 			@media (max-width: 1199px) {
 				width: 50%;
 			}
@@ -139,11 +142,11 @@
 
 			list-style-type: none;
 			margin: 0;
-			margin-bottom: 25px;
+			margin-bottom: 15px;
 			padding: 0;
 			list-style-position: outside;
 
-			font-weight: 500;
+			font-weight: 300;
 			font-size: 16px;
 			line-height: 18px;
 			text-align: left;
@@ -154,19 +157,19 @@
 			}
 
 			.footer-cirlce {
-				height: 42px;
-				width: 42px;
-				border: 1px solid #49494b;
+				height: 50px;
+				width: 50px;
+				border: 1px solid #5449CE;
 				border-radius: 50%;
-				text-align: center;
-				padding-top: 6px;
-
-				font-family: $primary-font;
+				font-family: $lora-font;
 				font-weight: 500;
 				font-size: 18px;
 				line-height: 26px;
+				color: #5449CE;
 
-				color: #49494b;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
 
 			.inline {

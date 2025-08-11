@@ -98,7 +98,7 @@ foreach ($query->posts as $id) {
 																				<?php if (trim($group_link['link']['url']) == '#'): ?>
 
 																					<div
-																						class="list-group-item list-group-item-action border-0 text-uppercase pb-2 subtitle">
+																						class="list-group-item list-group-item-action border-0 pb-2 subtitle">
 																						<?= $group_link['link']['title'] ?>
 
 																						<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
@@ -146,7 +146,7 @@ foreach ($query->posts as $id) {
 																				<?php if (trim($group_link['link']['url']) == '#'): ?>
 
 																					<div
-																						class="list-group-item list-group-item-action border-0 text-uppercase pb-2 subtitle">
+																						class="list-group-item list-group-item-action border-0 pb-2 subtitle">
 																						<?= $group_link['link']['title'] ?>
 
 																						<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
@@ -252,7 +252,7 @@ foreach ($query->posts as $id) {
 											<?php foreach ($groups['group_links'] as $i => $group_link): ?>
 
 												<a href="<?= $group_link['link']['url'] ?>"
-													class="list-group-item list-group-item-action border-0 <?= (!$i) ? 'text-uppercase pb-0 subtitle' : '' ?>">
+													class="list-group-item list-group-item-action border-0 <?= (!$i) ? 'pb-0 subtitle' : '' ?>">
 													<?= $group_link['link']['title'] ?>
 
 													<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
@@ -280,7 +280,7 @@ foreach ($query->posts as $id) {
 											<?php foreach ($groups['group_links'] as $i => $group_link): ?>
 
 												<a href="<?= $group_link['link']['url'] ?>"
-													class="list-group-item list-group-item-action border-0 <?= (!$i) ? 'text-uppercase pb-0 subtitle' : '' ?>">
+													class="list-group-item list-group-item-action border-0 <?= (!$i) ? 'pb-0 subtitle' : '' ?>">
 													<?= $group_link['link']['title'] ?>
 												</a>
 
@@ -298,7 +298,7 @@ foreach ($query->posts as $id) {
 								<?php endif ?>
 							</div>
 
-							<div>
+							<div class="mt-5">
 								<ul class="navbar-nav navbar-nav-moible">
 									<li>
 										<span class="nav-link mobile-btn-close-back mobile-btn-back fc-orange py-0">

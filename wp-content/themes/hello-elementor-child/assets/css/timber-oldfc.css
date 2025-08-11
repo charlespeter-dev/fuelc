@@ -24,10 +24,6 @@
   /* Individual Post block - Found on Post Page */
   /* Individual Post block */
 }
-.timber-oldfc *:not(.fa-brands):not(.fa-solid):not(.fab) {
-  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
-  font-weight: 500;
-}
 .timber-oldfc h1 {
   font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: normal;
@@ -191,14 +187,14 @@
 }
 .timber-oldfc #main-navbar .nav-container a {
   font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
-  font-weight: 700;
-  font-size: 13px !important;
+  font-weight: 300;
+  font-size: 13px;
   text-align: left;
   line-height: 1;
 }
 @media screen and (min-width: 992px) {
   .timber-oldfc #main-navbar .nav-container a {
-    font-size: 15px !important;
+    font-size: 16px;
   }
 }
 .timber-oldfc #main-navbar .nav-container a.subtitle {
@@ -206,22 +202,28 @@
 }
 .timber-oldfc #main-navbar .nav-container a.main-btn {
   color: #ffffff !important;
-  background-color: #CA1B89 !important;
+  background-color: #1C003A !important;
   border: none !important;
   transition: background-color 100ms ease-in-out;
 }
 .timber-oldfc #main-navbar .nav-container a.main-btn:hover {
-  background-color: #CA1B89 !important;
-  color: #ffffff !important;
+  background-color: #f2f3fe !important;
+  color: #5449ce !important;
 }
 .timber-oldfc #main-navbar .nav-container .nav-item {
   display: flex;
   align-items: center;
 }
 .timber-oldfc #main-navbar .nav-container .nav-item > a {
-  color: #49494b;
   white-space: nowrap;
-  font-size: 15px !important;
+  color: #49494b;
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
 }
 @media screen and (min-width: 992px) {
   .timber-oldfc #main-navbar .nav-container .nav-item > a {
@@ -265,12 +267,6 @@
 .timber-oldfc .nav-row-wrapper {
   justify-content: space-between;
 }
-.timber-oldfc .nav-link {
-  color: #49494b !important;
-  display: flex !important;
-  padding-top: 23px !important;
-  padding-bottom: 23px !important;
-}
 .timber-oldfc .nav-link.hidden {
   visibility: hidden;
 }
@@ -305,7 +301,7 @@
   display: none;
   background-color: #f8f8f8;
   position: absolute;
-  top: 74px;
+  top: 72px;
   right: 0;
   left: 0;
   filter: drop-shadow(0 0 0.75rem #bbb);
@@ -324,8 +320,12 @@
 }
 .timber-oldfc .sub-nav-wrapper-inner .left-submenus .subtitle,
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .subtitle {
-  color: #38195b !important;
+  color: #5449CE;
   font-size: 14px;
+  font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 500;
 }
 .timber-oldfc .sub-nav-wrapper-inner .left-submenus small,
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus small {
@@ -339,34 +339,40 @@
   border-bottom-right-radius: 10px;
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html {
-  padding: 1.5rem;
-  background-color: #29003F;
+  padding: 2rem;
+  background-color: #5449CE;
   color: #FFF;
   height: 100%;
   border-bottom-right-radius: 10px;
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html h2 {
   color: #FFF;
-  font-size: 25px;
-  line-height: 28px;
-  text-wrap: balance;
+  font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  text-wrap: pretty;
   margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-weight: 300;
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html p {
   color: #FFF;
-  line-height: 20px;
+  font-size: 16px;
+  font-weight: 300;
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html .cta-container a {
   display: inline-block;
-  background-color: #CA1B89;
+  background-color: transparent;
   color: #FFF;
-  padding: 0.7rem 1rem;
-  border-radius: 3px;
+  border: 2px solid #FFF;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
   transition: all 0.2s ease-in-out;
+  font-size: 12px !important;
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html .cta-container a:hover {
-  color: #FFF !important;
-  background-color: #CA1B89;
+  color: #5449ce !important;
+  background-color: #f2f3fe;
 }
 .timber-oldfc .subnav-title {
   font-size: 10px;
@@ -612,10 +618,15 @@
 }
 .timber-oldfc .mobile-nav .left-submenus .list-group > a,
 .timber-oldfc .mobile-nav .right-submenus .list-group > a {
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  color: #49494b;
   padding-block-end: 0;
+}
+.timber-oldfc .mobile-nav .left-submenus .list-group > a.subtitle,
+.timber-oldfc .mobile-nav .right-submenus .list-group > a.subtitle {
+  font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
+  font-size: 20px !important;
+  line-height: 30px !important;
+  font-weight: 500 !important;
+  color: #5449CE;
 }
 .timber-oldfc .mobile-nav .left-submenus small,
 .timber-oldfc .mobile-nav .right-submenus small {
@@ -626,8 +637,8 @@
   padding-block-start: 1.5rem;
 }
 .timber-oldfc .mobile-nav .right-submenus .custom-html {
-  padding-block: 1.5rem;
-  background-color: #29003F;
+  padding-block: 2rem;
+  background-color: #5449CE;
   color: #FFF;
   height: 100%;
   position: relative;
@@ -641,14 +652,17 @@
   top: 0;
   left: calc(-50vw + 50%);
   z-index: -1;
-  background-color: #29003F;
+  background-color: #5449CE;
 }
 .timber-oldfc .mobile-nav .right-submenus .custom-html h2 {
   color: #FFF;
-  font-size: 25px;
-  line-height: 28px;
-  text-wrap: balance;
+  font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
+  font-size: 40px;
+  line-height: 50px;
+  text-wrap: pretty;
   margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-weight: 300;
 }
 .timber-oldfc .mobile-nav .right-submenus .custom-html p {
   color: #FFF;
@@ -656,15 +670,17 @@
 }
 .timber-oldfc .mobile-nav .right-submenus .custom-html .cta-container a {
   display: inline-block;
-  background-color: #CA1B89;
+  background-color: transparent;
   color: #FFF;
-  padding: 0.7rem 1rem;
-  border-radius: 3px;
+  border: 2px solid #FFF;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
   transition: all 0.2s ease-in-out;
+  font-size: 12px !important;
 }
 .timber-oldfc .mobile-nav .right-submenus .custom-html .cta-container a:hover {
-  color: #FFF !important;
-  background-color: #CA1B89;
+  color: #5449ce !important;
+  background-color: #f2f3fe;
 }
 .timber-oldfc .mobile-nav-wrapper-flex {
   display: flex;
@@ -702,8 +718,10 @@
 }
 .timber-oldfc .mobile-nav-link {
   max-width: 155px;
-  font-size: 15px !important;
-  font-weight: 700 !important;
+  font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
+  font-size: 20px !important;
+  line-height: 30px !important;
+  font-weight: 500 !important;
   color: #49494b;
 }
 .timber-oldfc .mobile-nav-link-arrow {
@@ -1850,12 +1868,12 @@
   color: #613f97 !important;
 }
 .timber-oldfc .main-footer .footer-title {
-  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
-  font-weight: 700 !important;
-  font-size: 18px;
+  font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
   line-height: 26px;
   text-align: left;
-  color: #49494b;
+  color: #5449CE;
 }
 @media screen and (min-width: 1200px) {
   .timber-oldfc .main-footer .address-col {
@@ -1891,6 +1909,9 @@
     flex-direction: column;
   }
 }
+.timber-oldfc .main-footer .footer-address li {
+  align-items: center;
+}
 @media (max-width: 1199px) {
   .timber-oldfc .main-footer .footer-address li {
     width: 50%;
@@ -1910,10 +1931,10 @@
   text-align: left;
   list-style-type: none;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   padding: 0;
   list-style-position: outside;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 16px;
   line-height: 18px;
   text-align: left;
@@ -1923,17 +1944,18 @@
   margin-bottom: 0;
 }
 .timber-oldfc .main-footer ul li .footer-cirlce {
-  height: 42px;
-  width: 42px;
-  border: 1px solid #49494b;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #5449CE;
   border-radius: 50%;
-  text-align: center;
-  padding-top: 6px;
-  font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
+  font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;
-  color: #49494b;
+  color: #5449CE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .timber-oldfc .main-footer ul li .inline {
   display: inline-block;

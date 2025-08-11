@@ -83,7 +83,7 @@ $options = get_fields('options');
 									<li><a href="<?= $item['url'] ?>"><?= $item['text'] ?></a></li>
 								<?php endforeach ?>
 							</ul>
-							<p class="footer-title d-none d-md-block">
+							<p class="footer-title d-none d-md-block pt-lg-4 m-0">
 								<?= $options['column_2_title_bottom'] ?>
 							</p>
 							<ul class="d-none d-md-block">

@@ -22,10 +22,10 @@
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
 
-    *:not(.fa-brands):not(.fa-solid):not(.fab) {
-        font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
-        font-weight: 500;
-    }
+    // *:not(.fa-brands):not(.fa-solid):not(.fab) {
+    //     font-family: Inter, "greycliff-cf", "Open Sans", sans-serif;
+    //     font-weight: 500;
+    // }
 
     @import "typography.scss";
     @import "header.scss";

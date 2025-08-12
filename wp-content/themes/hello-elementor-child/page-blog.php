@@ -7,6 +7,7 @@ $context = Timber::context();
 $timber_post = Timber::get_post();
 $context['post'] = $timber_post;
 $args['search_filter_id'] = 27217;
+$context['filter_id'] = "[searchandfilter id='27217']";
 $context['ttcposts'] = Timber::get_posts($args);
 $context['pagination'] = Timber::get_pagination();
 

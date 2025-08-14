@@ -40,7 +40,7 @@ header h2 {
                 font-size: calc(16px - 20%);
             }
 
-            &.subtitle {
+            .subtitle {
                 font-size: 12px;
             }
 
@@ -208,6 +208,35 @@ header h2 {
 
         .left-submenus {
             border-bottom-left-radius: 10px;
+
+            &:has(.feature) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                overflow: clip;
+            }
+
+            .feature {
+
+                .subtitle {
+                    display: none;
+                }
+
+                &-nav-link {
+                    background-color: $fc-purple;
+                    padding: 1rem;
+                    color: #FFF !important;
+                    margin-inline-start: -110px;
+                    text-align: right !important;
+                    font-weight: 500 !important;
+                    border-radius: 3px;
+
+                    &:hover {
+                        background-color: #f2f3fe !important;
+                        color: #5449ce !important;
+                    }
+                }
+            }
         }
 
         .right-submenus {
@@ -557,16 +586,16 @@ header h2 {
         }
 
         .list-group {
+
+            .subtitle {
+                font-family: $lora-font;
+                font-size: 20px !important;
+                line-height: 30px !important;
+                font-weight: 500 !important;
+                color: #5449CE !important;
+            }
+
             >a {
-
-                &.subtitle {
-                    font-family: $lora-font;
-                    font-size: 20px !important;
-                    line-height: 30px !important;
-                    font-weight: 500 !important;
-                    color: #5449CE;
-                }
-
                 padding-block-end: 0;
             }
         }
@@ -579,6 +608,34 @@ header h2 {
 
     .left-submenus {
         padding-block-start: 1.5rem;
+
+        &:has(.feature) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: clip;
+        }
+
+        .feature {
+
+            .subtitle {
+                display: none;
+            }
+
+            &-nav-link {
+                background-color: $fc-purple;
+                padding: 1rem;
+                padding-block-end: 1rem !important;
+                color: #FFF !important;
+                font-weight: 500 !important;
+                border-radius: 3px;
+
+                &:hover {
+                    background-color: #f2f3fe !important;
+                    color: #5449ce !important;
+                }
+            }
+        }
     }
 
     .right-submenus {
@@ -628,6 +685,7 @@ header h2 {
                     border-radius: 3px;
                     transition: all .2s ease-in-out;
                     font-size: 12px !important;
+                    font-weight: 500 !important;
 
                     &:hover {
                         color: #5449ce !important;

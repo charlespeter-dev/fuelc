@@ -91,7 +91,8 @@ foreach ($query->posts as $id) {
 
 																	<?php foreach ($nav['children']['left_submenus'] as $groups): ?>
 
-																		<div class="list-group mb-3">
+																		<div
+																			class="list-group mb-3 <?= ($groups['group_name'] ?? '') ? sanitize_title($groups['group_name']) : '' ?>">
 
 																			<?php foreach ($groups['group_links'] as $i => $group_link): ?>
 
@@ -111,8 +112,17 @@ foreach ($query->posts as $id) {
 																				<?php else: ?>
 
 																					<a href="<?= $group_link['link']['url'] ?>"
-																						class="list-group-item list-group-item-action border-0">
+																						class="list-group-item list-group-item-action border-0 <?= ($groups['group_name'] ?? '') ? sanitize_title($groups['group_name']) . '-nav-link' : '' ?>">
 																						<?= $group_link['link']['title'] ?>
+
+																						<?php if (isset($groups['group_name']) && sanitize_title($groups['group_name']) == 'feature'): ?>
+																							<svg xmlns="http://www.w3.org/2000/svg" width="16"
+																								height="16" fill="currentColor"
+																								class="bi bi-arrow-right" viewBox="0 0 16 16">
+																								<path fill-rule="evenodd"
+																									d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+																							</svg>
+																						<?php endif ?>
 
 																						<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
 																							<small>
@@ -247,20 +257,45 @@ foreach ($query->posts as $id) {
 
 									<?php foreach ($nav['children']['left_submenus'] as $groups): ?>
 
-										<div class="list-group mb-3">
+										<div
+											class="list-group mb-3 <?= ($groups['group_name'] ?? '') ? sanitize_title($groups['group_name']) : '' ?>">
 
 											<?php foreach ($groups['group_links'] as $i => $group_link): ?>
 
-												<a href="<?= $group_link['link']['url'] ?>"
-													class="list-group-item list-group-item-action border-0 <?= (!$i) ? 'pb-0 subtitle' : '' ?>">
-													<?= $group_link['link']['title'] ?>
+												<?php if (trim($group_link['link']['url']) == '#'): ?>
 
-													<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
-														<small>
-															<?= $group_link['link_subtitle'] ?>
-														</small>
-													<?php endif ?>
-												</a>
+													<div class="list-group-item list-group-item-action border-0 pb-0 subtitle">
+														<?= $group_link['link']['title'] ?>
+
+														<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
+															<small>
+																<?= $group_link['link_subtitle'] ?>
+															</small>
+														<?php endif ?>
+													</div>
+
+												<?php else: ?>
+
+													<a href="<?= $group_link['link']['url'] ?>"
+														class="list-group-item list-group-item-action border-0 <?= ($groups['group_name'] ?? '') ? sanitize_title($groups['group_name']) . '-nav-link' : '' ?>">
+														<?= $group_link['link']['title'] ?>
+
+														<?php if (isset($groups['group_name']) && sanitize_title($groups['group_name']) == 'feature'): ?>
+															<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+																class="bi bi-arrow-right" viewBox="0 0 16 16">
+																<path fill-rule="evenodd"
+																	d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+															</svg>
+														<?php endif ?>
+
+														<?php if (isset($group_link['link_subtitle']) && $group_link['link_subtitle']): ?>
+															<small>
+																<?= $group_link['link_subtitle'] ?>
+															</small>
+														<?php endif ?>
+													</a>
+
+												<?php endif ?>
 
 											<?php endforeach ?>
 										</div>

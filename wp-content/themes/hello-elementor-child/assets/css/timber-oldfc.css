@@ -197,7 +197,7 @@
     font-size: calc(16px - 20%);
   }
 }
-.timber-oldfc #main-navbar .nav-container a.subtitle {
+.timber-oldfc #main-navbar .nav-container a .subtitle {
   font-size: 12px;
 }
 .timber-oldfc #main-navbar .nav-container a.main-btn {
@@ -334,6 +334,28 @@
 }
 .timber-oldfc .sub-nav-wrapper-inner .left-submenus {
   border-bottom-left-radius: 10px;
+}
+.timber-oldfc .sub-nav-wrapper-inner .left-submenus:has(.feature) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: clip;
+}
+.timber-oldfc .sub-nav-wrapper-inner .left-submenus .feature .subtitle {
+  display: none;
+}
+.timber-oldfc .sub-nav-wrapper-inner .left-submenus .feature-nav-link {
+  background-color: #5449CE;
+  padding: 1rem;
+  color: #FFF !important;
+  margin-inline-start: -110px;
+  text-align: right !important;
+  font-weight: 500 !important;
+  border-radius: 3px;
+}
+.timber-oldfc .sub-nav-wrapper-inner .left-submenus .feature-nav-link:hover {
+  background-color: #f2f3fe !important;
+  color: #5449ce !important;
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus {
   border-bottom-right-radius: 10px;
@@ -617,17 +639,17 @@
   font-size: 14px !important;
   font-weight: 500 !important;
 }
-.timber-oldfc .mobile-nav .left-submenus .list-group > a,
-.timber-oldfc .mobile-nav .right-submenus .list-group > a {
-  padding-block-end: 0;
-}
-.timber-oldfc .mobile-nav .left-submenus .list-group > a.subtitle,
-.timber-oldfc .mobile-nav .right-submenus .list-group > a.subtitle {
+.timber-oldfc .mobile-nav .left-submenus .list-group .subtitle,
+.timber-oldfc .mobile-nav .right-submenus .list-group .subtitle {
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-size: 20px !important;
   line-height: 30px !important;
   font-weight: 500 !important;
-  color: #5449CE;
+  color: #5449CE !important;
+}
+.timber-oldfc .mobile-nav .left-submenus .list-group > a,
+.timber-oldfc .mobile-nav .right-submenus .list-group > a {
+  padding-block-end: 0;
 }
 .timber-oldfc .mobile-nav .left-submenus small,
 .timber-oldfc .mobile-nav .right-submenus small {
@@ -636,6 +658,27 @@
 }
 .timber-oldfc .mobile-nav .left-submenus {
   padding-block-start: 1.5rem;
+}
+.timber-oldfc .mobile-nav .left-submenus:has(.feature) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: clip;
+}
+.timber-oldfc .mobile-nav .left-submenus .feature .subtitle {
+  display: none;
+}
+.timber-oldfc .mobile-nav .left-submenus .feature-nav-link {
+  background-color: #5449CE;
+  padding: 1rem;
+  padding-block-end: 1rem !important;
+  color: #FFF !important;
+  font-weight: 500 !important;
+  border-radius: 3px;
+}
+.timber-oldfc .mobile-nav .left-submenus .feature-nav-link:hover {
+  background-color: #f2f3fe !important;
+  color: #5449ce !important;
 }
 .timber-oldfc .mobile-nav .right-submenus .custom-html {
   padding-block: 2rem;
@@ -678,6 +721,7 @@
   border-radius: 3px;
   transition: all 0.2s ease-in-out;
   font-size: 12px !important;
+  font-weight: 500 !important;
 }
 .timber-oldfc .mobile-nav .right-submenus .custom-html .cta-container a:hover {
   color: #5449ce !important;

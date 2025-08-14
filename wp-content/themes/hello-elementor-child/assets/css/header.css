@@ -222,7 +222,7 @@ header h2 {
   color: #FFF;
   border: 1px solid #FFF;
   padding: 0.7rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 3px;
   transition: all 0.2s ease-in-out;
   font-size: 12px !important;
   font-weight: 500 !important;
@@ -581,7 +581,7 @@ header h2 {
   color: #FFF;
   border: 1px solid #FFF;
   padding: 0.7rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 3px;
   transition: all 0.2s ease-in-out;
   font-size: 12px !important;
 }

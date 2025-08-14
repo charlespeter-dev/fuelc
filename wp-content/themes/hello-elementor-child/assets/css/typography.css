@@ -45,7 +45,7 @@ a {
 
 a:hover {
   text-decoration: none !important;
-  color: #613f97 !important;
+  color: #5449CE !important;
 }
 
 textarea:focus,
@@ -89,7 +89,7 @@ input:focus {
 .main-btn:hover,
 .search-filter-reset:hover,
 .fc-main-button a:hover {
-  background-color: #613f97 !important;
+  background-color: #5449CE !important;
   color: white !important;
   transition: all 1s;
 }

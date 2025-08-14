@@ -65,12 +65,12 @@
 }
 .main-footer .gradient-bg .white-btn {
   background-color: white !important;
-  color: #613f97 !important;
+  color: #5449CE !important;
 }
 .main-footer .footer-title {
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 500;
-  font-size: calc(20px - 20%);
+  font-size: calc(20px - 30%);
   line-height: 26px;
   text-align: left;
   color: #5449CE;
@@ -166,14 +166,11 @@
   margin-right: 35px;
 }
 .main-footer ul li i {
-  color: #cb198a;
+  color: #5449CE;
   margin-right: 8px;
 }
-.main-footer ul li i:hover {
-  color: #613f97 !important;
-}
 .main-footer ul li:hover {
-  color: #613f97 !important;
+  color: #5449CE !important;
 }
 .main-footer .d-md-block {
   padding-top: 14px;

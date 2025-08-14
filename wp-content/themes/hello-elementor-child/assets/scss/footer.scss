@@ -77,7 +77,7 @@
 	.footer-title {
 		font-family: $lora-font;
 		font-weight: 500;
-		font-size: calc(20px - 20%);
+		font-size: calc(20px - 30%);
 		line-height: 26px;
 		text-align: left;
 		color: #5449CE;
@@ -183,13 +183,13 @@
 			}
 
 			i {
-				color: $fc-pink;
+				color: $fc-purple;
 				margin-right: 8px;
 			}
 
-			i:hover {
-				color: $fc-purple !important;
-			}
+			// i:hover {
+			// 	color: $fc-purple !important;
+			// }
 		}
 
 		li:hover {

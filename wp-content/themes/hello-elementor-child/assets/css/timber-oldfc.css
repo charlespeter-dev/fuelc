@@ -65,7 +65,7 @@
 }
 .timber-oldfc a:hover {
   text-decoration: none !important;
-  color: #613f97 !important;
+  color: #5449CE !important;
 }
 .timber-oldfc textarea:focus,
 .timber-oldfc input:focus {
@@ -104,7 +104,7 @@
 .timber-oldfc .main-btn:hover,
 .timber-oldfc .search-filter-reset:hover,
 .timber-oldfc .fc-main-button a:hover {
-  background-color: #613f97 !important;
+  background-color: #5449CE !important;
   color: white !important;
   transition: all 1s;
 }
@@ -221,7 +221,7 @@
   padding-top: 16px;
   padding-bottom: 16px;
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
-  font-size: calc(20px - 20%);
+  font-size: calc(20px - 30%);
   line-height: 26px;
   font-weight: 500;
 }
@@ -323,7 +323,7 @@
   color: #5449CE;
   font-size: 14px;
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
-  font-size: calc(20px - 20%);
+  font-size: calc(20px - 30%);
   line-height: 26px;
   font-weight: 500;
 }
@@ -364,7 +364,7 @@
   display: inline-block;
   background-color: transparent;
   color: #FFF;
-  border: 2px solid #FFF;
+  border: 1px solid #FFF;
   padding: 0.7rem 1.5rem;
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
@@ -396,7 +396,7 @@
   padding-left: 0 !important;
 }
 .timber-oldfc .subnav-link-a:hover * {
-  color: #613f97;
+  color: #5449CE;
 }
 .timber-oldfc .subnav-link-title {
   font-size: 18px;
@@ -495,7 +495,7 @@
   display: block;
 }
 .timber-oldfc .featured-post-title:hover {
-  color: #613f97 !important;
+  color: #5449CE !important;
 }
 .timber-oldfc .featured-post-title-mobile {
   line-height: 22px;
@@ -554,7 +554,7 @@
   color: #e85948;
 }
 .timber-oldfc .learn-more-wrapper a:hover {
-  color: #613f97;
+  color: #5449CE;
 }
 .timber-oldfc .learn-more-link {
   font-size: 13px;
@@ -673,7 +673,7 @@
   display: inline-block;
   background-color: transparent;
   color: #FFF;
-  border: 2px solid #FFF;
+  border: 1px solid #FFF;
   padding: 0.7rem 1.5rem;
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
@@ -1866,12 +1866,12 @@
 }
 .timber-oldfc .main-footer .gradient-bg .white-btn {
   background-color: white !important;
-  color: #613f97 !important;
+  color: #5449CE !important;
 }
 .timber-oldfc .main-footer .footer-title {
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 500;
-  font-size: calc(20px - 20%);
+  font-size: calc(20px - 30%);
   line-height: 26px;
   text-align: left;
   color: #5449CE;
@@ -1967,14 +1967,11 @@
   margin-right: 35px;
 }
 .timber-oldfc .main-footer ul li i {
-  color: #cb198a;
+  color: #5449CE;
   margin-right: 8px;
 }
-.timber-oldfc .main-footer ul li i:hover {
-  color: #613f97 !important;
-}
 .timber-oldfc .main-footer ul li:hover {
-  color: #613f97 !important;
+  color: #5449CE !important;
 }
 .timber-oldfc .main-footer .d-md-block {
   padding-top: 14px;

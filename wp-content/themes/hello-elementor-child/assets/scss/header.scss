@@ -68,7 +68,7 @@ header h2 {
                 padding-top: 16px;
                 padding-bottom: 16px;
                 font-family: $lora-font;
-                font-size: calc(20px - 20%);
+                font-size: calc(20px - 30%);
                 line-height: 26px;
                 font-weight: 500;
 
@@ -195,7 +195,7 @@ header h2 {
                 color: #5449CE;
                 font-size: 14px;
                 font-family: $lora-font;
-                font-size: calc(20px - 20%);
+                font-size: calc(20px - 30%);
                 line-height: 26px;
                 font-weight: 500;
             }
@@ -242,7 +242,7 @@ header h2 {
                         display: inline-block;
                         background-color: transparent;
                         color: #FFF;
-                        border: 2px solid #FFF;
+                        border: 1px solid #FFF;
                         padding: 0.7rem 1.5rem;
                         border-radius: 8px;
                         transition: all .2s ease-in-out;
@@ -623,7 +623,7 @@ header h2 {
                     display: inline-block;
                     background-color: transparent;
                     color: #FFF;
-                    border: 2px solid #FFF;
+                    border: 1px solid #FFF;
                     padding: 0.7rem 1.5rem;
                     border-radius: 8px;
                     transition: all .2s ease-in-out;

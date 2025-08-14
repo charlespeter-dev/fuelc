@@ -70,7 +70,7 @@
 .main-footer .footer-title {
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: calc(20px - 20%);
   line-height: 26px;
   text-align: left;
   color: #5449CE;
@@ -135,7 +135,7 @@
   padding: 0;
   list-style-position: outside;
   font-weight: 300;
-  font-size: 16px;
+  font-size: calc(16px - 20%);
   line-height: 18px;
   text-align: left;
   color: #49494b;

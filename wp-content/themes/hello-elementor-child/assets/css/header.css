@@ -36,7 +36,7 @@ header h2 {
 }
 @media screen and (min-width: 992px) {
   #main-navbar .nav-container a {
-    font-size: 16px;
+    font-size: calc(16px - 20%);
   }
 }
 #main-navbar .nav-container a.subtitle {
@@ -63,7 +63,7 @@ header h2 {
   padding-top: 16px;
   padding-bottom: 16px;
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: calc(20px - 20%);
   line-height: 26px;
   font-weight: 500;
 }
@@ -179,7 +179,7 @@ header h2 {
   color: #5449CE;
   font-size: 14px;
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: calc(20px - 20%);
   line-height: 26px;
   font-weight: 500;
 }
@@ -204,7 +204,7 @@ header h2 {
 .sub-nav-wrapper-inner .right-submenus .custom-html h2 {
   color: #FFF;
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
-  font-size: 40px;
+  font-size: calc(40px - 20%);
   line-height: 50px;
   text-wrap: pretty;
   margin-bottom: 1rem;
@@ -213,7 +213,7 @@ header h2 {
 }
 .sub-nav-wrapper-inner .right-submenus .custom-html p {
   color: #FFF;
-  font-size: 16px;
+  font-size: calc(16px - 20%);
   font-weight: 300;
 }
 .sub-nav-wrapper-inner .right-submenus .custom-html .cta-container a {
@@ -225,6 +225,7 @@ header h2 {
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
   font-size: 12px !important;
+  font-weight: 500 !important;
 }
 .sub-nav-wrapper-inner .right-submenus .custom-html .cta-container a:hover {
   color: #5449ce !important;

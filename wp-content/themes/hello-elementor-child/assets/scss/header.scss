@@ -37,7 +37,7 @@ header h2 {
             line-height: 1;
 
             @media screen and (min-width: 992px) {
-                font-size: 16px;
+                font-size: calc(16px - 20%);
             }
 
             &.subtitle {
@@ -68,7 +68,7 @@ header h2 {
                 padding-top: 16px;
                 padding-bottom: 16px;
                 font-family: $lora-font;
-                font-size: 20px;
+                font-size: calc(20px - 20%);
                 line-height: 26px;
                 font-weight: 500;
 
@@ -195,7 +195,7 @@ header h2 {
                 color: #5449CE;
                 font-size: 14px;
                 font-family: $lora-font;
-                font-size: 20px;
+                font-size: calc(20px - 20%);
                 line-height: 26px;
                 font-weight: 500;
             }
@@ -223,7 +223,7 @@ header h2 {
                 h2 {
                     color: #FFF;
                     font-family: $lora-font;
-                    font-size: 40px;
+                    font-size: calc(40px - 20%);
                     line-height: 50px;
                     text-wrap: pretty;
                     margin-bottom: 1rem;
@@ -233,7 +233,7 @@ header h2 {
 
                 p {
                     color: #FFF;
-                    font-size: 16px;
+                    font-size: calc(16px - 20%);
                     font-weight: 300;
                 }
 
@@ -247,6 +247,7 @@ header h2 {
                         border-radius: 8px;
                         transition: all .2s ease-in-out;
                         font-size: 12px !important;
+                        font-weight: 500 !important;
 
                         &:hover {
                             color: #5449ce !important;

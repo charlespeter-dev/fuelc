@@ -194,7 +194,7 @@
 }
 @media screen and (min-width: 992px) {
   .timber-oldfc #main-navbar .nav-container a {
-    font-size: 16px;
+    font-size: calc(16px - 20%);
   }
 }
 .timber-oldfc #main-navbar .nav-container a.subtitle {
@@ -221,7 +221,7 @@
   padding-top: 16px;
   padding-bottom: 16px;
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: calc(20px - 20%);
   line-height: 26px;
   font-weight: 500;
 }
@@ -323,7 +323,7 @@
   color: #5449CE;
   font-size: 14px;
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: calc(20px - 20%);
   line-height: 26px;
   font-weight: 500;
 }
@@ -348,7 +348,7 @@
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html h2 {
   color: #FFF;
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
-  font-size: 40px;
+  font-size: calc(40px - 20%);
   line-height: 50px;
   text-wrap: pretty;
   margin-bottom: 1rem;
@@ -357,7 +357,7 @@
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html p {
   color: #FFF;
-  font-size: 16px;
+  font-size: calc(16px - 20%);
   font-weight: 300;
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html .cta-container a {
@@ -369,6 +369,7 @@
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
   font-size: 12px !important;
+  font-weight: 500 !important;
 }
 .timber-oldfc .sub-nav-wrapper-inner .right-submenus .custom-html .cta-container a:hover {
   color: #5449ce !important;
@@ -1870,7 +1871,7 @@
 .timber-oldfc .main-footer .footer-title {
   font-family: Lora, Inter, "greycliff-cf", "Open Sans", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: calc(20px - 20%);
   line-height: 26px;
   text-align: left;
   color: #5449CE;
@@ -1935,7 +1936,7 @@
   padding: 0;
   list-style-position: outside;
   font-weight: 300;
-  font-size: 16px;
+  font-size: calc(16px - 20%);
   line-height: 18px;
   text-align: left;
   color: #49494b;

@@ -108,3 +108,6 @@ composer.lock
 cache
 wp-rocket-config
 upgrade-temp-backup
+llms.md
+llms.Ori.txt
+llms-sample.txt

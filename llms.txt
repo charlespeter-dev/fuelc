@@ -1,0 +1,83 @@
+# Fuel Cycle: Insights that Ignite Action
+
+> AI-native research platform for enterprises, unifying quantitative, qualitative and UX research into one connected ecosystem powered by agentic AI. Fuel Cycle replaces slow, fragmented methods with automated research pipelines and always on communities so teams can move from question to decision in hours rather than [weeks](https://fuelcycle.com/#:~:text=AI,Delay).
+
+**How to use this file:** Start with the **Platform** section for core product overviews. Use **Solutions** when tailoring the platform to specific teams or measuring impact. Visit **Resources** for webinars, guides and blogs. See **Company** to understand mission and culture. Refer to **Legal & Compliance** for data handling policies and security.
+
+## Platform
+
+- [**Autonomous Insights**](https://fuelcycle.com/ai/) AI orchestrated research pipeline that combines desk research, survey programming, fielding and synthesis in one seamless [flow](https://fuelcycle.com/ai/#:~:text=Turn%20questions%20into%20insights%20with,one%20seamless%2C%20automated%20flow). Purpose built agents built on expert tested methods power robust analysis while human in the loop guardrails ensure [rigor](https://fuelcycle.com/ai/#:~:text=%2A%20Purpose,grade%20accuracy). Enterprises can tailor agents with their own templates, audiences and metrics for personalized research at [scale](https://fuelcycle.com/ai/#:~:text=Plug%20in%20Your%20Playbook%E2%80%94%20AI,Personalized%20for%20your%20Enterprise).
+
+- [**Community Insights**](https://fuelcycle.com/community/) Always on insight communities provide real time, verified feedback through integrated qualitative and quantitative [tools](https://fuelcycle.com/community/#:~:text=Fuel%20Cycle%E2%80%99s%20Insight%20Communities%20enable,making%20at%20scale). Features include seamless CRM/marketing [integrations](https://fuelcycle.com/community/#:~:text=Seamless%20Tech%20Stack%20Integration), progressive participant profiling and gamified member experiences to sustain [engagement](https://fuelcycle.com/community/#:~:text=Progressive%20Profiling%20%26%20Behavioral%20Data).
+
+- [**UX Insights (FCUX)**](https://fuelcycle.com/ux/) High velocity user research platform for live or unmoderated video studies. Teams can scale moderated or self guided tests, validate prototypes and concepts quickly, and review AI summarized [highlights](https://fuelcycle.com/ux/#:~:text=Why%20settle%20for%20manual%20%26,expensive%20research%20suites). The platform records user behaviour across devices and produces instant themes, verbatims and clips to accelerate insight [delivery](https://fuelcycle.com/ux/#:~:text=See%20Real%20User%20Behavior%2C%20Across,Devices).
+
+- [**Tech Integrations**](https://fuelcycle.com/tech-integrations/) API first integrations connect research data with business systems. Fuel Cycle enables two way data flow with CRMs, CDPs and marketing automation so research insights link directly to business [outcomes](https://fuelcycle.com/tech-integrations/#:~:text=integrations). Partner categories span enterprise tools, marketing automation, qual & focus groups, prediction markets, rewards, UX platforms, analysis/repository tools and [more](https://fuelcycle.com/tech-integrations/#:~:text=Enterprise%20Tools).
+
+## Solutions & Use Cases
+
+- [**Insights Teams**](https://fuelcycle.com/fuel-cycle-for-mrx/) AI native research platform that unifies always on communities and end to end qualitative and quantitative workflows so insights teams can deliver strategic intelligence on tight [timelines](https://fuelcycle.com/fuel-cycle-for-mrx/#:~:text=Fuel%20Cycle%20for%20Market%20Researchers,Insights%20Teams). Autonomous agents replicate expert workflows for study design, analysis and personalized [outputs](https://fuelcycle.com/fuel-cycle-for-mrx/#:~:text=Fuel%20Cycle%20Autonomous%20Insights).
+
+- [**UX Teams**](https://fuelcycle.com/fuel-cycle-for-ux/) Combines unmoderated UX testing, longitudinal insights and autonomous research to help product and design teams move fast and reduce [risk](https://fuelcycle.com/fuel-cycle-for-ux/#:~:text=Fuel%20Cycle%20for%20UX%20Researchers). Features include AI enhanced usability testing, video diaries, automated summaries and highlight reel [creation](https://fuelcycle.com/fuel-cycle-for-ux/#:~:text=Rapid%20UX%20Feedback%20%E2%80%94%20Without,Compromising%20Quality).
+
+- [**Economic Impact (ROI)**](https://fuelcycle.com/economic-impact/) Shows how Fuel Cycle delivers cost savings and faster time to insight. Customers unlock substantial ROI by reducing project timelines and expenses while increasing research [throughput](https://fuelcycle.com/economic-impact/#:~:text=EFFICIENT%2C%20SCALABLE%2C%20%26%20ACTIONABLE%20INSIGHTS). The page outlines benefits such as improved efficiency, reduced support costs, rapid fielding, AI driven analytics and centralized [data](https://fuelcycle.com/economic-impact/#:~:text=Fuel%20Cycle%E2%80%99s%20platform%20supercharges%20your,enhancing%20customer%20engagement%20and%20loyalty).
+
+## Resources
+
+- [**Resource Hub**](https://fuelcycle.com/resource-hub/) Central repository featuring blog posts, guides, webinars and events across research and UX. Find materials like AI powered research agent guides, personalization articles and UX testing [playbooks](https://fuelcycle.com/resource-hub/#:~:text=Fuel%20Cycle%20Resource%20Hub).
+
+- [**Blog**](https://fuelcycle.test/blog/) & [**Platform Updates**](https://fuelcycle.test/whats-new/) Explore ongoing thought leadership, product releases and webinar recaps in the Blog and Platform Releases sections accessible from the Resource Hub.
+
+## Company
+
+- [**About Us**](https://fuelcycle.com/about-us/) Provides the mission, values and culture of Fuel Cycle. The company aims to accelerate decision intelligence by unifying MR and UX research and delivering AI powered insights that put customers at the core of every [decision](https://fuelcycle.com/about-us/#:~:text=This%20isn%27t%20just%20research,is%20intelligence%2C%20unleashed). Values include customer obsession, team before self, extreme impact and endless [curiosity](https://fuelcycle.com/about-us/#:~:text=The%20Values%20that%20Drive%20Us).
+
+- [**Contact**](https://fuelcycle.com/contact/) Invitation to connect with Fuel Cycles experts. Highlights how Fuel Cycle delivers decision intelligence through trusted communities, seamless user feedback and agentic AI to eliminate research bottlenecks and fuel smarter product [launches](https://fuelcycle.com/contact/#:~:text=Contact%20an%20Expert).
+
+## Legal & Compliance
+
+- [**Compliance & Security**](https://fuelcycle.com/compliance/) Outlines Fuel Cycles commitment to data security and privacy. The platform exceeds industry benchmarks and maintains certifications like SOC?2, GDPR and CCPA to protect customer [data](https://fuelcycle.com/compliance/#:~:text=Compliance%20%26%20Security).
+
+- [**Privacy Policy**](https://fuelcycle.com/legal/privacy-policy/) Explains how Fuel Cycle collects, uses and shares information across its websites and services, and details user rights and [choices](https://fuelcycle.com/legal/privacy-policy/#:~:text=Privacy%20Policy).
+
+- [**Policies & Legal**](https://fuelcycle.com/legal/) Gateway to legal documents such as Terms of Service, Anti Spam Policy, Security Statement, Service Level Agreement and Data Processing Addendum. Emphasizes Fuel Cycles dedication to upholding the highest legal standards and transparent data [management](https://fuelcycle.com/legal/#:~:text=Policies%20%26%20Legal).
+
+## Optional
+
+- **Platform Releases / What's New**  Highlights recent product updates and feature enhancements. Useful for staying current with Fuel Cycle capabilities.
+
+- **Customer Stories & Events**  Case studies, webinars and events demonstrating how leading brands leverage the platform for accelerated insights and ROI.
+
+## Contact Information
+
+**For AI/LLM Related Inquiries:**
+- Email: [ai-ethics@fuelcycle.com](mailto:ai-ethics@fuelcycle.com)
+- Subject Line: "LLM Content Usage Inquiry"
+
+**For Content Corrections:**
+- Email: [content@fuelcycle.com](mailto:content@fuelcycle.com)
+- Response Time: 2-3 business days
+
+**General Contact:**
+- Website: [https://fuelcycle.com/contact/](https://fuelcycle.com/contact/)
+- Phone: +1-555-TECH-INN
+- Address: 123 Innovation Drive, Tech City, TC 12345
+
+## Version and Updates
+
+**llms.txt Version:** 1.0
+
+**Changelog:**
+- v1.0 (Sep 2025): Initial version
+
+## Additional Resources
+
+**Related Files:**
+- [robots.txt](https://fuelcycle.com/robots.txt): Standard web crawler instructions
+- [sitemap.xml](https://fuelcycle.com/sitemap_index.xml): Complete site structure
+
+**AI Ethics Statement:**
+We support responsible AI development and encourage ethical use of our content. Please respect intellectual property rights and maintain accuracy when referencing our work.
+
+---
+*This llms.txt file is provided to facilitate responsible AI interaction with our content. For questions or clarifications, please contact us using the information above.*

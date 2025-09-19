@@ -48,21 +48,6 @@
 
 - **Customer Stories & Events**  Case studies, webinars and events demonstrating how leading brands leverage the platform for accelerated insights and ROI.
 
-## Contact Information
-
-**For AI/LLM Related Inquiries:**
-- Email: [ai-ethics@fuelcycle.com](mailto:ai-ethics@fuelcycle.com)
-- Subject Line: "LLM Content Usage Inquiry"
-
-**For Content Corrections:**
-- Email: [content@fuelcycle.com](mailto:content@fuelcycle.com)
-- Response Time: 2-3 business days
-
-**General Contact:**
-- Website: [https://fuelcycle.com/contact/](https://fuelcycle.com/contact/)
-- Phone: +1-555-TECH-INN
-- Address: 123 Innovation Drive, Tech City, TC 12345
-
 ## Version and Updates
 
 **llms.txt Version:** 1.0

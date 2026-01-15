@@ -515,3 +515,7 @@ add_filter('wpseo_metabox_prio', function () {
 //         wp_die('<h1>Under Maintenance</h1><br>Website under planned maintenance. Please check back later.');
 //     }
 // });
+
+// disable canonical URL to avoid conflict with Rank Math SEO
+
+add_filter('wpseo_canonical', '__return_false');
